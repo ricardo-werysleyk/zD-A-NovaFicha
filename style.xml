@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="sheetTemplate" dataType="DATA_TYPE_AQUI" 
+    title="Dementes e Árduos" name="style">
+
+    <style>
+        .testField {
+            width: 30;
+            margins: {left=5};
+        }
+
+        .testResField {
+            fontColor: white;
+        }
+
+        .layoutTest {
+            width: 450;
+            margins: {top=10};
+        }
+        .campoInfoChar {
+            width: 450;
+        }
+    </style>
+</form>

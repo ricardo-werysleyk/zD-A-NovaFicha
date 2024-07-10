@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="sheetTemplate" dataType="DATA_TYPE_AQUI" 
+    title="Dementes e Árduos" name="DzA">
+
+    <import file="style.xml"/>
+    <import file="script.xml"/>
+
+    <tabControl width="1260" height="500">
+        <tab title="Ficha">
+            <layout g="col" g-width="2" height="450" margins="{top=10}">
+                <layout left="20" top="20" height="25" g="block" width="450">
+                    <label align="left" text="Teste" width="40" hitTest="true" margins="{right=5}" hint="Testes físicos do seu personagem"/>
+                    <label align="left" text="Valor" width="40" hitTest="true"/>
+                    <label align="left" text="Mod" width="40" hitTest="true" hint="Modificador somado ao teste" margins="{left=-4}"/>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Sorte" width="40" hitTest="true" hint="Quão cagado tu és"/>
+                    <edit align="left" horzTextAlign="center" field="sorte" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="sorteMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.sorteDoPersonagem); 
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end; 
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Sorte");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Vital" width="40" hitTest="true" hint="Quantidade de energia vital"/>
+                    <edit align="left" horzTextAlign="center" field="vital" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="vitalMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.vitalDoPersonagem); 
+                            local vitalValue = tonumber(sheet.vital) or 0;
+
+                            if not rolagem.possuiAlgumDado then
+                                if vitalValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif vitalValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif vitalValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif vitalValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if vitalValue % 2 == 0 then
+                                        vitalValue = vitalValue + 2;
+                                        local vitalValueString = tostring(vitalValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. vitalValueString):concatenar(rolagem);
+                                    else
+                                        vitalValue = vitalValue + 3;
+                                        local vitalValueString = tostring(vitalValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. vitalValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Vital");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Adre" width="40" hitTest="true" hint="Habilidade de reação"/>
+                    <edit align="left" horzTextAlign="center" field="adrenalina" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="adrenalinaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.adrenalinaDoPersonagem); 
+                            local adrenalinaValue = tonumber(sheet.adrenalina) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if adrenalinaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif adrenalinaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif adrenalinaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif adrenalinaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if adrenalinaValue % 2 == 0 then
+                                        adrenalinaValue = adrenalinaValue + 2;
+                                        local adrenalinaValueString = tostring(adrenalinaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. adrenalinaValueString):concatenar(rolagem);
+                                    else
+                                        adrenalinaValue = adrenalinaValue + 3;
+                                        local adrenalinaValueString = tostring(adrenalinaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. adrenalinaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Adrenalina");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Ataq" width="40" hitTest="true" hint="Sucesso do seu ataque"/>
+                    <edit align="left" horzTextAlign="center" field="ataque" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="ataqueMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.ataqueDoPersonagem); 
+                            local ataqueValue = tonumber(sheet.ataque) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if ataqueValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif ataqueValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif ataqueValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif ataqueValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if ataqueValue % 2 == 0 then
+                                        ataqueValue = ataqueValue + 2;
+                                        local ataqueValueString = tostring(ataqueValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. ataqueValueString):concatenar(rolagem);
+                                    else
+                                        ataqueValue = ataqueValue + 3;
+                                        local ataqueValueString = tostring(ataqueValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. ataqueValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Ataque");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Defe" width="40" hitTest="true" hint="Sucesso da sua defesa"/>
+                    <edit align="left" horzTextAlign="center" field="defesa" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="defesaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.defesaDoPersonagem); 
+                            local defesaValue = tonumber(sheet.defesa) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if defesaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif defesaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif defesaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif defesaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if defesaValue % 2 == 0 then
+                                        defesaValue = defesaValue + 2;
+                                        local defesaValueString = tostring(defesaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. defesaValueString):concatenar(rolagem);
+                                    else
+                                        defesaValue = defesaValue + 3;
+                                        local defesaValueString = tostring(defesaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. defesaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Defesa");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Dest" width="40" hitTest="true" hint="Define a precisão de suas ações"/>
+                    <edit align="left" horzTextAlign="center" field="destreza" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="destrezaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.destrezaDoPersonagem); 
+                            local destrezaValue = tonumber(sheet.destreza) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if destrezaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif destrezaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif destrezaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif destrezaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if destrezaValue % 2 == 0 then
+                                        destrezaValue = destrezaValue + 2;
+                                        local destrezaValueString = tostring(destrezaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. destrezaValueString):concatenar(rolagem);
+                                    else
+                                        destrezaValue = destrezaValue + 3;
+                                        local destrezaValueString = tostring(destrezaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. destrezaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Destreza");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Força" width="40" hitTest="true" hint="Habilidade de vencer a inércia"/>
+                    <edit align="left" horzTextAlign="center" field="forca" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="forcaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.forcaDoPersonagem); 
+                            local forcaValue = tonumber(sheet.forca) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if forcaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif forcaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif forcaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif forcaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if forcaValue % 2 == 0 then
+                                        forcaValue = forcaValue + 2;
+                                        local forcaValueString = tostring(forcaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. forcaValueString):concatenar(rolagem);
+                                    else
+                                        forcaValue = forcaValue + 3;
+                                        local forcaValueString = tostring(forcaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. forcaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Força");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Inte" width="40" hitTest="true" hint="Conhecimentos acadêmicos"/>
+                    <edit align="left" horzTextAlign="center" field="inteligencia" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="inteligenciaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.inteligenciaDoPersonagem); 
+                            local inteligenciaValue = tonumber(sheet.inteligencia) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if inteligenciaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif inteligenciaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif inteligenciaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif inteligenciaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if inteligenciaValue % 2 == 0 then
+                                        inteligenciaValue = inteligenciaValue + 2;
+                                        local inteligenciaValueString = tostring(inteligenciaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. inteligenciaValueString):concatenar(rolagem);
+                                    else
+                                        inteligenciaValue = inteligenciaValue + 3;
+                                        local inteligenciaValueString = tostring(inteligenciaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. inteligenciaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Inteligência");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Resis" width="40" hitTest="true" hint="Resiliência do seu personagem"/>
+                    <edit align="left" horzTextAlign="center" field="resistencia" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="resistenciaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.resistenciaDoPersonagem); 
+                            local resistenciaValue = tonumber(sheet.resistencia) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if resistenciaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif resistenciaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif resistenciaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif resistenciaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if resistenciaValue % 2 == 0 then
+                                        resistenciaValue = resistenciaValue + 2;
+                                        local resistenciaValueString = tostring(resistenciaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. resistenciaValueString):concatenar(rolagem);
+                                    else
+                                        resistenciaValue = resistenciaValue + 3;
+                                        local resistenciaValueString = tostring(resistenciaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. resistenciaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Resistência");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Sabe" width="40" hitTest="true" hint="Experiência de vida"/>
+                    <edit align="left" horzTextAlign="center" field="sabedoria" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="sabedoriaMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.sabedoriaDoPersonagem); 
+                            local sabedoriaValue = tonumber(sheet.sabedoria) or 0;
+
+                            if not rolagem.possuiAlgumDado then
+                                if sabedoriaValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif sabedoriaValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif sabedoriaValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif sabedoriaValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if sabedoriaValue % 2 == 0 then
+                                        sabedoriaValue = sabedoriaValue + 2;
+                                        local sabedoriaValueString = tostring(sabedoriaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. sabedoriaValueString):concatenar(rolagem);
+                                    else
+                                        sabedoriaValue = sabedoriaValue + 3;
+                                        local sabedoriaValueString = tostring(sabedoriaValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. sabedoriaValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Sabedoria");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout left="20" top="20" height="25" g="block" class="layoutTest">
+                    <label align="left" text="Velo" width="40" hitTest="true" hint="Velocidade que seu personagem executa ações"/>
+                    <edit align="left" horzTextAlign="center" field="velocidade" class="testField"/>   
+                    <edit align="left" horzTextAlign="center" field="velocidadeMod" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.velocidadeDoPersonagem); 
+                            local velocidadeValue = tonumber(sheet.velocidade) or 0;
+
+                            if not rolagem.possuiAlgumDado then
+                                if velocidadeValue == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif velocidadeValue == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif velocidadeValue == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif velocidadeValue == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if velocidadeValue % 2 == 0 then
+                                        velocidadeValue = velocidadeValue + 2;
+                                        local velocidadeValueString = tostring(velocidadeValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. velocidadeValueString):concatenar(rolagem);
+                                    else
+                                        velocidadeValue = velocidadeValue + 3;
+                                        local velocidadeValueString = tostring(velocidadeValue);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. velocidadeValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, "Velocidade");
+                            end;
+                        </event>
+                    </button>
+                </layout>
+            </layout>
+            
+            <layout g="col" g-width="4" height="420" margins="{top=10}">
+                <layout g="block" height="25" class="campoInfoChar">
+                    <label align="left" text="Informações do personagem" width="300"/>
+                </layout>
+                <layout  g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <label align="left" text="Nome" width="64" hitTest="true" hint="Nome do seu personagem"/>
+                    <edit align="left" horzTextAlign="leading" field="nomeChar" width="282"/>
+                </layout>
+                <layout  g="block" height="25" class="campoInfoChar"  margins="{top=6}">
+                    <label align="left" text="Raça" width="64" hitTest="true" hint="Raça do seu personagem"/>
+                    <edit align="left" horzTextAlign="center" field="racaChar" width="168"/>
+                    <label align="left" text="Idade" width="40" hitTest="true" margins="{left=6}" hint="Idade do seu personagem"/>
+                    <edit align="left" horzTextAlign="center" field="idadeChar" width="68"/>
+                </layout>
+                <layout  g="block" height="25" class="campoInfoChar" margins="{top=6}">
+                    <label align="left" text="Tendência" width="64" hitTest="true" hint="Alinhamento moral do seu personagem"/>
+                    <edit align="left" horzTextAlign="center" field="tendenciaChar" width="168"/>
+                    <label align="left" text="Level" width="40" hitTest="true" margins="{left=6}" hint="Level do seu personagem"/>
+                    <edit align="left" horzTextAlign="center" field="levelChar" width="68"/>
+                </layout>
+                <layout  g="block" height="25" class="campoInfoChar"  margins="{top=6}">
+                    <label align="left" text="Atual" width="64" hitTest="true" hint="Xp atual do seu personagem"/>
+                    <edit align="left"  horzTextAlign="center" field="atualXpChar" width="106"/>
+                    <label align="left" text="Requer" width="64" hitTest="true" margins="{left=6}" hint="Requerimento de XP para upar"/>
+                    <edit align="left" horzTextAlign="center" field="requerimentoXpChar" width="106"/>
+                </layout>
+                <layout  g="block" height="25" class="campoInfoChar"  margins="{top=6}">
+                    <progressBar width="282" left="64" height="15" color="#4dff5e" min="0" field="atualXpChar" fieldMax="requerimentoXpChar"/>
+                </layout>
+                <layout  g="block" height="52" class="campoInfoChar"  margins="{top=6}">
+                    <label align="left" text="Sanidade" width="64" hitTest="true" hint="Precisa de um psi,psi...doutor???"/>
+                    <imageCheckBox width="52" align="left" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade1"/>
+                    <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade2"/>
+                    <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade3"/>
+                    <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade4"/>
+                    <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade5"/>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=12}">
+                    <label align="left" text="Desvantagens" width="212"/>
+                    <label align="left" text="Teste" width="64" />
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=6}">
+                    <edit align="left"  horzTextAlign="leading" field="desvantagem1" width="204"/>
+                    <edit align="left"  horzTextAlign="center" field="testeDesvantagem1" width="64" margins="{left=6}"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem1DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20");
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem1);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                    <edit align="left"  horzTextAlign="leading" field="desvantagem2" width="204"/>
+                    <edit align="left"  horzTextAlign="center" field="testeDesvantagem2" width="64" margins="{left=6}"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem2DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20");
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem2);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                    <edit align="left"  horzTextAlign="leading" field="desvantagem3" width="204"/>
+                    <edit align="left"  horzTextAlign="center" field="testeDesvantagem3" width="64" margins="{left=6}"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem3DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20");
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem3);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                    <edit align="left"  horzTextAlign="leading" field="desvantagem4" width="204"/>
+                    <edit align="left"  horzTextAlign="center" field="testeDesvantagem4" width="64" margins="{left=6}"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem4DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20");
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem4);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+            </layout>
+            
+            <layout g="col" g-width="3" height="420" margins="{top=10}">
+                <layout g="block" height="25" class="campoInfoChar">
+                    <label align="left" text="Capacidades" width="200"/>
+                    <label align="left" text="Teste" width="64" margins="{left=4}"/>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade1" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade1" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade1DoPersonagem); 
+                            local testeCapacidade1Value = tonumber(sheet.testeCapacidade1) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade1Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade1Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade1Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade1Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade1Value % 2 == 0 then
+                                        testeCapacidade1Value = testeCapacidade1Value + 2;
+                                        local testeCapacidade1ValueString = tostring(testeCapacidade1Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade1ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade1Value = testeCapacidade1Value + 3;
+                                        local testeCapacidade1ValueString = tostring(testeCapacidade1Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade1ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade1);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade2" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade2" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade2DoPersonagem); 
+                            local testeCapacidade2Value = tonumber(sheet.testeCapacidade2) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade2Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade2Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade2Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade2Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade2Value % 2 == 0 then
+                                        testeCapacidade2Value = testeCapacidade2Value + 2;
+                                        local testeCapacidade2ValueString = tostring(testeCapacidade2Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade2ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade2Value = testeCapacidade2Value + 3;
+                                        local testeCapacidade2ValueString = tostring(testeCapacidade2Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade2ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade2);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade3" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade3" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade3DoPersonagem); 
+                            local testeCapacidade3Value = tonumber(sheet.testeCapacidade3) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade3Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade3Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade3Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade3Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade3Value % 2 == 0 then
+                                        testeCapacidade3Value = testeCapacidade3Value + 2;
+                                        local testeCapacidade3ValueString = tostring(testeCapacidade3Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade3ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade3Value = testeCapacidade3Value + 3;
+                                        local testeCapacidade3ValueString = tostring(testeCapacidade3Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade3ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade3);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade4" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade4" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade4DoPersonagem); 
+                            local testeCapacidade4Value = tonumber(sheet.testeCapacidade4) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade4Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade4Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade4Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade4Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade4Value % 2 == 0 then
+                                        testeCapacidade4Value = testeCapacidade4Value + 2;
+                                        local testeCapacidade4ValueString = tostring(testeCapacidade4Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade4ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade4Value = testeCapacidade4Value + 3;
+                                        local testeCapacidade4ValueString = tostring(testeCapacidade4Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade4ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade4);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade5" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade5" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade5DoPersonagem); 
+                            local testeCapacidade5Value = tonumber(sheet.testeCapacidade5) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade5Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade5Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade5Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade5Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade5Value % 2 == 0 then
+                                        testeCapacidade5Value = testeCapacidade5Value + 2;
+                                        local testeCapacidade5ValueString = tostring(testeCapacidade5Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade5ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade5Value = testeCapacidade5Value + 3;
+                                        local testeCapacidade5ValueString = tostring(testeCapacidade5Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade5ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade5);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade6" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade6" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade6DoPersonagem); 
+                            local testeCapacidade6Value = tonumber(sheet.testeCapacidade6) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade6Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade6Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade6Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade6Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade6Value % 2 == 0 then
+                                        testeCapacidade6Value = testeCapacidade6Value + 2;
+                                        local testeCapacidade6ValueString = tostring(testeCapacidade6Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade6ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade6Value = testeCapacidade6Value + 3;
+                                        local testeCapacidade6ValueString = tostring(testeCapacidade6Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade6ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade6);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade7" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade7" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade7DoPersonagem); 
+                            local testeCapacidade7Value = tonumber(sheet.testeCapacidade7) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade7Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade7Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade7Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade7Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade7Value % 2 == 0 then
+                                        testeCapacidade7Value = testeCapacidade7Value + 2;
+                                        local testeCapacidade7ValueString = tostring(testeCapacidade7Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade7ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade7Value = testeCapacidade7Value + 3;
+                                        local testeCapacidade7ValueString = tostring(testeCapacidade7Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade7ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade7);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="capacidade8" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeCapacidade8" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeCapacidade8DoPersonagem); 
+                            local testeCapacidade8Value = tonumber(sheet.testeCapacidade8) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeCapacidade8Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade8Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade8Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeCapacidade8Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeCapacidade8Value % 2 == 0 then
+                                        testeCapacidade8Value = testeCapacidade8Value + 2;
+                                        local testeCapacidade8ValueString = tostring(testeCapacidade8Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade8ValueString):concatenar(rolagem);
+                                    else
+                                        testeCapacidade8Value = testeCapacidade8Value + 3;
+                                        local testeCapacidade8ValueString = tostring(testeCapacidade8Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeCapacidade8ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.capacidade8);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=4}">
+                    <label align="left" text="Movimentos Aprimorados" width="200"/>
+                    <label align="left" text="Teste" width="64" margins="{left=4}"/>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="moviApri1" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeMoviApri1" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeMoviApri1DoPersonagem); 
+                            local testeMoviApri1Value = tonumber(sheet.testeMoviApri1) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeMoviApri1Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri1Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri1Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri1Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeMoviApri1Value % 2 == 0 then
+                                        testeMoviApri1Value = testeMoviApri1Value + 2;
+                                        local testeMoviApri1ValueString = tostring(testeMoviApri1Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeMoviApri1ValueString):concatenar(rolagem);
+                                    else
+                                        testeMoviApri1Value = testeMoviApri1Value + 3;
+                                        local testeMoviApri1ValueString = tostring(testeMoviApri1Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeMoviApri1ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.MoviApri1);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=8}">
+                    <edit align="left"  horzTextAlign="leading" field="moviApri2" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeMoviApri2" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeMoviApri2DoPersonagem); 
+                            local testeMoviApri2Value = tonumber(sheet.testeMoviApri2) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeMoviApri2Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri2Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri2Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri2Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeMoviApri2Value % 2 == 0 then
+                                        testeMoviApri2Value = testeMoviApri2Value + 2;
+                                        local testeMoviApri2ValueString = tostring(testeMoviApri2Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeMoviApri2ValueString):concatenar(rolagem);
+                                    else
+                                        testeMoviApri2Value = testeMoviApri2Value + 3;
+                                        local testeMoviApri2ValueString = tostring(testeMoviApri2Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeMoviApri2ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.MoviApri2);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=8}">
+                    <edit align="left"  horzTextAlign="leading" field="moviApri3" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testeMoviApri3" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testeMoviApri3DoPersonagem); 
+                            local testeMoviApri3Value = tonumber(sheet.testeMoviApri3) or 0;
+
+
+                            if not rolagem.possuiAlgumDado then
+                                if testeMoviApri3Value == 1  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri3Value == 2  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri3Value == 3  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                elseif testeMoviApri3Value == 4  then
+                                    rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                                else
+                                    if testeMoviApri3Value % 2 == 0 then
+                                        testeMoviApri3Value = testeMoviApri3Value + 2;
+                                        local testeMoviApri3ValueString = tostring(testeMoviApri3Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeMoviApri3ValueString):concatenar(rolagem);
+                                    else
+                                        testeMoviApri3Value = testeMoviApri3Value + 3;
+                                        local testeMoviApri3ValueString = tostring(testeMoviApri3Value);
+                                        rolagem = Firecast.interpretarRolagem("1d" .. testeMoviApri3ValueString):concatenar(rolagem);
+                                    end                            
+                                end
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.MoviApri3);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+            </layout>
+            
+            <layout g="col" g-width="3" height="420" margins="{top=10}">
+                <layout g="block" height="25" class="campoInfoChar">
+                    <label align="left" text="Perícias" width="200"/>
+                    <label align="left" text="Teste" width="64" margins="{left=4}"/>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia1" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia1" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia1DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia1);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia2" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia2" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia2DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia2);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia3" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia3" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia3DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia3);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia4" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia4" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia4DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia4);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia5" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia5" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia5DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia5);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia6" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia6" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia6DoPersonagem); 
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia6);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia7" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia7" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia7DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia7);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+                    <edit align="left"  horzTextAlign="leading" field="Pericia8" width="200"/>
+                    <edit align="left"  horzTextAlign="center" field="testePericia8" class="testField"/>
+                    <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+                        <event name="onClick">
+                            local rolagem = Firecast.interpretarRolagem(sheet.testePericia8DoPersonagem);
+
+                            if not rolagem.possuiAlgumDado then
+                                rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                            end
+
+                            local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                            if mesaDoPersonagem ~= nil then
+                                    mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia8);
+                            end;
+                        </event>
+                    </button>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=32}">
+                    <label align="left" text="PC" width="24"/>
+                    <edit align="left"  horzTextAlign="leading" field="PC" width="64"/>
+                    <label align="left" text="PP" width="24" margins="{left=6}"/>
+                    <edit align="left"  horzTextAlign="leading" field="PP" width="64"/>
+                </layout>
+
+                <image left="164" top="295" width="125" height="125" src="/images/bau_ouro.png"/>
+
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=10}">
+                    <label align="left" text="PO" width="24"/>
+                    <edit align="left"  horzTextAlign="leading" field="PO" width="64"/>
+                    <label align="left" text="PL" width="24"  margins="{left=6}"/>
+                    <edit align="left"  horzTextAlign="leading" field="PL" width="64"/>
+                </layout>
+                <layout g="block" height="25" class="campoInfoChar" margins="{top=10}">
+                    <label align="left" text="DA" width="24"/>
+                    <edit align="left"  horzTextAlign="leading" field="DA" width="64"/>
+                </layout>
+            </layout>
+        </tab>
+        <tab title="Coisas">
+            <richEdit align="client" backgroundColor="white" defaultFontColor="black" field="txt"/>
+        </tab>
+        <tab title="Conhecimentos">
+            <richEdit align="client" backgroundColor="white" defaultFontColor="black" field="conhecimentos"/>
+        </tab>
+    </tabControl>
+</form>

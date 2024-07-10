@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="sheetTemplate" dataType="DATA_TYPE_AQUI" 
+    title="Dementes e Árduos" name="script">      
+
+    <!-- Começa aqui os cálculos automáticos da ficha -->
+    <dataLink fields="{'sorte', 'sorteMod'}">
+        <event name="onChange">
+            local sorteValue = sheet.sorte or 0;
+            local modValue = sheet.sorteMod or 0;                   
+
+            sheet.sorteRes = sorteValue + modValue;
+        </event>
+    </dataLink>
+    <!-- Botões das desvantagens -->
+
+</form>
