@@ -1,0 +1,177 @@
+<layout g="col" g-width="3" height="420" margins="{top=10}">
+    <layout g="block" height="25" class="campoInfoChar">
+        <label align="left" text="Perícias" width="200"/>
+        <label align="left" text="Teste" width="64" margins="{left=4}"/>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia1" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia1" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia1DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia1);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia2" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia2" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia2DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia2);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia3" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia3" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia3DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia3);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia4" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia4" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia4DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia4);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia5" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia5" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia5DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia5);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia6" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia6" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia6DoPersonagem); 
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia6);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia7" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia7" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia7DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia7);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <edit align="left"  horzTextAlign="leading" field="Pericia8" width="200"/>
+        <edit align="left"  horzTextAlign="center" field="testePericia8" class="testField"/>
+        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.testePericia8DoPersonagem);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia8);
+                end;
+            </event>
+        </button>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=32}">
+        <label align="left" text="PC" width="24"/>
+        <edit align="left"  horzTextAlign="leading" field="PC" width="64"/>
+        <label align="left" text="PP" width="24" margins="{left=6}"/>
+        <edit align="left"  horzTextAlign="leading" field="PP" width="64"/>
+    </layout>
+
+    <image left="164" top="295" width="125" height="125" src="/images/bau_ouro.png"/>
+
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=10}">
+        <label align="left" text="PO" width="24"/>
+        <edit align="left"  horzTextAlign="leading" field="PO" width="64"/>
+        <label align="left" text="PL" width="24"  margins="{left=6}"/>
+        <edit align="left"  horzTextAlign="leading" field="PL" width="64"/>
+    </layout>
+    <layout g="block" height="25" class="campoInfoChar" margins="{top=10}">
+        <label align="left" text="DA" width="24"/>
+        <edit align="left"  horzTextAlign="leading" field="DA" width="64"/>
+    </layout>
+</layout>

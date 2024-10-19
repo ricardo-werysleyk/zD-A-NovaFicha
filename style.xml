@@ -7,6 +7,8 @@
         .testField {
             width: 30;
             margins: {left=5};
+            align:  left;
+            horzTextAlign: center;
         }
 
         .testResField {
@@ -19,6 +21,23 @@
         }
         .campoInfoChar {
             width: 450;
+        }
+        .campoCapacidades{
+            width: 164;
+            align:  left;
+            horzTextAlign: leading;
+        }
+        .layoutCapacidades{
+            width: 250;
+            margins: {top=7};
+        }
+        .buttonRolar{
+            width: 40;
+            text: rolar;
+            cursor: handPoint;
+            g: block;
+            height: 25;
+            margins: {left=6};
         }
     </style>
 </form>

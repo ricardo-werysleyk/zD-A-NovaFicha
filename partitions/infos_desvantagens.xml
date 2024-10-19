@@ -1,0 +1,201 @@
+<layout g="col" g-width="4" height="420" margins="{top=10}">
+    <layout g="block" height="25" class="campoInfoChar">
+        <label align="left" text="Informações do personagem" width="300"/>
+    </layout>
+    <layout  g="block" height="25" class="campoInfoChar" margins="{top=7}">
+        <label align="left" text="Nome" width="64" hitTest="true" hint="Nome do seu personagem"/>
+        <edit align="left" horzTextAlign="leading" field="nomeChar" width="282"/>
+    </layout>
+    <layout  g="block" height="25" class="campoInfoChar"  margins="{top=6}">
+        <label align="left" text="Raça" width="64" hitTest="true" hint="Raça do seu personagem"/>
+        <edit align="left" horzTextAlign="center" field="racaChar" width="168"/>
+        <label align="left" text="Idade" width="40" hitTest="true" margins="{left=6}" hint="Idade do seu personagem"/>
+        <edit align="left" horzTextAlign="center" field="idadeChar" width="68"/>
+    </layout>
+    <layout  g="block" height="25" class="campoInfoChar" margins="{top=6}">
+        <label align="left" text="Tendência" width="64" hitTest="true" hint="Alinhamento moral do seu personagem"/>
+        <edit align="left" horzTextAlign="center" field="tendenciaChar" width="168"/>
+        <label align="left" text="Level" width="40" hitTest="true" margins="{left=6}" hint="Level do seu personagem"/>
+        <edit align="left" horzTextAlign="center" field="levelChar" width="68"/>
+    </layout>
+    <layout  g="block" height="25" class="campoInfoChar"  margins="{top=6}">
+        <label align="left" text="Atual" width="64" hitTest="true" hint="Xp atual do seu personagem"/>
+        <edit align="left"  horzTextAlign="center" field="atualXpChar" width="106"/>
+        <label align="left" text="Requer" width="64" hitTest="true" margins="{left=6}" hint="Requerimento de XP para upar"/>
+        <edit align="left" horzTextAlign="center" field="requerimentoXpChar" width="106"/>
+    </layout>
+    <layout  g="block" height="25" class="campoInfoChar"  margins="{top=6}">
+        <progressBar width="282" left="64" height="15" color="#4dff5e" min="0" field="atualXpChar" fieldMax="requerimentoXpChar"/>
+    </layout>
+    <layout  g="block" height="52" class="campoInfoChar"  margins="{top=6}">
+        <label align="left" text="Sanidade" width="64" hitTest="true" hint="Precisa de um psi,psi...doutor???"/>
+        <imageCheckBox width="52" align="left" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade1"/>
+        <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade2"/>
+        <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade3"/>
+        <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade4"/>
+        <imageCheckBox width="52" align="left" margins="{left=6}" checkedImage="/images/Caveira3.png" uncheckedImage="/images/Caveira2.png" field="sanidade5"/>
+    </layout>
+    
+
+    <tabControl g="block" width="400" height="500">
+        <layout g="block" height="25" class="campoInfoChar" margins="{top=12}">
+            <label align="right" text="Teste" width="64" margins="{right=150}"/>
+        </layout>
+        <tab title="Desvantagens 1">
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=6}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem1" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem1" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem1DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem1);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem2" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem2" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem2DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem2);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem3" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem3" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem3DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem3);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem4" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem4" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem4DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem4);
+                        end;
+                    </event>
+                </button>
+            </layout>
+        </tab>
+        <tab title="Desvantagens 2">
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=6}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem5" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem5" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem5DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem5);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem6" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem6" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem6DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem6);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem7" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem7" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem7DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem7);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
+                <edit align="left"  horzTextAlign="leading" field="desvantagem8" width="204"/>
+                <edit align="left"  horzTextAlign="center" field="testeDesvantagem8" width="64" margins="{left=6}"/>
+                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                    <event name="onClick">
+                        local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem8DoPersonagem);
+
+                        if not rolagem.possuiAlgumDado then
+                            rolagem = Firecast.interpretarRolagem("1d20");
+                        end
+
+                        local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                        if mesaDoPersonagem ~= nil then
+                                mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem8);
+                        end;
+                    </event>
+                </button>
+            </layout>
+        </tab>
+    </tabControl>
+</layout>
