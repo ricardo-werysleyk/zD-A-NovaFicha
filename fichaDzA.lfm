@@ -8,7 +8,7 @@
 
     <tabControl g="col" g-width="12" height="500">
         <tab title="Ficha">
-            
+
             <import file="./partitions/testsFisicos.xml"/>
             
             <import file="./partitions/infos_desvantagens.xml"/>

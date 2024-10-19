@@ -14,4 +14,67 @@
     </dataLink>
     <!-- Botões das desvantagens -->
 
+    <!-- Botões para capacidades -->
+
+    <script>
+            local function dadoPadrao(nome,teste, rolagemTest, modificador)
+                    local rolagem = Firecast.interpretarRolagem(sheet.rolagemTest); 
+                    local testeValue = tonumber(teste) or 0;
+                    
+                    if not rolagem.possuiAlgumDado then                        
+                        if testeValue == 1  then
+                            rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                        elseif testeValue == 2  then
+                            rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                        elseif testeValue == 3  then
+                            rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                        elseif testeValue == 4  then
+                            rolagem = Firecast.interpretarRolagem("1d6"):concatenar(rolagem);
+                        else
+                            if testeValue % 2 == 0 then
+                                testeValue = testeValue + 2;
+                                local testeValueString = tostring(testeValue);
+                                rolagem = Firecast.interpretarRolagem("1d" .. testeValueString):concatenar(rolagem);
+                            else
+                                testeValue = testeValue + 3;
+                                local testeValueString = tostring(testeValue);
+                                rolagem = Firecast.interpretarRolagem("1d" .. testeValueString):concatenar(rolagem);
+                            end               
+                        end
+                    end
+
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                    if mesaDoPersonagem ~= nil and modificador == nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, nome .. " (" .. teste .. ")");
+                    else
+                        mesaDoPersonagem.chat:rolarDados(rolagem, nome .. " (" .. teste .. ") - Mod: " .. modificador);
+                    end;
+            end;
+
+            local function dado20(nome, teste, rolagemTest)
+                local rolagem = Firecast.interpretarRolagem(sheet.rolagemTest);
+
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end
+
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+
+                if mesaDoPersonagem ~= nil and modificador == nil then
+                    mesaDoPersonagem.chat:rolarDados(rolagem, nome .. " (" .. teste .. ")");
+                end;
+            end;
+
+            local function exibirMensagem()        
+                    local texto = "";
+
+                    for i = 1, 5, 1 do
+                        texto = texto .. "Linha " .. i .. "\n";
+                    end;                   
+
+                    showMessage(texto);
+            end;
+    </script>
+
 </form>

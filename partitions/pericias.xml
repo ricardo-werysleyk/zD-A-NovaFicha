@@ -8,16 +8,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia1" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia1DoPersonagem);
+                local teste = tonumber(sheet.testePericia1) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia1);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
                 end;
             </event>
         </button>
@@ -27,16 +23,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia2" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia2DoPersonagem);
+                local teste = tonumber(sheet.testePericia2) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia2);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia2, sheet.testePericia2DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia2, sheet.testePericia2DoPersonagem);
                 end;
             </event>
         </button>
@@ -46,16 +38,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia3" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia3DoPersonagem);
+                local teste = tonumber(sheet.testePericia3) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia3);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia3, sheet.testePericia3DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia3, sheet.testePericia3DoPersonagem);
                 end;
             </event>
         </button>
@@ -65,16 +53,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia4" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia4DoPersonagem);
+                local teste = tonumber(sheet.testePericia4) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia4);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia4, sheet.testePericia4DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia4, sheet.testePericia4DoPersonagem);
                 end;
             </event>
         </button>
@@ -84,16 +68,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia5" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia5DoPersonagem);
+                local teste = tonumber(sheet.testePericia5) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia5);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia5, sheet.testePericia5DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia5, sheet.testePericia5DoPersonagem);
                 end;
             </event>
         </button>
@@ -103,16 +83,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia6" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia6DoPersonagem); 
+                local teste = tonumber(sheet.testePericia6) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia6);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia6, sheet.testePericia6DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia6, sheet.testePericia6DoPersonagem);
                 end;
             </event>
         </button>
@@ -122,16 +98,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia7" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia7DoPersonagem);
+                local teste = tonumber(sheet.testePericia7) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia7);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia7, sheet.testePericia7DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia7, sheet.testePericia7DoPersonagem);
                 end;
             </event>
         </button>
@@ -141,16 +113,12 @@
         <edit align="left"  horzTextAlign="center" field="testePericia8" class="testField"/>
         <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
             <event name="onClick">
-                local rolagem = Firecast.interpretarRolagem(sheet.testePericia8DoPersonagem);
+                local teste = tonumber(sheet.testePericia8) or 0;
 
-                if not rolagem.possuiAlgumDado then
-                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
-                end
-
-                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-
-                if mesaDoPersonagem ~= nil then
-                        mesaDoPersonagem.chat:rolarDados(rolagem, sheet.Pericia8);
+                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                    dado20(sheet.Pericia1, sheet.testePericia8, sheet.testePericia8DoPersonagem);
+                else
+                    dadoPadrao(sheet.Pericia1, sheet.testePericia8, sheet.testePericia8DoPersonagem);
                 end;
             </event>
         </button>
