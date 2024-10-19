@@ -8,7 +8,7 @@
         <label align="left" text="Sorte" width="40" hitTest="true" hint="Quão cagado tu és"/>
         <edit align="left" horzTextAlign="center" field="sorte" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="sorteMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 local rolagem = Firecast.interpretarRolagem(sheet.sorteDoPersonagem); 
 
@@ -28,7 +28,7 @@
         <label align="left" text="Vital" width="40" hitTest="true" hint="Quantidade de energia vital"/>
         <edit align="left" horzTextAlign="center" field="vital" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="vitalMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Vital", sheet.vital, sheet.vitalDoPersonagem, sheet.vitalMod);
             </event>
@@ -38,7 +38,7 @@
         <label align="left" text="Adre" width="40" hitTest="true" hint="Habilidade de reação"/>
         <edit align="left" horzTextAlign="center" field="adrenalina" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="adrenalinaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Adrenalina", sheet.adrenalina, sheet.adrenalinaDoPersonagem, sheet.adrenalinaMod);
             </event>
@@ -48,7 +48,7 @@
         <label align="left" text="Ataq" width="40" hitTest="true" hint="Sucesso do seu ataque"/>
         <edit align="left" horzTextAlign="center" field="ataque" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="ataqueMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Ataque", sheet.ataque, sheet.ataqueDoPersonagem, sheet.ataqueMod);
             </event>
@@ -58,7 +58,7 @@
         <label align="left" text="Defe" width="40" hitTest="true" hint="Sucesso da sua defesa"/>
         <edit align="left" horzTextAlign="center" field="defesa" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="defesaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Defesa", sheet.defesa, sheet.defesaDoPersonagem, sheet.defesaMod);
             </event>
@@ -68,7 +68,7 @@
         <label align="left" text="Dest" width="40" hitTest="true" hint="Define a precisão de suas ações"/>
         <edit align="left" horzTextAlign="center" field="destreza" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="destrezaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Destreza", sheet.destreza, sheet.destrezaDoPersonagem, sheet.destrezaMod);
             </event>
@@ -78,7 +78,7 @@
         <label align="left" text="Força" width="40" hitTest="true" hint="Habilidade de vencer a inércia"/>
         <edit align="left" horzTextAlign="center" field="forca" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="forcaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Força", sheet.forca, sheet.forcaDoPersonagem, sheet.forcaMod);
             </event>
@@ -88,7 +88,7 @@
         <label align="left" text="Inte" width="40" hitTest="true" hint="Conhecimentos acadêmicos"/>
         <edit align="left" horzTextAlign="center" field="inteligencia" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="inteligenciaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Inteligencia", sheet.inteligencia, sheet.inteligenciaDoPersonagem, sheet.inteligenciaMod);
             </event>
@@ -98,7 +98,7 @@
         <label align="left" text="Resis" width="40" hitTest="true" hint="Resiliência do seu personagem"/>
         <edit align="left" horzTextAlign="center" field="resistencia" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="resistenciaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Resistência", sheet.resistencia, sheet.resistenciaDoPersonagem, sheet.resistenciaMod);
             </event>
@@ -108,7 +108,7 @@
         <label align="left" text="Sabe" width="40" hitTest="true" hint="Experiência de vida"/>
         <edit align="left" horzTextAlign="center" field="sabedoria" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="sabedoriaMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Sabedoria", sheet.sabedoria, sheet.sabedoriaDoPersonagem, sheet.sabedoriaMod);
             </event>
@@ -118,7 +118,7 @@
         <label align="left" text="Velo" width="40" hitTest="true" hint="Velocidade que seu personagem executa ações"/>
         <edit align="left" horzTextAlign="center" field="velocidade" class="testField"/>   
         <edit align="left" horzTextAlign="center" field="velocidadeMod" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
+        <button class="buttonRolar">
             <event name="onClick">
                 dadoPadrao("Velocidade", sheet.velocidade, sheet.velocidadeDoPersonagem, sheet.velocidadeMod);
             </event>

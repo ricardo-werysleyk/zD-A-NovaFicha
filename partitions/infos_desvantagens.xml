@@ -45,7 +45,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=6}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem1" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem1" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem1) or 0;
 
@@ -60,7 +60,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem2" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem2" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem2) or 0;
 
@@ -75,7 +75,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem3" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem3" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem3) or 0;
 
@@ -90,7 +90,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem4" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem4" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem4) or 0;
 
@@ -107,7 +107,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=6}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem5" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem5" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem5) or 0;
 
@@ -122,7 +122,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem6" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem6" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem6) or 0;
 
@@ -137,7 +137,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem7" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem7" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem7) or 0;
 
@@ -152,7 +152,7 @@
             <layout g="block" height="25" class="campoInfoChar" margins="{top=9}">
                 <edit align="left"  horzTextAlign="leading" field="desvantagem8" width="204"/>
                 <edit align="left"  horzTextAlign="center" field="testeDesvantagem8" width="64" margins="{left=6}"/>
-                <button text="Rolar" g="block" height="25" margins="{left=8}" width="64">
+                <button class="buttonRolar">
                     <event name="onClick">
                         local teste = tonumber(sheet.testeDesvantagem8) or 0;
 

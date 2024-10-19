@@ -208,12 +208,13 @@ local function constructNew_DzA()
 
     obj.button1 = GUI.fromHandle(_obj_newObject("button"));
     obj.button1:setParent(obj.layout3);
-    obj.button1:setText("Rolar");
+    obj.button1:setName("button1");
+    obj.button1:setWidth(40);
+    obj.button1:setText("rolar");
+    obj.button1:setCursor("handPoint");
     obj.button1.grid.role = "block";
     obj.button1:setHeight(25);
     obj.button1:setMargins({left=6});
-    obj.button1:setWidth(40);
-    obj.button1:setName("button1");
 
     obj.layout4 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout4:setParent(obj.layout1);
@@ -254,12 +255,13 @@ local function constructNew_DzA()
 
     obj.button2 = GUI.fromHandle(_obj_newObject("button"));
     obj.button2:setParent(obj.layout4);
-    obj.button2:setText("Rolar");
+    obj.button2:setName("button2");
+    obj.button2:setWidth(40);
+    obj.button2:setText("rolar");
+    obj.button2:setCursor("handPoint");
     obj.button2.grid.role = "block";
     obj.button2:setHeight(25);
     obj.button2:setMargins({left=6});
-    obj.button2:setWidth(40);
-    obj.button2:setName("button2");
 
     obj.layout5 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout5:setParent(obj.layout1);
@@ -300,12 +302,13 @@ local function constructNew_DzA()
 
     obj.button3 = GUI.fromHandle(_obj_newObject("button"));
     obj.button3:setParent(obj.layout5);
-    obj.button3:setText("Rolar");
+    obj.button3:setName("button3");
+    obj.button3:setWidth(40);
+    obj.button3:setText("rolar");
+    obj.button3:setCursor("handPoint");
     obj.button3.grid.role = "block";
     obj.button3:setHeight(25);
     obj.button3:setMargins({left=6});
-    obj.button3:setWidth(40);
-    obj.button3:setName("button3");
 
     obj.layout6 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout6:setParent(obj.layout1);
@@ -346,12 +349,13 @@ local function constructNew_DzA()
 
     obj.button4 = GUI.fromHandle(_obj_newObject("button"));
     obj.button4:setParent(obj.layout6);
-    obj.button4:setText("Rolar");
+    obj.button4:setName("button4");
+    obj.button4:setWidth(40);
+    obj.button4:setText("rolar");
+    obj.button4:setCursor("handPoint");
     obj.button4.grid.role = "block";
     obj.button4:setHeight(25);
     obj.button4:setMargins({left=6});
-    obj.button4:setWidth(40);
-    obj.button4:setName("button4");
 
     obj.layout7 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout7:setParent(obj.layout1);
@@ -392,12 +396,13 @@ local function constructNew_DzA()
 
     obj.button5 = GUI.fromHandle(_obj_newObject("button"));
     obj.button5:setParent(obj.layout7);
-    obj.button5:setText("Rolar");
+    obj.button5:setName("button5");
+    obj.button5:setWidth(40);
+    obj.button5:setText("rolar");
+    obj.button5:setCursor("handPoint");
     obj.button5.grid.role = "block";
     obj.button5:setHeight(25);
     obj.button5:setMargins({left=6});
-    obj.button5:setWidth(40);
-    obj.button5:setName("button5");
 
     obj.layout8 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout8:setParent(obj.layout1);
@@ -438,12 +443,13 @@ local function constructNew_DzA()
 
     obj.button6 = GUI.fromHandle(_obj_newObject("button"));
     obj.button6:setParent(obj.layout8);
-    obj.button6:setText("Rolar");
+    obj.button6:setName("button6");
+    obj.button6:setWidth(40);
+    obj.button6:setText("rolar");
+    obj.button6:setCursor("handPoint");
     obj.button6.grid.role = "block";
     obj.button6:setHeight(25);
     obj.button6:setMargins({left=6});
-    obj.button6:setWidth(40);
-    obj.button6:setName("button6");
 
     obj.layout9 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout9:setParent(obj.layout1);
@@ -484,12 +490,13 @@ local function constructNew_DzA()
 
     obj.button7 = GUI.fromHandle(_obj_newObject("button"));
     obj.button7:setParent(obj.layout9);
-    obj.button7:setText("Rolar");
+    obj.button7:setName("button7");
+    obj.button7:setWidth(40);
+    obj.button7:setText("rolar");
+    obj.button7:setCursor("handPoint");
     obj.button7.grid.role = "block";
     obj.button7:setHeight(25);
     obj.button7:setMargins({left=6});
-    obj.button7:setWidth(40);
-    obj.button7:setName("button7");
 
     obj.layout10 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout10:setParent(obj.layout1);
@@ -530,12 +537,13 @@ local function constructNew_DzA()
 
     obj.button8 = GUI.fromHandle(_obj_newObject("button"));
     obj.button8:setParent(obj.layout10);
-    obj.button8:setText("Rolar");
+    obj.button8:setName("button8");
+    obj.button8:setWidth(40);
+    obj.button8:setText("rolar");
+    obj.button8:setCursor("handPoint");
     obj.button8.grid.role = "block";
     obj.button8:setHeight(25);
     obj.button8:setMargins({left=6});
-    obj.button8:setWidth(40);
-    obj.button8:setName("button8");
 
     obj.layout11 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout11:setParent(obj.layout1);
@@ -576,12 +584,13 @@ local function constructNew_DzA()
 
     obj.button9 = GUI.fromHandle(_obj_newObject("button"));
     obj.button9:setParent(obj.layout11);
-    obj.button9:setText("Rolar");
+    obj.button9:setName("button9");
+    obj.button9:setWidth(40);
+    obj.button9:setText("rolar");
+    obj.button9:setCursor("handPoint");
     obj.button9.grid.role = "block";
     obj.button9:setHeight(25);
     obj.button9:setMargins({left=6});
-    obj.button9:setWidth(40);
-    obj.button9:setName("button9");
 
     obj.layout12 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout12:setParent(obj.layout1);
@@ -622,12 +631,13 @@ local function constructNew_DzA()
 
     obj.button10 = GUI.fromHandle(_obj_newObject("button"));
     obj.button10:setParent(obj.layout12);
-    obj.button10:setText("Rolar");
+    obj.button10:setName("button10");
+    obj.button10:setWidth(40);
+    obj.button10:setText("rolar");
+    obj.button10:setCursor("handPoint");
     obj.button10.grid.role = "block";
     obj.button10:setHeight(25);
     obj.button10:setMargins({left=6});
-    obj.button10:setWidth(40);
-    obj.button10:setName("button10");
 
     obj.layout13 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout13:setParent(obj.layout1);
@@ -668,12 +678,13 @@ local function constructNew_DzA()
 
     obj.button11 = GUI.fromHandle(_obj_newObject("button"));
     obj.button11:setParent(obj.layout13);
-    obj.button11:setText("Rolar");
+    obj.button11:setName("button11");
+    obj.button11:setWidth(40);
+    obj.button11:setText("rolar");
+    obj.button11:setCursor("handPoint");
     obj.button11.grid.role = "block";
     obj.button11:setHeight(25);
     obj.button11:setMargins({left=6});
-    obj.button11:setWidth(40);
-    obj.button11:setName("button11");
 
     obj.layout14 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout14:setParent(obj.tab1);
@@ -991,12 +1002,13 @@ local function constructNew_DzA()
 
     obj.button12 = GUI.fromHandle(_obj_newObject("button"));
     obj.button12:setParent(obj.layout23);
-    obj.button12:setText("Rolar");
+    obj.button12:setName("button12");
+    obj.button12:setWidth(40);
+    obj.button12:setText("rolar");
+    obj.button12:setCursor("handPoint");
     obj.button12.grid.role = "block";
     obj.button12:setHeight(25);
-    obj.button12:setMargins({left=8});
-    obj.button12:setWidth(64);
-    obj.button12:setName("button12");
+    obj.button12:setMargins({left=6});
 
     obj.layout24 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout24:setParent(obj.tab2);
@@ -1025,12 +1037,13 @@ local function constructNew_DzA()
 
     obj.button13 = GUI.fromHandle(_obj_newObject("button"));
     obj.button13:setParent(obj.layout24);
-    obj.button13:setText("Rolar");
+    obj.button13:setName("button13");
+    obj.button13:setWidth(40);
+    obj.button13:setText("rolar");
+    obj.button13:setCursor("handPoint");
     obj.button13.grid.role = "block";
     obj.button13:setHeight(25);
-    obj.button13:setMargins({left=8});
-    obj.button13:setWidth(64);
-    obj.button13:setName("button13");
+    obj.button13:setMargins({left=6});
 
     obj.layout25 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout25:setParent(obj.tab2);
@@ -1059,12 +1072,13 @@ local function constructNew_DzA()
 
     obj.button14 = GUI.fromHandle(_obj_newObject("button"));
     obj.button14:setParent(obj.layout25);
-    obj.button14:setText("Rolar");
+    obj.button14:setName("button14");
+    obj.button14:setWidth(40);
+    obj.button14:setText("rolar");
+    obj.button14:setCursor("handPoint");
     obj.button14.grid.role = "block";
     obj.button14:setHeight(25);
-    obj.button14:setMargins({left=8});
-    obj.button14:setWidth(64);
-    obj.button14:setName("button14");
+    obj.button14:setMargins({left=6});
 
     obj.layout26 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout26:setParent(obj.tab2);
@@ -1093,12 +1107,13 @@ local function constructNew_DzA()
 
     obj.button15 = GUI.fromHandle(_obj_newObject("button"));
     obj.button15:setParent(obj.layout26);
-    obj.button15:setText("Rolar");
+    obj.button15:setName("button15");
+    obj.button15:setWidth(40);
+    obj.button15:setText("rolar");
+    obj.button15:setCursor("handPoint");
     obj.button15.grid.role = "block";
     obj.button15:setHeight(25);
-    obj.button15:setMargins({left=8});
-    obj.button15:setWidth(64);
-    obj.button15:setName("button15");
+    obj.button15:setMargins({left=6});
 
     obj.tab3 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab3:setParent(obj.tabControl2);
@@ -1132,12 +1147,13 @@ local function constructNew_DzA()
 
     obj.button16 = GUI.fromHandle(_obj_newObject("button"));
     obj.button16:setParent(obj.layout27);
-    obj.button16:setText("Rolar");
+    obj.button16:setName("button16");
+    obj.button16:setWidth(40);
+    obj.button16:setText("rolar");
+    obj.button16:setCursor("handPoint");
     obj.button16.grid.role = "block";
     obj.button16:setHeight(25);
-    obj.button16:setMargins({left=8});
-    obj.button16:setWidth(64);
-    obj.button16:setName("button16");
+    obj.button16:setMargins({left=6});
 
     obj.layout28 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout28:setParent(obj.tab3);
@@ -1166,12 +1182,13 @@ local function constructNew_DzA()
 
     obj.button17 = GUI.fromHandle(_obj_newObject("button"));
     obj.button17:setParent(obj.layout28);
-    obj.button17:setText("Rolar");
+    obj.button17:setName("button17");
+    obj.button17:setWidth(40);
+    obj.button17:setText("rolar");
+    obj.button17:setCursor("handPoint");
     obj.button17.grid.role = "block";
     obj.button17:setHeight(25);
-    obj.button17:setMargins({left=8});
-    obj.button17:setWidth(64);
-    obj.button17:setName("button17");
+    obj.button17:setMargins({left=6});
 
     obj.layout29 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout29:setParent(obj.tab3);
@@ -1200,12 +1217,13 @@ local function constructNew_DzA()
 
     obj.button18 = GUI.fromHandle(_obj_newObject("button"));
     obj.button18:setParent(obj.layout29);
-    obj.button18:setText("Rolar");
+    obj.button18:setName("button18");
+    obj.button18:setWidth(40);
+    obj.button18:setText("rolar");
+    obj.button18:setCursor("handPoint");
     obj.button18.grid.role = "block";
     obj.button18:setHeight(25);
-    obj.button18:setMargins({left=8});
-    obj.button18:setWidth(64);
-    obj.button18:setName("button18");
+    obj.button18:setMargins({left=6});
 
     obj.layout30 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout30:setParent(obj.tab3);
@@ -1234,12 +1252,13 @@ local function constructNew_DzA()
 
     obj.button19 = GUI.fromHandle(_obj_newObject("button"));
     obj.button19:setParent(obj.layout30);
-    obj.button19:setText("Rolar");
+    obj.button19:setName("button19");
+    obj.button19:setWidth(40);
+    obj.button19:setText("rolar");
+    obj.button19:setCursor("handPoint");
     obj.button19.grid.role = "block";
     obj.button19:setHeight(25);
-    obj.button19:setMargins({left=8});
-    obj.button19:setWidth(64);
-    obj.button19:setName("button19");
+    obj.button19:setMargins({left=6});
 
     obj.layout31 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout31:setParent(obj.tab1);
@@ -2152,8 +2171,20 @@ local function constructNew_DzA()
     obj.layout60:setMargins({top=10});
     obj.layout60:setName("layout60");
 
+    obj.tabControl4 = GUI.fromHandle(_obj_newObject("tabControl"));
+    obj.tabControl4:setParent(obj.layout60);
+    obj.tabControl4.grid.role = "col";
+    obj.tabControl4.grid.width = 12;
+    obj.tabControl4:setHeight(320);
+    obj.tabControl4:setName("tabControl4");
+
+    obj.tab6 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab6:setParent(obj.tabControl4);
+    obj.tab6:setTitle("Aba de perícias 1");
+    obj.tab6:setName("tab6");
+
     obj.layout61 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout61:setParent(obj.layout60);
+    obj.layout61:setParent(obj.tab6);
     obj.layout61.grid.role = "block";
     obj.layout61:setHeight(25);
     obj.layout61:setName("layout61");
@@ -2163,7 +2194,7 @@ local function constructNew_DzA()
     obj.label33:setParent(obj.layout61);
     obj.label33:setAlign("left");
     obj.label33:setText("Perícias");
-    obj.label33:setWidth(200);
+    obj.label33:setWidth(124);
     obj.label33:setName("label33");
 
     obj.label34 = GUI.fromHandle(_obj_newObject("label"));
@@ -2171,319 +2202,634 @@ local function constructNew_DzA()
     obj.label34:setAlign("left");
     obj.label34:setText("Teste");
     obj.label34:setWidth(64);
-    obj.label34:setMargins({left=4});
+    obj.label34:setMargins({left=45});
     obj.label34:setName("label34");
 
     obj.layout62 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout62:setParent(obj.layout60);
+    obj.layout62:setParent(obj.tab6);
     obj.layout62.grid.role = "block";
     obj.layout62:setHeight(25);
-    obj.layout62:setMargins({top=7});
     obj.layout62:setName("layout62");
-    obj.layout62:setWidth(450);
+    obj.layout62:setWidth(250);
+    obj.layout62:setMargins({top=7});
 
     obj.edit90 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit90:setParent(obj.layout62);
+    obj.edit90:setField("Pericia1");
+    obj.edit90:setName("edit90");
+    obj.edit90:setWidth(164);
     obj.edit90:setAlign("left");
     obj.edit90:setHorzTextAlign("leading");
-    obj.edit90:setField("Pericia1");
-    obj.edit90:setWidth(200);
-    obj.edit90:setName("edit90");
 
     obj.edit91 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit91:setParent(obj.layout62);
-    obj.edit91:setAlign("left");
-    obj.edit91:setHorzTextAlign("center");
     obj.edit91:setField("testePericia1");
     obj.edit91:setName("edit91");
     obj.edit91:setWidth(30);
     obj.edit91:setMargins({left=5});
+    obj.edit91:setAlign("left");
+    obj.edit91:setHorzTextAlign("center");
 
     obj.button42 = GUI.fromHandle(_obj_newObject("button"));
     obj.button42:setParent(obj.layout62);
-    obj.button42:setText("Rolar");
+    obj.button42:setName("button42");
+    obj.button42:setWidth(40);
+    obj.button42:setText("rolar");
+    obj.button42:setCursor("handPoint");
     obj.button42.grid.role = "block";
     obj.button42:setHeight(25);
     obj.button42:setMargins({left=6});
-    obj.button42:setWidth(40);
-    obj.button42:setName("button42");
 
     obj.layout63 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout63:setParent(obj.layout60);
+    obj.layout63:setParent(obj.tab6);
     obj.layout63.grid.role = "block";
     obj.layout63:setHeight(25);
-    obj.layout63:setMargins({top=7});
     obj.layout63:setName("layout63");
-    obj.layout63:setWidth(450);
+    obj.layout63:setWidth(250);
+    obj.layout63:setMargins({top=7});
 
     obj.edit92 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit92:setParent(obj.layout63);
+    obj.edit92:setField("Pericia2");
+    obj.edit92:setName("edit92");
+    obj.edit92:setWidth(164);
     obj.edit92:setAlign("left");
     obj.edit92:setHorzTextAlign("leading");
-    obj.edit92:setField("Pericia2");
-    obj.edit92:setWidth(200);
-    obj.edit92:setName("edit92");
 
     obj.edit93 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit93:setParent(obj.layout63);
-    obj.edit93:setAlign("left");
-    obj.edit93:setHorzTextAlign("center");
     obj.edit93:setField("testePericia2");
     obj.edit93:setName("edit93");
     obj.edit93:setWidth(30);
     obj.edit93:setMargins({left=5});
+    obj.edit93:setAlign("left");
+    obj.edit93:setHorzTextAlign("center");
 
     obj.button43 = GUI.fromHandle(_obj_newObject("button"));
     obj.button43:setParent(obj.layout63);
-    obj.button43:setText("Rolar");
+    obj.button43:setName("button43");
+    obj.button43:setWidth(40);
+    obj.button43:setText("rolar");
+    obj.button43:setCursor("handPoint");
     obj.button43.grid.role = "block";
     obj.button43:setHeight(25);
     obj.button43:setMargins({left=6});
-    obj.button43:setWidth(40);
-    obj.button43:setName("button43");
 
     obj.layout64 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout64:setParent(obj.layout60);
+    obj.layout64:setParent(obj.tab6);
     obj.layout64.grid.role = "block";
     obj.layout64:setHeight(25);
-    obj.layout64:setMargins({top=7});
     obj.layout64:setName("layout64");
-    obj.layout64:setWidth(450);
+    obj.layout64:setWidth(250);
+    obj.layout64:setMargins({top=7});
 
     obj.edit94 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit94:setParent(obj.layout64);
+    obj.edit94:setField("Pericia3");
+    obj.edit94:setName("edit94");
+    obj.edit94:setWidth(164);
     obj.edit94:setAlign("left");
     obj.edit94:setHorzTextAlign("leading");
-    obj.edit94:setField("Pericia3");
-    obj.edit94:setWidth(200);
-    obj.edit94:setName("edit94");
 
     obj.edit95 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit95:setParent(obj.layout64);
-    obj.edit95:setAlign("left");
-    obj.edit95:setHorzTextAlign("center");
     obj.edit95:setField("testePericia3");
     obj.edit95:setName("edit95");
     obj.edit95:setWidth(30);
     obj.edit95:setMargins({left=5});
+    obj.edit95:setAlign("left");
+    obj.edit95:setHorzTextAlign("center");
 
     obj.button44 = GUI.fromHandle(_obj_newObject("button"));
     obj.button44:setParent(obj.layout64);
-    obj.button44:setText("Rolar");
+    obj.button44:setName("button44");
+    obj.button44:setWidth(40);
+    obj.button44:setText("rolar");
+    obj.button44:setCursor("handPoint");
     obj.button44.grid.role = "block";
     obj.button44:setHeight(25);
     obj.button44:setMargins({left=6});
-    obj.button44:setWidth(40);
-    obj.button44:setName("button44");
 
     obj.layout65 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout65:setParent(obj.layout60);
+    obj.layout65:setParent(obj.tab6);
     obj.layout65.grid.role = "block";
     obj.layout65:setHeight(25);
-    obj.layout65:setMargins({top=7});
     obj.layout65:setName("layout65");
-    obj.layout65:setWidth(450);
+    obj.layout65:setWidth(250);
+    obj.layout65:setMargins({top=7});
 
     obj.edit96 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit96:setParent(obj.layout65);
+    obj.edit96:setField("Pericia4");
+    obj.edit96:setName("edit96");
+    obj.edit96:setWidth(164);
     obj.edit96:setAlign("left");
     obj.edit96:setHorzTextAlign("leading");
-    obj.edit96:setField("Pericia4");
-    obj.edit96:setWidth(200);
-    obj.edit96:setName("edit96");
 
     obj.edit97 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit97:setParent(obj.layout65);
-    obj.edit97:setAlign("left");
-    obj.edit97:setHorzTextAlign("center");
     obj.edit97:setField("testePericia4");
     obj.edit97:setName("edit97");
     obj.edit97:setWidth(30);
     obj.edit97:setMargins({left=5});
+    obj.edit97:setAlign("left");
+    obj.edit97:setHorzTextAlign("center");
 
     obj.button45 = GUI.fromHandle(_obj_newObject("button"));
     obj.button45:setParent(obj.layout65);
-    obj.button45:setText("Rolar");
+    obj.button45:setName("button45");
+    obj.button45:setWidth(40);
+    obj.button45:setText("rolar");
+    obj.button45:setCursor("handPoint");
     obj.button45.grid.role = "block";
     obj.button45:setHeight(25);
     obj.button45:setMargins({left=6});
-    obj.button45:setWidth(40);
-    obj.button45:setName("button45");
 
     obj.layout66 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout66:setParent(obj.layout60);
+    obj.layout66:setParent(obj.tab6);
     obj.layout66.grid.role = "block";
     obj.layout66:setHeight(25);
-    obj.layout66:setMargins({top=7});
     obj.layout66:setName("layout66");
-    obj.layout66:setWidth(450);
+    obj.layout66:setWidth(250);
+    obj.layout66:setMargins({top=7});
 
     obj.edit98 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit98:setParent(obj.layout66);
+    obj.edit98:setField("Pericia5");
+    obj.edit98:setName("edit98");
+    obj.edit98:setWidth(164);
     obj.edit98:setAlign("left");
     obj.edit98:setHorzTextAlign("leading");
-    obj.edit98:setField("Pericia5");
-    obj.edit98:setWidth(200);
-    obj.edit98:setName("edit98");
 
     obj.edit99 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit99:setParent(obj.layout66);
-    obj.edit99:setAlign("left");
-    obj.edit99:setHorzTextAlign("center");
     obj.edit99:setField("testePericia5");
     obj.edit99:setName("edit99");
     obj.edit99:setWidth(30);
     obj.edit99:setMargins({left=5});
+    obj.edit99:setAlign("left");
+    obj.edit99:setHorzTextAlign("center");
 
     obj.button46 = GUI.fromHandle(_obj_newObject("button"));
     obj.button46:setParent(obj.layout66);
-    obj.button46:setText("Rolar");
+    obj.button46:setName("button46");
+    obj.button46:setWidth(40);
+    obj.button46:setText("rolar");
+    obj.button46:setCursor("handPoint");
     obj.button46.grid.role = "block";
     obj.button46:setHeight(25);
     obj.button46:setMargins({left=6});
-    obj.button46:setWidth(40);
-    obj.button46:setName("button46");
 
     obj.layout67 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout67:setParent(obj.layout60);
+    obj.layout67:setParent(obj.tab6);
     obj.layout67.grid.role = "block";
     obj.layout67:setHeight(25);
-    obj.layout67:setMargins({top=7});
     obj.layout67:setName("layout67");
-    obj.layout67:setWidth(450);
+    obj.layout67:setWidth(250);
+    obj.layout67:setMargins({top=7});
 
     obj.edit100 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit100:setParent(obj.layout67);
+    obj.edit100:setField("Pericia6");
+    obj.edit100:setName("edit100");
+    obj.edit100:setWidth(164);
     obj.edit100:setAlign("left");
     obj.edit100:setHorzTextAlign("leading");
-    obj.edit100:setField("Pericia6");
-    obj.edit100:setWidth(200);
-    obj.edit100:setName("edit100");
 
     obj.edit101 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit101:setParent(obj.layout67);
-    obj.edit101:setAlign("left");
-    obj.edit101:setHorzTextAlign("center");
     obj.edit101:setField("testePericia6");
     obj.edit101:setName("edit101");
     obj.edit101:setWidth(30);
     obj.edit101:setMargins({left=5});
+    obj.edit101:setAlign("left");
+    obj.edit101:setHorzTextAlign("center");
 
     obj.button47 = GUI.fromHandle(_obj_newObject("button"));
     obj.button47:setParent(obj.layout67);
-    obj.button47:setText("Rolar");
+    obj.button47:setName("button47");
+    obj.button47:setWidth(40);
+    obj.button47:setText("rolar");
+    obj.button47:setCursor("handPoint");
     obj.button47.grid.role = "block";
     obj.button47:setHeight(25);
     obj.button47:setMargins({left=6});
-    obj.button47:setWidth(40);
-    obj.button47:setName("button47");
 
     obj.layout68 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout68:setParent(obj.layout60);
+    obj.layout68:setParent(obj.tab6);
     obj.layout68.grid.role = "block";
     obj.layout68:setHeight(25);
-    obj.layout68:setMargins({top=7});
     obj.layout68:setName("layout68");
-    obj.layout68:setWidth(450);
+    obj.layout68:setWidth(250);
+    obj.layout68:setMargins({top=7});
 
     obj.edit102 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit102:setParent(obj.layout68);
+    obj.edit102:setField("Pericia7");
+    obj.edit102:setName("edit102");
+    obj.edit102:setWidth(164);
     obj.edit102:setAlign("left");
     obj.edit102:setHorzTextAlign("leading");
-    obj.edit102:setField("Pericia7");
-    obj.edit102:setWidth(200);
-    obj.edit102:setName("edit102");
 
     obj.edit103 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit103:setParent(obj.layout68);
-    obj.edit103:setAlign("left");
-    obj.edit103:setHorzTextAlign("center");
     obj.edit103:setField("testePericia7");
     obj.edit103:setName("edit103");
     obj.edit103:setWidth(30);
     obj.edit103:setMargins({left=5});
+    obj.edit103:setAlign("left");
+    obj.edit103:setHorzTextAlign("center");
 
     obj.button48 = GUI.fromHandle(_obj_newObject("button"));
     obj.button48:setParent(obj.layout68);
-    obj.button48:setText("Rolar");
+    obj.button48:setName("button48");
+    obj.button48:setWidth(40);
+    obj.button48:setText("rolar");
+    obj.button48:setCursor("handPoint");
     obj.button48.grid.role = "block";
     obj.button48:setHeight(25);
     obj.button48:setMargins({left=6});
-    obj.button48:setWidth(40);
-    obj.button48:setName("button48");
 
     obj.layout69 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout69:setParent(obj.layout60);
+    obj.layout69:setParent(obj.tab6);
     obj.layout69.grid.role = "block";
     obj.layout69:setHeight(25);
-    obj.layout69:setMargins({top=7});
     obj.layout69:setName("layout69");
-    obj.layout69:setWidth(450);
+    obj.layout69:setWidth(250);
+    obj.layout69:setMargins({top=7});
 
     obj.edit104 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit104:setParent(obj.layout69);
+    obj.edit104:setField("Pericia8");
+    obj.edit104:setName("edit104");
+    obj.edit104:setWidth(164);
     obj.edit104:setAlign("left");
     obj.edit104:setHorzTextAlign("leading");
-    obj.edit104:setField("Pericia8");
-    obj.edit104:setWidth(200);
-    obj.edit104:setName("edit104");
 
     obj.edit105 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit105:setParent(obj.layout69);
-    obj.edit105:setAlign("left");
-    obj.edit105:setHorzTextAlign("center");
     obj.edit105:setField("testePericia8");
     obj.edit105:setName("edit105");
     obj.edit105:setWidth(30);
     obj.edit105:setMargins({left=5});
+    obj.edit105:setAlign("left");
+    obj.edit105:setHorzTextAlign("center");
 
     obj.button49 = GUI.fromHandle(_obj_newObject("button"));
     obj.button49:setParent(obj.layout69);
-    obj.button49:setText("Rolar");
+    obj.button49:setName("button49");
+    obj.button49:setWidth(40);
+    obj.button49:setText("rolar");
+    obj.button49:setCursor("handPoint");
     obj.button49.grid.role = "block";
     obj.button49:setHeight(25);
     obj.button49:setMargins({left=6});
-    obj.button49:setWidth(40);
-    obj.button49:setName("button49");
+
+    obj.tab7 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab7:setParent(obj.tabControl4);
+    obj.tab7:setTitle("Aba de perícias 2");
+    obj.tab7:setName("tab7");
 
     obj.layout70 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout70:setParent(obj.layout60);
+    obj.layout70:setParent(obj.tab7);
     obj.layout70.grid.role = "block";
     obj.layout70:setHeight(25);
-    obj.layout70:setMargins({top=32});
     obj.layout70:setName("layout70");
     obj.layout70:setWidth(450);
 
     obj.label35 = GUI.fromHandle(_obj_newObject("label"));
     obj.label35:setParent(obj.layout70);
     obj.label35:setAlign("left");
-    obj.label35:setText("PC");
-    obj.label35:setWidth(24);
+    obj.label35:setText("Perícias");
+    obj.label35:setWidth(124);
     obj.label35:setName("label35");
-
-    obj.edit106 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit106:setParent(obj.layout70);
-    obj.edit106:setAlign("left");
-    obj.edit106:setHorzTextAlign("leading");
-    obj.edit106:setField("PC");
-    obj.edit106:setWidth(64);
-    obj.edit106:setName("edit106");
 
     obj.label36 = GUI.fromHandle(_obj_newObject("label"));
     obj.label36:setParent(obj.layout70);
     obj.label36:setAlign("left");
-    obj.label36:setText("PP");
-    obj.label36:setWidth(24);
-    obj.label36:setMargins({left=6});
+    obj.label36:setText("Teste");
+    obj.label36:setWidth(64);
+    obj.label36:setMargins({left=45});
     obj.label36:setName("label36");
 
+    obj.layout71 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout71:setParent(obj.tab7);
+    obj.layout71.grid.role = "block";
+    obj.layout71:setHeight(25);
+    obj.layout71:setName("layout71");
+    obj.layout71:setWidth(250);
+    obj.layout71:setMargins({top=7});
+
+    obj.edit106 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit106:setParent(obj.layout71);
+    obj.edit106:setField("Pericia9");
+    obj.edit106:setName("edit106");
+    obj.edit106:setWidth(164);
+    obj.edit106:setAlign("left");
+    obj.edit106:setHorzTextAlign("leading");
+
     obj.edit107 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit107:setParent(obj.layout70);
-    obj.edit107:setAlign("left");
-    obj.edit107:setHorzTextAlign("leading");
-    obj.edit107:setField("PP");
-    obj.edit107:setWidth(64);
+    obj.edit107:setParent(obj.layout71);
+    obj.edit107:setField("testePericia9");
     obj.edit107:setName("edit107");
+    obj.edit107:setWidth(30);
+    obj.edit107:setMargins({left=5});
+    obj.edit107:setAlign("left");
+    obj.edit107:setHorzTextAlign("center");
+
+    obj.button50 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button50:setParent(obj.layout71);
+    obj.button50:setName("button50");
+    obj.button50:setWidth(40);
+    obj.button50:setText("rolar");
+    obj.button50:setCursor("handPoint");
+    obj.button50.grid.role = "block";
+    obj.button50:setHeight(25);
+    obj.button50:setMargins({left=6});
+
+    obj.layout72 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout72:setParent(obj.tab7);
+    obj.layout72.grid.role = "block";
+    obj.layout72:setHeight(25);
+    obj.layout72:setName("layout72");
+    obj.layout72:setWidth(250);
+    obj.layout72:setMargins({top=7});
+
+    obj.edit108 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit108:setParent(obj.layout72);
+    obj.edit108:setField("Pericia10");
+    obj.edit108:setName("edit108");
+    obj.edit108:setWidth(164);
+    obj.edit108:setAlign("left");
+    obj.edit108:setHorzTextAlign("leading");
+
+    obj.edit109 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit109:setParent(obj.layout72);
+    obj.edit109:setField("testePericia10");
+    obj.edit109:setName("edit109");
+    obj.edit109:setWidth(30);
+    obj.edit109:setMargins({left=5});
+    obj.edit109:setAlign("left");
+    obj.edit109:setHorzTextAlign("center");
+
+    obj.button51 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button51:setParent(obj.layout72);
+    obj.button51:setName("button51");
+    obj.button51:setWidth(40);
+    obj.button51:setText("rolar");
+    obj.button51:setCursor("handPoint");
+    obj.button51.grid.role = "block";
+    obj.button51:setHeight(25);
+    obj.button51:setMargins({left=6});
+
+    obj.layout73 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout73:setParent(obj.tab7);
+    obj.layout73.grid.role = "block";
+    obj.layout73:setHeight(25);
+    obj.layout73:setName("layout73");
+    obj.layout73:setWidth(250);
+    obj.layout73:setMargins({top=7});
+
+    obj.edit110 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit110:setParent(obj.layout73);
+    obj.edit110:setField("Pericia11");
+    obj.edit110:setName("edit110");
+    obj.edit110:setWidth(164);
+    obj.edit110:setAlign("left");
+    obj.edit110:setHorzTextAlign("leading");
+
+    obj.edit111 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit111:setParent(obj.layout73);
+    obj.edit111:setField("testePericia11");
+    obj.edit111:setName("edit111");
+    obj.edit111:setWidth(30);
+    obj.edit111:setMargins({left=5});
+    obj.edit111:setAlign("left");
+    obj.edit111:setHorzTextAlign("center");
+
+    obj.button52 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button52:setParent(obj.layout73);
+    obj.button52:setName("button52");
+    obj.button52:setWidth(40);
+    obj.button52:setText("rolar");
+    obj.button52:setCursor("handPoint");
+    obj.button52.grid.role = "block";
+    obj.button52:setHeight(25);
+    obj.button52:setMargins({left=6});
+
+    obj.layout74 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout74:setParent(obj.tab7);
+    obj.layout74.grid.role = "block";
+    obj.layout74:setHeight(25);
+    obj.layout74:setName("layout74");
+    obj.layout74:setWidth(250);
+    obj.layout74:setMargins({top=7});
+
+    obj.edit112 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit112:setParent(obj.layout74);
+    obj.edit112:setField("Pericia12");
+    obj.edit112:setName("edit112");
+    obj.edit112:setWidth(164);
+    obj.edit112:setAlign("left");
+    obj.edit112:setHorzTextAlign("leading");
+
+    obj.edit113 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit113:setParent(obj.layout74);
+    obj.edit113:setField("testePericia12");
+    obj.edit113:setName("edit113");
+    obj.edit113:setWidth(30);
+    obj.edit113:setMargins({left=5});
+    obj.edit113:setAlign("left");
+    obj.edit113:setHorzTextAlign("center");
+
+    obj.button53 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button53:setParent(obj.layout74);
+    obj.button53:setName("button53");
+    obj.button53:setWidth(40);
+    obj.button53:setText("rolar");
+    obj.button53:setCursor("handPoint");
+    obj.button53.grid.role = "block";
+    obj.button53:setHeight(25);
+    obj.button53:setMargins({left=6});
+
+    obj.layout75 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout75:setParent(obj.tab7);
+    obj.layout75.grid.role = "block";
+    obj.layout75:setHeight(25);
+    obj.layout75:setName("layout75");
+    obj.layout75:setWidth(250);
+    obj.layout75:setMargins({top=7});
+
+    obj.edit114 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit114:setParent(obj.layout75);
+    obj.edit114:setField("Pericia13");
+    obj.edit114:setName("edit114");
+    obj.edit114:setWidth(164);
+    obj.edit114:setAlign("left");
+    obj.edit114:setHorzTextAlign("leading");
+
+    obj.edit115 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit115:setParent(obj.layout75);
+    obj.edit115:setField("testePericia13");
+    obj.edit115:setName("edit115");
+    obj.edit115:setWidth(30);
+    obj.edit115:setMargins({left=5});
+    obj.edit115:setAlign("left");
+    obj.edit115:setHorzTextAlign("center");
+
+    obj.button54 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button54:setParent(obj.layout75);
+    obj.button54:setName("button54");
+    obj.button54:setWidth(40);
+    obj.button54:setText("rolar");
+    obj.button54:setCursor("handPoint");
+    obj.button54.grid.role = "block";
+    obj.button54:setHeight(25);
+    obj.button54:setMargins({left=6});
+
+    obj.layout76 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout76:setParent(obj.tab7);
+    obj.layout76.grid.role = "block";
+    obj.layout76:setHeight(25);
+    obj.layout76:setName("layout76");
+    obj.layout76:setWidth(250);
+    obj.layout76:setMargins({top=7});
+
+    obj.edit116 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit116:setParent(obj.layout76);
+    obj.edit116:setField("Pericia14");
+    obj.edit116:setName("edit116");
+    obj.edit116:setWidth(164);
+    obj.edit116:setAlign("left");
+    obj.edit116:setHorzTextAlign("leading");
+
+    obj.edit117 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit117:setParent(obj.layout76);
+    obj.edit117:setField("testePericia14");
+    obj.edit117:setName("edit117");
+    obj.edit117:setWidth(30);
+    obj.edit117:setMargins({left=5});
+    obj.edit117:setAlign("left");
+    obj.edit117:setHorzTextAlign("center");
+
+    obj.button55 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button55:setParent(obj.layout76);
+    obj.button55:setName("button55");
+    obj.button55:setWidth(40);
+    obj.button55:setText("rolar");
+    obj.button55:setCursor("handPoint");
+    obj.button55.grid.role = "block";
+    obj.button55:setHeight(25);
+    obj.button55:setMargins({left=6});
+
+    obj.layout77 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout77:setParent(obj.tab7);
+    obj.layout77.grid.role = "block";
+    obj.layout77:setHeight(25);
+    obj.layout77:setName("layout77");
+    obj.layout77:setWidth(250);
+    obj.layout77:setMargins({top=7});
+
+    obj.edit118 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit118:setParent(obj.layout77);
+    obj.edit118:setField("Pericia15");
+    obj.edit118:setName("edit118");
+    obj.edit118:setWidth(164);
+    obj.edit118:setAlign("left");
+    obj.edit118:setHorzTextAlign("leading");
+
+    obj.edit119 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit119:setParent(obj.layout77);
+    obj.edit119:setField("testePericia15");
+    obj.edit119:setName("edit119");
+    obj.edit119:setWidth(30);
+    obj.edit119:setMargins({left=5});
+    obj.edit119:setAlign("left");
+    obj.edit119:setHorzTextAlign("center");
+
+    obj.button56 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button56:setParent(obj.layout77);
+    obj.button56:setName("button56");
+    obj.button56:setWidth(40);
+    obj.button56:setText("rolar");
+    obj.button56:setCursor("handPoint");
+    obj.button56.grid.role = "block";
+    obj.button56:setHeight(25);
+    obj.button56:setMargins({left=6});
+
+    obj.layout78 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout78:setParent(obj.tab7);
+    obj.layout78.grid.role = "block";
+    obj.layout78:setHeight(25);
+    obj.layout78:setName("layout78");
+    obj.layout78:setWidth(250);
+    obj.layout78:setMargins({top=7});
+
+    obj.edit120 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit120:setParent(obj.layout78);
+    obj.edit120:setField("Pericia16");
+    obj.edit120:setName("edit120");
+    obj.edit120:setWidth(164);
+    obj.edit120:setAlign("left");
+    obj.edit120:setHorzTextAlign("leading");
+
+    obj.edit121 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit121:setParent(obj.layout78);
+    obj.edit121:setField("testePericia16");
+    obj.edit121:setName("edit121");
+    obj.edit121:setWidth(30);
+    obj.edit121:setMargins({left=5});
+    obj.edit121:setAlign("left");
+    obj.edit121:setHorzTextAlign("center");
+
+    obj.button57 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button57:setParent(obj.layout78);
+    obj.button57:setName("button57");
+    obj.button57:setWidth(40);
+    obj.button57:setText("rolar");
+    obj.button57:setCursor("handPoint");
+    obj.button57.grid.role = "block";
+    obj.button57:setHeight(25);
+    obj.button57:setMargins({left=6});
+
+    obj.layout79 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout79:setParent(obj.layout60);
+    obj.layout79.grid.role = "block";
+    obj.layout79:setHeight(25);
+    obj.layout79:setMargins({top=32});
+    obj.layout79:setName("layout79");
+    obj.layout79:setWidth(450);
+
+    obj.label37 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label37:setParent(obj.layout79);
+    obj.label37:setAlign("left");
+    obj.label37:setText("PC");
+    obj.label37:setWidth(24);
+    obj.label37:setName("label37");
+
+    obj.edit122 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit122:setParent(obj.layout79);
+    obj.edit122:setAlign("left");
+    obj.edit122:setHorzTextAlign("leading");
+    obj.edit122:setField("PC");
+    obj.edit122:setWidth(64);
+    obj.edit122:setName("edit122");
+
+    obj.label38 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label38:setParent(obj.layout79);
+    obj.label38:setAlign("left");
+    obj.label38:setText("PP");
+    obj.label38:setWidth(24);
+    obj.label38:setMargins({left=6});
+    obj.label38:setName("label38");
+
+    obj.edit123 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit123:setParent(obj.layout79);
+    obj.edit123:setAlign("left");
+    obj.edit123:setHorzTextAlign("leading");
+    obj.edit123:setField("PP");
+    obj.edit123:setWidth(64);
+    obj.edit123:setName("edit123");
 
     obj.image1 = GUI.fromHandle(_obj_newObject("image"));
     obj.image1:setParent(obj.layout60);
@@ -2494,114 +2840,114 @@ local function constructNew_DzA()
     obj.image1:setSRC("/images/bau_ouro.png");
     obj.image1:setName("image1");
 
-    obj.layout71 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout71:setParent(obj.layout60);
-    obj.layout71.grid.role = "block";
-    obj.layout71:setHeight(25);
-    obj.layout71:setMargins({top=10});
-    obj.layout71:setName("layout71");
-    obj.layout71:setWidth(450);
-
-    obj.label37 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label37:setParent(obj.layout71);
-    obj.label37:setAlign("left");
-    obj.label37:setText("PO");
-    obj.label37:setWidth(24);
-    obj.label37:setName("label37");
-
-    obj.edit108 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit108:setParent(obj.layout71);
-    obj.edit108:setAlign("left");
-    obj.edit108:setHorzTextAlign("leading");
-    obj.edit108:setField("PO");
-    obj.edit108:setWidth(64);
-    obj.edit108:setName("edit108");
-
-    obj.label38 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label38:setParent(obj.layout71);
-    obj.label38:setAlign("left");
-    obj.label38:setText("PL");
-    obj.label38:setWidth(24);
-    obj.label38:setMargins({left=6});
-    obj.label38:setName("label38");
-
-    obj.edit109 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit109:setParent(obj.layout71);
-    obj.edit109:setAlign("left");
-    obj.edit109:setHorzTextAlign("leading");
-    obj.edit109:setField("PL");
-    obj.edit109:setWidth(64);
-    obj.edit109:setName("edit109");
-
-    obj.layout72 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout72:setParent(obj.layout60);
-    obj.layout72.grid.role = "block";
-    obj.layout72:setHeight(25);
-    obj.layout72:setMargins({top=10});
-    obj.layout72:setName("layout72");
-    obj.layout72:setWidth(450);
+    obj.layout80 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout80:setParent(obj.layout60);
+    obj.layout80.grid.role = "block";
+    obj.layout80:setHeight(25);
+    obj.layout80:setMargins({top=10});
+    obj.layout80:setName("layout80");
+    obj.layout80:setWidth(450);
 
     obj.label39 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label39:setParent(obj.layout72);
+    obj.label39:setParent(obj.layout80);
     obj.label39:setAlign("left");
-    obj.label39:setText("DA");
+    obj.label39:setText("PO");
     obj.label39:setWidth(24);
     obj.label39:setName("label39");
 
-    obj.edit110 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit110:setParent(obj.layout72);
-    obj.edit110:setAlign("left");
-    obj.edit110:setHorzTextAlign("leading");
-    obj.edit110:setField("DA");
-    obj.edit110:setWidth(64);
-    obj.edit110:setName("edit110");
+    obj.edit124 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit124:setParent(obj.layout80);
+    obj.edit124:setAlign("left");
+    obj.edit124:setHorzTextAlign("leading");
+    obj.edit124:setField("PO");
+    obj.edit124:setWidth(64);
+    obj.edit124:setName("edit124");
 
-    obj.tab6 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab6:setParent(obj.tabControl1);
-    obj.tab6:setTitle("Magias");
-    obj.tab6:setName("tab6");
+    obj.label40 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label40:setParent(obj.layout80);
+    obj.label40:setAlign("left");
+    obj.label40:setText("PL");
+    obj.label40:setWidth(24);
+    obj.label40:setMargins({left=6});
+    obj.label40:setName("label40");
+
+    obj.edit125 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit125:setParent(obj.layout80);
+    obj.edit125:setAlign("left");
+    obj.edit125:setHorzTextAlign("leading");
+    obj.edit125:setField("PL");
+    obj.edit125:setWidth(64);
+    obj.edit125:setName("edit125");
+
+    obj.layout81 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout81:setParent(obj.layout60);
+    obj.layout81.grid.role = "block";
+    obj.layout81:setHeight(25);
+    obj.layout81:setMargins({top=10});
+    obj.layout81:setName("layout81");
+    obj.layout81:setWidth(450);
+
+    obj.label41 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label41:setParent(obj.layout81);
+    obj.label41:setAlign("left");
+    obj.label41:setText("DA");
+    obj.label41:setWidth(24);
+    obj.label41:setName("label41");
+
+    obj.edit126 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit126:setParent(obj.layout81);
+    obj.edit126:setAlign("left");
+    obj.edit126:setHorzTextAlign("leading");
+    obj.edit126:setField("DA");
+    obj.edit126:setWidth(64);
+    obj.edit126:setName("edit126");
+
+    obj.tab8 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab8:setParent(obj.tabControl1);
+    obj.tab8:setTitle("Magias");
+    obj.tab8:setName("tab8");
 
     obj.richEdit1 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit1:setParent(obj.tab6);
+    obj.richEdit1:setParent(obj.tab8);
     obj.richEdit1:setAlign("client");
     obj.richEdit1.backgroundColor = "white";
     obj.richEdit1.defaultFontColor = "black";
     obj.richEdit1:setField("magias");
     obj.richEdit1:setName("richEdit1");
 
-    obj.tab7 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab7:setParent(obj.tabControl1);
-    obj.tab7:setTitle("Coisas");
-    obj.tab7:setName("tab7");
+    obj.tab9 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab9:setParent(obj.tabControl1);
+    obj.tab9:setTitle("Coisas");
+    obj.tab9:setName("tab9");
 
     obj.richEdit2 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit2:setParent(obj.tab7);
+    obj.richEdit2:setParent(obj.tab9);
     obj.richEdit2:setAlign("client");
     obj.richEdit2.backgroundColor = "white";
     obj.richEdit2.defaultFontColor = "black";
     obj.richEdit2:setField("txt");
     obj.richEdit2:setName("richEdit2");
 
-    obj.tab8 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab8:setParent(obj.tabControl1);
-    obj.tab8:setTitle("Conhecimentos");
-    obj.tab8:setName("tab8");
+    obj.tab10 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab10:setParent(obj.tabControl1);
+    obj.tab10:setTitle("Conhecimentos");
+    obj.tab10:setName("tab10");
 
     obj.richEdit3 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit3:setParent(obj.tab8);
+    obj.richEdit3:setParent(obj.tab10);
     obj.richEdit3:setAlign("client");
     obj.richEdit3.backgroundColor = "white";
     obj.richEdit3.defaultFontColor = "black";
     obj.richEdit3:setField("conhecimentos");
     obj.richEdit3:setName("richEdit3");
 
-    obj.tab9 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab9:setParent(obj.tabControl1);
-    obj.tab9:setTitle("Lore");
-    obj.tab9:setName("tab9");
+    obj.tab11 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab11:setParent(obj.tabControl1);
+    obj.tab11:setTitle("Lore");
+    obj.tab11:setName("tab11");
 
     obj.richEdit4 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit4:setParent(obj.tab9);
+    obj.richEdit4:setParent(obj.tab11);
     obj.richEdit4:setAlign("client");
     obj.richEdit4.backgroundColor = "white";
     obj.richEdit4.defaultFontColor = "black";
@@ -2883,91 +3229,187 @@ local function constructNew_DzA()
         function (event)
             local teste = tonumber(sheet.testePericia1) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
+                                    end;
         end);
 
     obj._e_event43 = obj.button43:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia2) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia2, sheet.testePericia2DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia2, sheet.testePericia2DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia2, sheet.testePericia2, sheet.testePericia2DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia2, sheet.testePericia2, sheet.testePericia2DoPersonagem);
+                                    end;
         end);
 
     obj._e_event44 = obj.button44:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia3) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia3, sheet.testePericia3DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia3, sheet.testePericia3DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia3, sheet.testePericia3, sheet.testePericia3DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia3, sheet.testePericia3, sheet.testePericia3DoPersonagem);
+                                    end;
         end);
 
     obj._e_event45 = obj.button45:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia4) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia4, sheet.testePericia4DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia4, sheet.testePericia4DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia4, sheet.testePericia4, sheet.testePericia4DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia4, sheet.testePericia4, sheet.testePericia4DoPersonagem);
+                                    end;
         end);
 
     obj._e_event46 = obj.button46:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia5) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia5, sheet.testePericia5DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia5, sheet.testePericia5DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia5, sheet.testePericia5, sheet.testePericia5DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia5, sheet.testePericia5, sheet.testePericia5DoPersonagem);
+                                    end;
         end);
 
     obj._e_event47 = obj.button47:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia6) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia6, sheet.testePericia6DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia6, sheet.testePericia6DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia6, sheet.testePericia6, sheet.testePericia6DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia6, sheet.testePericia6, sheet.testePericia6DoPersonagem);
+                                    end;
         end);
 
     obj._e_event48 = obj.button48:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia7) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia7, sheet.testePericia7DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia7, sheet.testePericia7DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia7, sheet.testePericia7, sheet.testePericia7DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia7, sheet.testePericia7, sheet.testePericia7DoPersonagem);
+                                    end;
         end);
 
     obj._e_event49 = obj.button49:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia8) or 0;
             
-                            if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                                dado20(sheet.Pericia1, sheet.testePericia8, sheet.testePericia8DoPersonagem);
-                            else
-                                dadoPadrao(sheet.Pericia1, sheet.testePericia8, sheet.testePericia8DoPersonagem);
-                            end;
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia8, sheet.testePericia8, sheet.testePericia8DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia8, sheet.testePericia8, sheet.testePericia8DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event50 = obj.button50:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia9) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia9, sheet.testePericia9, sheet.testePericia9DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia9, sheet.testePericia9, sheet.testePericia9DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event51 = obj.button51:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia10) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia10, sheet.testePericia10, sheet.testePericia10DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia10, sheet.testePericia10, sheet.testePericia10DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event52 = obj.button52:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia11) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia11, sheet.testePericia11, sheet.testePericia11DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia11, sheet.testePericia11, sheet.testePericia11DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event53 = obj.button53:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia12) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia12, sheet.testePericia12, sheet.testePericia12DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia12, sheet.testePericia12, sheet.testePericia12DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event54 = obj.button54:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia13) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia13, sheet.testePericia13, sheet.testePericia13DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia13, sheet.testePericia13, sheet.testePericia13DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event55 = obj.button55:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia14) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia14, sheet.testePericia14, sheet.testePericia14DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia14, sheet.testePericia14, sheet.testePericia14DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event56 = obj.button56:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia15) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia15, sheet.testePericia15, sheet.testePericia15DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia15, sheet.testePericia15, sheet.testePericia15DoPersonagem);
+                                    end;
+        end);
+
+    obj._e_event57 = obj.button57:addEventListener("onClick",
+        function (event)
+            local teste = tonumber(sheet.testePericia16) or 0;
+            
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.Pericia16, sheet.testePericia16, sheet.testePericia16DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.Pericia16, sheet.testePericia16, sheet.testePericia16DoPersonagem);
+                                    end;
         end);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event57);
+        __o_rrpgObjs.removeEventListenerById(self._e_event56);
+        __o_rrpgObjs.removeEventListenerById(self._e_event55);
+        __o_rrpgObjs.removeEventListenerById(self._e_event54);
+        __o_rrpgObjs.removeEventListenerById(self._e_event53);
+        __o_rrpgObjs.removeEventListenerById(self._e_event52);
+        __o_rrpgObjs.removeEventListenerById(self._e_event51);
+        __o_rrpgObjs.removeEventListenerById(self._e_event50);
         __o_rrpgObjs.removeEventListenerById(self._e_event49);
         __o_rrpgObjs.removeEventListenerById(self._e_event48);
         __o_rrpgObjs.removeEventListenerById(self._e_event47);
@@ -3038,12 +3480,14 @@ local function constructNew_DzA()
         if self.imageCheckBox1 ~= nil then self.imageCheckBox1:destroy(); self.imageCheckBox1 = nil; end;
         if self.edit88 ~= nil then self.edit88:destroy(); self.edit88 = nil; end;
         if self.edit30 ~= nil then self.edit30:destroy(); self.edit30 = nil; end;
-        if self.label37 ~= nil then self.label37:destroy(); self.label37 = nil; end;
+        if self.edit119 ~= nil then self.edit119:destroy(); self.edit119 = nil; end;
         if self.layout3 ~= nil then self.layout3:destroy(); self.layout3 = nil; end;
         if self.edit95 ~= nil then self.edit95:destroy(); self.edit95 = nil; end;
         if self.edit70 ~= nil then self.edit70:destroy(); self.edit70 = nil; end;
         if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
         if self.layout43 ~= nil then self.layout43:destroy(); self.layout43 = nil; end;
+        if self.label37 ~= nil then self.label37:destroy(); self.label37 = nil; end;
+        if self.edit123 ~= nil then self.edit123:destroy(); self.edit123 = nil; end;
         if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
         if self.button25 ~= nil then self.button25:destroy(); self.button25 = nil; end;
         if self.imageCheckBox4 ~= nil then self.imageCheckBox4:destroy(); self.imageCheckBox4 = nil; end;
@@ -3051,18 +3495,23 @@ local function constructNew_DzA()
         if self.layout70 ~= nil then self.layout70:destroy(); self.layout70 = nil; end;
         if self.edit49 ~= nil then self.edit49:destroy(); self.edit49 = nil; end;
         if self.layout46 ~= nil then self.layout46:destroy(); self.layout46 = nil; end;
+        if self.edit124 ~= nil then self.edit124:destroy(); self.edit124 = nil; end;
         if self.button28 ~= nil then self.button28:destroy(); self.button28 = nil; end;
+        if self.button57 ~= nil then self.button57:destroy(); self.button57 = nil; end;
         if self.edit82 ~= nil then self.edit82:destroy(); self.edit82 = nil; end;
         if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
+        if self.layout75 ~= nil then self.layout75:destroy(); self.layout75 = nil; end;
         if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
         if self.label22 ~= nil then self.label22:destroy(); self.label22 = nil; end;
         if self.edit14 ~= nil then self.edit14:destroy(); self.edit14 = nil; end;
         if self.edit59 ~= nil then self.edit59:destroy(); self.edit59 = nil; end;
         if self.layout49 ~= nil then self.layout49:destroy(); self.layout49 = nil; end;
+        if self.button50 ~= nil then self.button50:destroy(); self.button50 = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
         if self.edit108 ~= nil then self.edit108:destroy(); self.edit108 = nil; end;
         if self.edit65 ~= nil then self.edit65:destroy(); self.edit65 = nil; end;
         if self.layout37 ~= nil then self.layout37:destroy(); self.layout37 = nil; end;
+        if self.tab11 ~= nil then self.tab11:destroy(); self.tab11 = nil; end;
         if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
         if self.label29 ~= nil then self.label29:destroy(); self.label29 = nil; end;
         if self.edit56 ~= nil then self.edit56:destroy(); self.edit56 = nil; end;
@@ -3087,21 +3536,25 @@ local function constructNew_DzA()
         if self.layout67 ~= nil then self.layout67:destroy(); self.layout67 = nil; end;
         if self.edit107 ~= nil then self.edit107:destroy(); self.edit107 = nil; end;
         if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
+        if self.label40 ~= nil then self.label40:destroy(); self.label40 = nil; end;
         if self.label9 ~= nil then self.label9:destroy(); self.label9 = nil; end;
         if self.layout15 ~= nil then self.layout15:destroy(); self.layout15 = nil; end;
         if self.button18 ~= nil then self.button18:destroy(); self.button18 = nil; end;
         if self.button6 ~= nil then self.button6:destroy(); self.button6 = nil; end;
         if self.label33 ~= nil then self.label33:destroy(); self.label33 = nil; end;
+        if self.edit115 ~= nil then self.edit115:destroy(); self.edit115 = nil; end;
         if self.layout7 ~= nil then self.layout7:destroy(); self.layout7 = nil; end;
         if self.edit91 ~= nil then self.edit91:destroy(); self.edit91 = nil; end;
         if self.edit74 ~= nil then self.edit74:destroy(); self.edit74 = nil; end;
         if self.edit46 ~= nil then self.edit46:destroy(); self.edit46 = nil; end;
         if self.button21 ~= nil then self.button21:destroy(); self.button21 = nil; end;
+        if self.edit118 ~= nil then self.edit118:destroy(); self.edit118 = nil; end;
         if self.edit31 ~= nil then self.edit31:destroy(); self.edit31 = nil; end;
         if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
         if self.edit96 ~= nil then self.edit96:destroy(); self.edit96 = nil; end;
         if self.edit71 ~= nil then self.edit71:destroy(); self.edit71 = nil; end;
         if self.layout42 ~= nil then self.layout42:destroy(); self.layout42 = nil; end;
+        if self.edit120 ~= nil then self.edit120:destroy(); self.edit120 = nil; end;
         if self.label7 ~= nil then self.label7:destroy(); self.label7 = nil; end;
         if self.button16 ~= nil then self.button16:destroy(); self.button16 = nil; end;
         if self.button24 ~= nil then self.button24:destroy(); self.button24 = nil; end;
@@ -3112,19 +3565,24 @@ local function constructNew_DzA()
         if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
         if self.edit48 ~= nil then self.edit48:destroy(); self.edit48 = nil; end;
         if self.layout45 ~= nil then self.layout45:destroy(); self.layout45 = nil; end;
+        if self.edit125 ~= nil then self.edit125:destroy(); self.edit125 = nil; end;
         if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
+        if self.button54 ~= nil then self.button54:destroy(); self.button54 = nil; end;
         if self.edit85 ~= nil then self.edit85:destroy(); self.edit85 = nil; end;
         if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
+        if self.layout76 ~= nil then self.layout76:destroy(); self.layout76 = nil; end;
         if self.richEdit4 ~= nil then self.richEdit4:destroy(); self.richEdit4 = nil; end;
         if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
         if self.label25 ~= nil then self.label25:destroy(); self.label25 = nil; end;
         if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.layout48 ~= nil then self.layout48:destroy(); self.layout48 = nil; end;
+        if self.button51 ~= nil then self.button51:destroy(); self.button51 = nil; end;
         if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
         if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
         if self.edit64 ~= nil then self.edit64:destroy(); self.edit64 = nil; end;
         if self.layout30 ~= nil then self.layout30:destroy(); self.layout30 = nil; end;
         if self.edit109 ~= nil then self.edit109:destroy(); self.edit109 = nil; end;
+        if self.tab10 ~= nil then self.tab10:destroy(); self.tab10 = nil; end;
         if self.label28 ~= nil then self.label28:destroy(); self.label28 = nil; end;
         if self.tab8 ~= nil then self.tab8:destroy(); self.tab8 = nil; end;
         if self.edit57 ~= nil then self.edit57:destroy(); self.edit57 = nil; end;
@@ -3144,16 +3602,19 @@ local function constructNew_DzA()
         if self.button2 ~= nil then self.button2:destroy(); self.button2 = nil; end;
         if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
         if self.button49 ~= nil then self.button49:destroy(); self.button49 = nil; end;
+        if self.edit111 ~= nil then self.edit111:destroy(); self.edit111 = nil; end;
         if self.edit78 ~= nil then self.edit78:destroy(); self.edit78 = nil; end;
         if self.label8 ~= nil then self.label8:destroy(); self.label8 = nil; end;
         if self.layout12 ~= nil then self.layout12:destroy(); self.layout12 = nil; end;
         if self.button19 ~= nil then self.button19:destroy(); self.button19 = nil; end;
         if self.button5 ~= nil then self.button5:destroy(); self.button5 = nil; end;
         if self.label34 ~= nil then self.label34:destroy(); self.label34 = nil; end;
+        if self.edit114 ~= nil then self.edit114:destroy(); self.edit114 = nil; end;
         if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
         if self.edit92 ~= nil then self.edit92:destroy(); self.edit92 = nil; end;
         if self.edit75 ~= nil then self.edit75:destroy(); self.edit75 = nil; end;
         if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
+        if self.layout78 ~= nil then self.layout78:destroy(); self.layout78 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
         if self.button12 ~= nil then self.button12:destroy(); self.button12 = nil; end;
         if self.imageCheckBox3 ~= nil then self.imageCheckBox3:destroy(); self.imageCheckBox3 = nil; end;
@@ -3163,6 +3624,7 @@ local function constructNew_DzA()
         if self.edit97 ~= nil then self.edit97:destroy(); self.edit97 = nil; end;
         if self.label18 ~= nil then self.label18:destroy(); self.label18 = nil; end;
         if self.layout41 ~= nil then self.layout41:destroy(); self.layout41 = nil; end;
+        if self.edit121 ~= nil then self.edit121:destroy(); self.edit121 = nil; end;
         if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
         if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
         if self.button27 ~= nil then self.button27:destroy(); self.button27 = nil; end;
@@ -3172,8 +3634,10 @@ local function constructNew_DzA()
         if self.layout44 ~= nil then self.layout44:destroy(); self.layout44 = nil; end;
         if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
+        if self.button55 ~= nil then self.button55:destroy(); self.button55 = nil; end;
         if self.edit84 ~= nil then self.edit84:destroy(); self.edit84 = nil; end;
         if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
+        if self.layout77 ~= nil then self.layout77:destroy(); self.layout77 = nil; end;
         if self.layout34 ~= nil then self.layout34:destroy(); self.layout34 = nil; end;
         if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
         if self.label24 ~= nil then self.label24:destroy(); self.label24 = nil; end;
@@ -3211,10 +3675,12 @@ local function constructNew_DzA()
         if self.label35 ~= nil then self.label35:destroy(); self.label35 = nil; end;
         if self.button4 ~= nil then self.button4:destroy(); self.button4 = nil; end;
         if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
+        if self.edit117 ~= nil then self.edit117:destroy(); self.edit117 = nil; end;
         if self.layout5 ~= nil then self.layout5:destroy(); self.layout5 = nil; end;
         if self.edit93 ~= nil then self.edit93:destroy(); self.edit93 = nil; end;
         if self.edit72 ~= nil then self.edit72:destroy(); self.edit72 = nil; end;
         if self.edit40 ~= nil then self.edit40:destroy(); self.edit40 = nil; end;
+        if self.layout79 ~= nil then self.layout79:destroy(); self.layout79 = nil; end;
         if self.edit18 ~= nil then self.edit18:destroy(); self.edit18 = nil; end;
         if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
         if self.button13 ~= nil then self.button13:destroy(); self.button13 = nil; end;
@@ -3222,19 +3688,23 @@ local function constructNew_DzA()
         if self.button23 ~= nil then self.button23:destroy(); self.button23 = nil; end;
         if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
         if self.edit98 ~= nil then self.edit98:destroy(); self.edit98 = nil; end;
+        if self.tabControl4 ~= nil then self.tabControl4:destroy(); self.tabControl4 = nil; end;
         if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
         if self.layout40 ~= nil then self.layout40:destroy(); self.layout40 = nil; end;
+        if self.edit126 ~= nil then self.edit126:destroy(); self.edit126 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
         if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
         if self.button26 ~= nil then self.button26:destroy(); self.button26 = nil; end;
         if self.edit80 ~= nil then self.edit80:destroy(); self.edit80 = nil; end;
         if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
-        if self.richEdit3 ~= nil then self.richEdit3:destroy(); self.richEdit3 = nil; end;
+        if self.layout73 ~= nil then self.layout73:destroy(); self.layout73 = nil; end;
         if self.layout38 ~= nil then self.layout38:destroy(); self.layout38 = nil; end;
+        if self.richEdit3 ~= nil then self.richEdit3:destroy(); self.richEdit3 = nil; end;
         if self.tabControl3 ~= nil then self.tabControl3:destroy(); self.tabControl3 = nil; end;
         if self.label12 ~= nil then self.label12:destroy(); self.label12 = nil; end;
         if self.label20 ~= nil then self.label20:destroy(); self.label20 = nil; end;
         if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
+        if self.button52 ~= nil then self.button52:destroy(); self.button52 = nil; end;
         if self.edit87 ~= nil then self.edit87:destroy(); self.edit87 = nil; end;
         if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
         if self.edit67 ~= nil then self.edit67:destroy(); self.edit67 = nil; end;
@@ -3253,6 +3723,7 @@ local function constructNew_DzA()
         if self.edit100 ~= nil then self.edit100:destroy(); self.edit100 = nil; end;
         if self.button32 ~= nil then self.button32:destroy(); self.button32 = nil; end;
         if self.layout26 ~= nil then self.layout26:destroy(); self.layout26 = nil; end;
+        if self.layout81 ~= nil then self.layout81:destroy(); self.layout81 = nil; end;
         if self.tab3 ~= nil then self.tab3:destroy(); self.tab3 = nil; end;
         if self.layout51 ~= nil then self.layout51:destroy(); self.layout51 = nil; end;
         if self.layout65 ~= nil then self.layout65:destroy(); self.layout65 = nil; end;
@@ -3264,6 +3735,7 @@ local function constructNew_DzA()
         if self.layout17 ~= nil then self.layout17:destroy(); self.layout17 = nil; end;
         if self.label31 ~= nil then self.label31:destroy(); self.label31 = nil; end;
         if self.layout68 ~= nil then self.layout68:destroy(); self.layout68 = nil; end;
+        if self.edit113 ~= nil then self.edit113:destroy(); self.edit113 = nil; end;
         if self.layout28 ~= nil then self.layout28:destroy(); self.layout28 = nil; end;
         if self.layout9 ~= nil then self.layout9:destroy(); self.layout9 = nil; end;
         if self.edit76 ~= nil then self.edit76:destroy(); self.edit76 = nil; end;
@@ -3272,10 +3744,12 @@ local function constructNew_DzA()
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
         if self.edit89 ~= nil then self.edit89:destroy(); self.edit89 = nil; end;
         if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
+        if self.edit116 ~= nil then self.edit116:destroy(); self.edit116 = nil; end;
         if self.layout4 ~= nil then self.layout4:destroy(); self.layout4 = nil; end;
         if self.edit94 ~= nil then self.edit94:destroy(); self.edit94 = nil; end;
         if self.edit73 ~= nil then self.edit73:destroy(); self.edit73 = nil; end;
         if self.edit43 ~= nil then self.edit43:destroy(); self.edit43 = nil; end;
+        if self.edit122 ~= nil then self.edit122:destroy(); self.edit122 = nil; end;
         if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
@@ -3289,13 +3763,16 @@ local function constructNew_DzA()
         if self.button29 ~= nil then self.button29:destroy(); self.button29 = nil; end;
         if self.edit83 ~= nil then self.edit83:destroy(); self.edit83 = nil; end;
         if self.edit20 ~= nil then self.edit20:destroy(); self.edit20 = nil; end;
-        if self.richEdit2 ~= nil then self.richEdit2:destroy(); self.richEdit2 = nil; end;
+        if self.layout74 ~= nil then self.layout74:destroy(); self.layout74 = nil; end;
         if self.layout39 ~= nil then self.layout39:destroy(); self.layout39 = nil; end;
+        if self.button56 ~= nil then self.button56:destroy(); self.button56 = nil; end;
         if self.tabControl2 ~= nil then self.tabControl2:destroy(); self.tabControl2 = nil; end;
+        if self.richEdit2 ~= nil then self.richEdit2:destroy(); self.richEdit2 = nil; end;
         if self.label13 ~= nil then self.label13:destroy(); self.label13 = nil; end;
         if self.label23 ~= nil then self.label23:destroy(); self.label23 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
         if self.edit58 ~= nil then self.edit58:destroy(); self.edit58 = nil; end;
+        if self.button53 ~= nil then self.button53:destroy(); self.button53 = nil; end;
         if self.edit86 ~= nil then self.edit86:destroy(); self.edit86 = nil; end;
         if self.edit66 ~= nil then self.edit66:destroy(); self.edit66 = nil; end;
         if self.script ~= nil then self.script:destroy(); self.script = nil; end;
@@ -3317,14 +3794,17 @@ local function constructNew_DzA()
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.layout21 ~= nil then self.layout21:destroy(); self.layout21 = nil; end;
         if self.label38 ~= nil then self.label38:destroy(); self.label38 = nil; end;
+        if self.layout80 ~= nil then self.layout80:destroy(); self.layout80 = nil; end;
         if self.layout56 ~= nil then self.layout56:destroy(); self.layout56 = nil; end;
         if self.layout64 ~= nil then self.layout64:destroy(); self.layout64 = nil; end;
         if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
         if self.edit106 ~= nil then self.edit106:destroy(); self.edit106 = nil; end;
+        if self.label41 ~= nil then self.label41:destroy(); self.label41 = nil; end;
         if self.tab5 ~= nil then self.tab5:destroy(); self.tab5 = nil; end;
         if self.layout14 ~= nil then self.layout14:destroy(); self.layout14 = nil; end;
         if self.label32 ~= nil then self.label32:destroy(); self.label32 = nil; end;
         if self.button7 ~= nil then self.button7:destroy(); self.button7 = nil; end;
+        if self.edit112 ~= nil then self.edit112:destroy(); self.edit112 = nil; end;
         self:_oldLFMDestroy();
     end;
 

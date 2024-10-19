@@ -1,128 +1,260 @@
-<layout g="col" g-width="3" height="420" margins="{top=10}">
-    <layout g="block" height="25" class="campoInfoChar">
-        <label align="left" text="Perícias" width="200"/>
-        <label align="left" text="Teste" width="64" margins="{left=4}"/>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia1" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia1" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia1) or 0;
+<layout g="col" g-width="3" height="420" margins="{top=10}">    
+    <tabControl  g="col" g-width="12" height="320">
+        <tab title="Aba de perícias 1">
+            <layout g="block" height="25" class="campoInfoChar">
+                <label align="left" text="Perícias" width="124"/>
+                <label align="left" text="Teste" width="64" margins="{left=45}"/>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia1" class="campoPericias"/>
+                <edit field="testePericia1" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia1) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia2" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia2" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia2) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia1, sheet.testePericia1, sheet.testePericia1DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia2" class="campoPericias"/>
+                <edit field="testePericia2" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia2) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia2, sheet.testePericia2DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia2, sheet.testePericia2DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia3" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia3" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia3) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia2, sheet.testePericia2, sheet.testePericia2DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia2, sheet.testePericia2, sheet.testePericia2DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia3" class="campoPericias"/>
+                <edit field="testePericia3" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia3) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia3, sheet.testePericia3DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia3, sheet.testePericia3DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia4" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia4" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia4) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia3, sheet.testePericia3, sheet.testePericia3DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia3, sheet.testePericia3, sheet.testePericia3DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia4" class="campoPericias"/>
+                <edit field="testePericia4" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia4) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia4, sheet.testePericia4DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia4, sheet.testePericia4DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia5" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia5" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia5) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia4, sheet.testePericia4, sheet.testePericia4DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia4, sheet.testePericia4, sheet.testePericia4DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia5" class="campoPericias"/>
+                <edit field="testePericia5" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia5) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia5, sheet.testePericia5DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia5, sheet.testePericia5DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia6" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia6" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia6) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia5, sheet.testePericia5, sheet.testePericia5DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia5, sheet.testePericia5, sheet.testePericia5DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia6" class="campoPericias"/>
+                <edit field="testePericia6" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia6) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia6, sheet.testePericia6DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia6, sheet.testePericia6DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia7" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia7" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia7) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia6, sheet.testePericia6, sheet.testePericia6DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia6, sheet.testePericia6, sheet.testePericia6DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia7" class="campoPericias"/>
+                <edit field="testePericia7" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia7) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia7, sheet.testePericia7DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia7, sheet.testePericia7DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
-    <layout g="block" height="25" class="campoInfoChar" margins="{top=7}">
-        <edit align="left"  horzTextAlign="leading" field="Pericia8" width="200"/>
-        <edit align="left"  horzTextAlign="center" field="testePericia8" class="testField"/>
-        <button text="Rolar" g="block" height="25" margins="{left=6}" width="40">
-            <event name="onClick">
-                local teste = tonumber(sheet.testePericia8) or 0;
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia7, sheet.testePericia7, sheet.testePericia7DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia7, sheet.testePericia7, sheet.testePericia7DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia8" class="campoPericias"/>
+                <edit field="testePericia8" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia8) or 0;
 
-                if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
-                    dado20(sheet.Pericia1, sheet.testePericia8, sheet.testePericia8DoPersonagem);
-                else
-                    dadoPadrao(sheet.Pericia1, sheet.testePericia8, sheet.testePericia8DoPersonagem);
-                end;
-            </event>
-        </button>
-    </layout>
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia8, sheet.testePericia8, sheet.testePericia8DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia8, sheet.testePericia8, sheet.testePericia8DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+        </tab>
+
+        <tab title="Aba de perícias 2">
+            <layout g="block" height="25" class="campoInfoChar">
+                <label align="left" text="Perícias" width="124"/>
+                <label align="left" text="Teste" width="64" margins="{left=45}"/>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia9" class="campoPericias"/>
+                <edit field="testePericia9" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia9) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia9, sheet.testePericia9, sheet.testePericia9DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia9, sheet.testePericia9, sheet.testePericia9DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia10" class="campoPericias"/>
+                <edit field="testePericia10" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia10) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia10, sheet.testePericia10, sheet.testePericia10DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia10, sheet.testePericia10, sheet.testePericia10DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia11" class="campoPericias"/>
+                <edit field="testePericia11" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia11) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia11, sheet.testePericia11, sheet.testePericia11DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia11, sheet.testePericia11, sheet.testePericia11DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia12" class="campoPericias"/>
+                <edit field="testePericia12" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia12) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia12, sheet.testePericia12, sheet.testePericia12DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia12, sheet.testePericia12, sheet.testePericia12DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia13" class="campoPericias"/>
+                <edit field="testePericia13" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia13) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia13, sheet.testePericia13, sheet.testePericia13DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia13, sheet.testePericia13, sheet.testePericia13DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia14" class="campoPericias"/>
+                <edit field="testePericia14" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia14) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia14, sheet.testePericia14, sheet.testePericia14DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia14, sheet.testePericia14, sheet.testePericia14DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia15" class="campoPericias"/>
+                <edit field="testePericia15" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia15) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia15, sheet.testePericia15, sheet.testePericia15DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia15, sheet.testePericia15, sheet.testePericia15DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+            <layout g="block" height="25" class="layoutPericias">
+                <edit field="Pericia16" class="campoPericias"/>
+                <edit field="testePericia16" class="testField"/>
+                <button class="buttonRolar">
+                    <event name="onClick">
+                        local teste = tonumber(sheet.testePericia16) or 0;
+
+                        if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                            dado20(sheet.Pericia16, sheet.testePericia16, sheet.testePericia16DoPersonagem);
+                        else
+                            dadoPadrao(sheet.Pericia16, sheet.testePericia16, sheet.testePericia16DoPersonagem);
+                        end;
+                    </event>
+                </button>
+            </layout>
+        </tab>
+    </tabControl>
+
     <layout g="block" height="25" class="campoInfoChar" margins="{top=32}">
         <label align="left" text="PC" width="24"/>
         <edit align="left"  horzTextAlign="leading" field="PC" width="64"/>
