@@ -2683,121 +2683,89 @@ local function constructNew_DzA()
 
     obj._e_event12 = obj.button12:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem1DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem1) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem1);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem1, sheet.testeDesvantagem1, sheet.testeDesvantagem1DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem1, sheet.testeDesvantagem1, sheet.testeDesvantagem1DoPersonagem);
                                     end;
         end);
 
     obj._e_event13 = obj.button13:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem2DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem2) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem2);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem2, sheet.testeDesvantagem2, sheet.testeDesvantagem2DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem2, sheet.testeDesvantagem2, sheet.testeDesvantagem2DoPersonagem);
                                     end;
         end);
 
     obj._e_event14 = obj.button14:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem3DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem3) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem3);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem3, sheet.testeDesvantagem3, sheet.testeDesvantagem3DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem3, sheet.testeDesvantagem3, sheet.testeDesvantagem3DoPersonagem);
                                     end;
         end);
 
     obj._e_event15 = obj.button15:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem4DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem4) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem4);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem4, sheet.testeDesvantagem4, sheet.testeDesvantagem4DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem4, sheet.testeDesvantagem4, sheet.testeDesvantagem4DoPersonagem);
                                     end;
         end);
 
     obj._e_event16 = obj.button16:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem5DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem5) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem5);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem5, sheet.testeDesvantagem5, sheet.testeDesvantagem5DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem5, sheet.testeDesvantagem5, sheet.testeDesvantagem5DoPersonagem);
                                     end;
         end);
 
     obj._e_event17 = obj.button17:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem6DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem6) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem6);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem6, sheet.testeDesvantagem6, sheet.testeDesvantagem6DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem6, sheet.testeDesvantagem6, sheet.testeDesvantagem6DoPersonagem);
                                     end;
         end);
 
     obj._e_event18 = obj.button18:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem7DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem7) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem7);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem7, sheet.testeDesvantagem7, sheet.testeDesvantagem7DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem7, sheet.testeDesvantagem7, sheet.testeDesvantagem7DoPersonagem);
                                     end;
         end);
 
     obj._e_event19 = obj.button19:addEventListener("onClick",
         function (event)
-            local rolagem = Firecast.interpretarRolagem(sheet.testeDesvantagem8DoPersonagem);
+            local teste = tonumber(sheet.testeDesvantagem8) or 0;
             
-                                    if not rolagem.possuiAlgumDado then
-                                        rolagem = Firecast.interpretarRolagem("1d20");
-                                    end
-            
-                                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
-            
-                                    if mesaDoPersonagem ~= nil then
-                                            mesaDoPersonagem.chat:rolarDados(rolagem, sheet.desvantagem8);
+                                    if teste == 1 or teste == 2 or teste == 3 or teste == 4 or teste == 5 or teste == 6 or teste == 7 or teste == 8 or teste == 9 or teste == 10 or teste == 11 or teste == 12 or teste == 13 or teste == 14 or teste == 15 or teste == 16 or teste == 17 or teste == 18  then
+                                        dado20(sheet.desvantagem8, sheet.testeDesvantagem8, sheet.testeDesvantagem8DoPersonagem);
+                                    else
+                                        dadoPadrao(sheet.desvantagem8, sheet.testeDesvantagem8, sheet.testeDesvantagem8DoPersonagem);
                                     end;
         end);
 
