@@ -44,6 +44,76 @@
             <recordList name="rclItens" field="itens" templateForm="frmItensGerais" left="20" top="72" width="1280" autoHeight="true"/>
         </tab>
 
+        <tab title="Equipamentos">
+            <!-- Botão de inserir novo item à lista -->
+
+            <layout align="top" height="30" margins="{bottom=4}">
+                    <button text="Criar Novo Item" width="150" align="left">
+                            <event name="onClick">
+                                    -- Usuário clicou no botão de criar novo item.
+                                    -- Vamos inserir um novo item no nosso recordList                              
+                                    self.rclListaDosItens:append();
+                            </event>
+                    </button>
+            </layout>       
+
+            <!-- recordList, representando a lista -->
+            <recordList name="rclListaDosItens" field="campoDosItens" templateForm="frmItemDaLista" align="top" selectable="true" layout="horizontal" height="40">                       
+
+                    <event name="onSelect">
+                            --[[
+                            Este evento é chamado quando o usuário selecionar/deselecionar itens da lista. Quando o usuário selecionar, vamos fazer nosso dataScopeBox (e todas as tag dentro dele) salvar e carregar dados no   objeto Nodo (NodeDatabase) do item selecionado.
+
+                    --]]                      
+                    local node = self.rclListaDosItens.selectedNode;  
+                            self.boxDetalhesDoItem.node = node;                       
+                    -- a caixa de detalhe só ficará visível se houver item selecionado
+                            self.boxDetalhesDoItem.visible = (node ~= nil);
+                    </event>
+                    <event name="onEndEnumeration">
+                        if self.rclListaDosItens.selectedNode == nil and sheet ~= nil then
+                                local nodes = ndb.getChildNodes(sheet.campoDosItens);               
+
+                                if #nodes > 0 then
+                                        self.rclListaDosItens.selectedNode = nodes[1];
+                                end;
+                        end;
+                </event>
+            </recordList>                     
+
+            <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+
+            <dataScopeBox name="boxDetalhesDoItem" visible="false" align="client"
+                        margins="{left=4, right=4, top=2}">
+                    <!-- Faça um layout "bonito" para sua caixa de detalhes =). Utilize a propriedade "field" nas tags aqui dentro   -->      
+
+                    <rectangle align="client" color="black" xradius="10" yradius="10"
+                            padding="{top=3, left=3, right=3, bottom=3}">                                   
+
+                            <layout align="top" height="30" margins="{bottom=4}">
+                                    <label align="left" text="Titulo do Item:" autoSize="true"/>
+                                    <edit align="client" field="campoTitulo"/>
+                                                                
+
+                                <!-- Botão de apagar o item -->
+                                <button align="right" text="Apagar!" cursor="no"
+                                        margins="{left=4, right=4, top=2, bottom=2}" width="150"
+                                        onClick="ndb.deleteNode(self.boxDetalhesDoItem.node);" />
+
+                            </layout>                       
+
+                            <layout align="top" height="130">              
+                                    <image align="left" editable="true" field="campoURLImagem" width="130"/>                               
+
+                                    <layout align="client" margins="{left=2}">
+                                            <edit align="top" field="campoSubTitulo" height="30"/>
+                                            <textEditor align="top" field="campoTextoGrande" height="100"/>
+                                    </layout>                      
+                            </layout>
+                    </rectangle>
+            </dataScopeBox>
+        </tab>
+
         <tab title="Treinamentos">
             <import file="./partitions/treinamentos.xml"/>
         </tab>

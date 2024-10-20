@@ -3104,463 +3104,571 @@ local function constructNew_DzA()
 
     obj.tab10 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab10:setParent(obj.tabControl1);
-    obj.tab10:setTitle("Treinamentos");
+    obj.tab10:setTitle("Equipamentos");
     obj.tab10:setName("tab10");
 
     obj.layout84 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout84:setParent(obj.tab10);
-    obj.layout84:setLeft(20);
-    obj.layout84:setTop(0);
-    obj.layout84:setHeight(500);
-    obj.layout84:setWidth(1280);
+    obj.layout84:setAlign("top");
+    obj.layout84:setHeight(30);
+    obj.layout84:setMargins({bottom=4});
     obj.layout84:setName("layout84");
 
+    obj.button60 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button60:setParent(obj.layout84);
+    obj.button60:setText("Criar Novo Item");
+    obj.button60:setWidth(150);
+    obj.button60:setAlign("left");
+    obj.button60:setName("button60");
+
+    obj.rclListaDosItens = GUI.fromHandle(_obj_newObject("recordList"));
+    obj.rclListaDosItens:setParent(obj.tab10);
+    obj.rclListaDosItens:setName("rclListaDosItens");
+    obj.rclListaDosItens:setField("campoDosItens");
+    obj.rclListaDosItens:setTemplateForm("frmItemDaLista");
+    obj.rclListaDosItens:setAlign("top");
+    obj.rclListaDosItens:setSelectable(true);
+    obj.rclListaDosItens:setLayout("horizontal");
+    obj.rclListaDosItens:setHeight(40);
+
+    obj.boxDetalhesDoItem = GUI.fromHandle(_obj_newObject("dataScopeBox"));
+    obj.boxDetalhesDoItem:setParent(obj.tab10);
+    obj.boxDetalhesDoItem:setName("boxDetalhesDoItem");
+    obj.boxDetalhesDoItem:setVisible(false);
+    obj.boxDetalhesDoItem:setAlign("client");
+    obj.boxDetalhesDoItem:setMargins({left=4, right=4, top=2});
+
+    obj.rectangle1 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle1:setParent(obj.boxDetalhesDoItem);
+    obj.rectangle1:setAlign("client");
+    obj.rectangle1:setColor("black");
+    obj.rectangle1:setXradius(10);
+    obj.rectangle1:setYradius(10);
+    obj.rectangle1:setPadding({top=3, left=3, right=3, bottom=3});
+    obj.rectangle1:setName("rectangle1");
+
     obj.layout85 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout85:setParent(obj.layout84);
-    obj.layout85:setLeft(20);
-    obj.layout85:setTop(48);
-    obj.layout85:setHeight(25);
-    obj.layout85:setWidth(1280);
+    obj.layout85:setParent(obj.rectangle1);
+    obj.layout85:setAlign("top");
+    obj.layout85:setHeight(30);
+    obj.layout85:setMargins({bottom=4});
     obj.layout85:setName("layout85");
 
     obj.label56 = GUI.fromHandle(_obj_newObject("label"));
     obj.label56:setParent(obj.layout85);
     obj.label56:setAlign("left");
-    obj.label56:setText("Treino Principal");
-    obj.label56:setWidth(160);
-    obj.label56:setMargins({right=5});
+    obj.label56:setText("Titulo do Item:");
+    obj.label56:setAutoSize(true);
     obj.label56:setName("label56");
 
+    obj.edit127 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit127:setParent(obj.layout85);
+    obj.edit127:setAlign("client");
+    obj.edit127:setField("campoTitulo");
+    obj.edit127:setName("edit127");
+
+    obj.button61 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button61:setParent(obj.layout85);
+    obj.button61:setAlign("right");
+    obj.button61:setText("Apagar!");
+    obj.button61:setCursor("no");
+    obj.button61:setMargins({left=4, right=4, top=2, bottom=2});
+    obj.button61:setWidth(150);
+    obj.button61:setName("button61");
+
+    obj.layout86 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout86:setParent(obj.rectangle1);
+    obj.layout86:setAlign("top");
+    obj.layout86:setHeight(130);
+    obj.layout86:setName("layout86");
+
+    obj.image2 = GUI.fromHandle(_obj_newObject("image"));
+    obj.image2:setParent(obj.layout86);
+    obj.image2:setAlign("left");
+    obj.image2:setEditable(true);
+    obj.image2:setField("campoURLImagem");
+    obj.image2:setWidth(130);
+    obj.image2:setName("image2");
+
+    obj.layout87 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout87:setParent(obj.layout86);
+    obj.layout87:setAlign("client");
+    obj.layout87:setMargins({left=2});
+    obj.layout87:setName("layout87");
+
+    obj.edit128 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit128:setParent(obj.layout87);
+    obj.edit128:setAlign("top");
+    obj.edit128:setField("campoSubTitulo");
+    obj.edit128:setHeight(30);
+    obj.edit128:setName("edit128");
+
+    obj.textEditor1 = GUI.fromHandle(_obj_newObject("textEditor"));
+    obj.textEditor1:setParent(obj.layout87);
+    obj.textEditor1:setAlign("top");
+    obj.textEditor1:setField("campoTextoGrande");
+    obj.textEditor1:setHeight(100);
+    obj.textEditor1:setName("textEditor1");
+
+    obj.tab11 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab11:setParent(obj.tabControl1);
+    obj.tab11:setTitle("Treinamentos");
+    obj.tab11:setName("tab11");
+
+    obj.layout88 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout88:setParent(obj.tab11);
+    obj.layout88:setLeft(20);
+    obj.layout88:setTop(0);
+    obj.layout88:setHeight(500);
+    obj.layout88:setWidth(1280);
+    obj.layout88:setName("layout88");
+
+    obj.layout89 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout89:setParent(obj.layout88);
+    obj.layout89:setLeft(20);
+    obj.layout89:setTop(48);
+    obj.layout89:setHeight(25);
+    obj.layout89:setWidth(1280);
+    obj.layout89:setName("layout89");
+
     obj.label57 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label57:setParent(obj.layout85);
+    obj.label57:setParent(obj.layout89);
     obj.label57:setAlign("left");
-    obj.label57:setText("Treino Secundário");
+    obj.label57:setText("Treino Principal");
     obj.label57:setWidth(160);
     obj.label57:setMargins({right=5});
     obj.label57:setName("label57");
 
     obj.label58 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label58:setParent(obj.layout85);
+    obj.label58:setParent(obj.layout89);
     obj.label58:setAlign("left");
-    obj.label58:setText("Int");
-    obj.label58:setWidth(40);
+    obj.label58:setText("Treino Secundário");
+    obj.label58:setWidth(160);
     obj.label58:setMargins({right=5});
     obj.label58:setName("label58");
 
     obj.label59 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label59:setParent(obj.layout85);
+    obj.label59:setParent(obj.layout89);
     obj.label59:setAlign("left");
-    obj.label59:setText("Sab");
+    obj.label59:setText("Int");
     obj.label59:setWidth(40);
     obj.label59:setMargins({right=5});
     obj.label59:setName("label59");
 
     obj.label60 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label60:setParent(obj.layout85);
+    obj.label60:setParent(obj.layout89);
     obj.label60:setAlign("left");
-    obj.label60:setText("Descrição do treinamento");
-    obj.label60:setWidth(600);
+    obj.label60:setText("Sab");
+    obj.label60:setWidth(40);
     obj.label60:setMargins({right=5});
     obj.label60:setName("label60");
 
     obj.label61 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label61:setParent(obj.layout85);
+    obj.label61:setParent(obj.layout89);
     obj.label61:setAlign("left");
-    obj.label61:setText("Tempo h.");
-    obj.label61:setWidth(60);
+    obj.label61:setText("Descrição do treinamento");
+    obj.label61:setWidth(600);
     obj.label61:setMargins({right=5});
     obj.label61:setName("label61");
 
-    obj.layout86 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout86:setParent(obj.layout84);
-    obj.layout86:setLeft(20);
-    obj.layout86:setTop(78);
-    obj.layout86:setHeight(25);
-    obj.layout86:setWidth(1280);
-    obj.layout86:setName("layout86");
+    obj.label62 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label62:setParent(obj.layout89);
+    obj.label62:setAlign("left");
+    obj.label62:setText("Tempo h.");
+    obj.label62:setWidth(60);
+    obj.label62:setMargins({right=5});
+    obj.label62:setName("label62");
 
-    obj.edit127 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit127:setParent(obj.layout86);
-    obj.edit127:setAlign("left");
-    obj.edit127:setHorzTextAlign("center");
-    obj.edit127:setField("principalTreino1");
-    obj.edit127:setWidth(160);
-    obj.edit127:setHeight(25);
-    obj.edit127:setMargins({right=5});
-    obj.edit127:setName("edit127");
-
-    obj.edit128 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit128:setParent(obj.layout86);
-    obj.edit128:setAlign("left");
-    obj.edit128:setHorzTextAlign("center");
-    obj.edit128:setField("secundarioTreino1");
-    obj.edit128:setWidth(160);
-    obj.edit128:setHeight(25);
-    obj.edit128:setMargins({right=5});
-    obj.edit128:setName("edit128");
+    obj.layout90 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout90:setParent(obj.layout88);
+    obj.layout90:setLeft(20);
+    obj.layout90:setTop(78);
+    obj.layout90:setHeight(25);
+    obj.layout90:setWidth(1280);
+    obj.layout90:setName("layout90");
 
     obj.edit129 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit129:setParent(obj.layout86);
+    obj.edit129:setParent(obj.layout90);
     obj.edit129:setAlign("left");
     obj.edit129:setHorzTextAlign("center");
-    obj.edit129:setField("intTreino1");
-    obj.edit129:setWidth(40);
+    obj.edit129:setField("principalTreino1");
+    obj.edit129:setWidth(160);
     obj.edit129:setHeight(25);
     obj.edit129:setMargins({right=5});
     obj.edit129:setName("edit129");
 
     obj.edit130 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit130:setParent(obj.layout86);
+    obj.edit130:setParent(obj.layout90);
     obj.edit130:setAlign("left");
     obj.edit130:setHorzTextAlign("center");
-    obj.edit130:setField("sabTreino1");
-    obj.edit130:setWidth(40);
+    obj.edit130:setField("secundarioTreino1");
+    obj.edit130:setWidth(160);
     obj.edit130:setHeight(25);
     obj.edit130:setMargins({right=5});
     obj.edit130:setName("edit130");
 
     obj.edit131 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit131:setParent(obj.layout86);
+    obj.edit131:setParent(obj.layout90);
     obj.edit131:setAlign("left");
-    obj.edit131:setField("descTreino1");
-    obj.edit131:setWidth(600);
+    obj.edit131:setHorzTextAlign("center");
+    obj.edit131:setField("intTreino1");
+    obj.edit131:setWidth(40);
     obj.edit131:setHeight(25);
     obj.edit131:setMargins({right=5});
     obj.edit131:setName("edit131");
 
     obj.edit132 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit132:setParent(obj.layout86);
+    obj.edit132:setParent(obj.layout90);
     obj.edit132:setAlign("left");
     obj.edit132:setHorzTextAlign("center");
-    obj.edit132:setField("tempoTreino1");
-    obj.edit132:setWidth(60);
+    obj.edit132:setField("sabTreino1");
+    obj.edit132:setWidth(40);
     obj.edit132:setHeight(25);
     obj.edit132:setMargins({right=5});
     obj.edit132:setName("edit132");
 
-    obj.button60 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button60:setParent(obj.layout86);
-    obj.button60:setAlign("left");
-    obj.button60:setText("Limpar");
-    obj.button60:setWidth(80);
-    obj.button60:setName("button60");
-
-    obj.layout87 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout87:setParent(obj.layout84);
-    obj.layout87:setLeft(20);
-    obj.layout87:setTop(108);
-    obj.layout87:setHeight(25);
-    obj.layout87:setWidth(1280);
-    obj.layout87:setName("layout87");
-
     obj.edit133 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit133:setParent(obj.layout87);
+    obj.edit133:setParent(obj.layout90);
     obj.edit133:setAlign("left");
-    obj.edit133:setHorzTextAlign("center");
-    obj.edit133:setField("principalTreino2");
-    obj.edit133:setWidth(160);
+    obj.edit133:setField("descTreino1");
+    obj.edit133:setWidth(600);
     obj.edit133:setHeight(25);
     obj.edit133:setMargins({right=5});
     obj.edit133:setName("edit133");
 
     obj.edit134 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit134:setParent(obj.layout87);
+    obj.edit134:setParent(obj.layout90);
     obj.edit134:setAlign("left");
     obj.edit134:setHorzTextAlign("center");
-    obj.edit134:setField("secundarioTreino2");
-    obj.edit134:setWidth(160);
+    obj.edit134:setField("tempoTreino1");
+    obj.edit134:setWidth(60);
     obj.edit134:setHeight(25);
     obj.edit134:setMargins({right=5});
     obj.edit134:setName("edit134");
 
-    obj.edit135 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit135:setParent(obj.layout87);
-    obj.edit135:setAlign("left");
-    obj.edit135:setHorzTextAlign("center");
-    obj.edit135:setField("intTreino2");
-    obj.edit135:setWidth(40);
-    obj.edit135:setHeight(25);
-    obj.edit135:setMargins({right=5});
-    obj.edit135:setName("edit135");
-
-    obj.edit136 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit136:setParent(obj.layout87);
-    obj.edit136:setAlign("left");
-    obj.edit136:setHorzTextAlign("center");
-    obj.edit136:setField("sabTreino2");
-    obj.edit136:setWidth(40);
-    obj.edit136:setHeight(25);
-    obj.edit136:setMargins({right=5});
-    obj.edit136:setName("edit136");
-
-    obj.edit137 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit137:setParent(obj.layout87);
-    obj.edit137:setAlign("left");
-    obj.edit137:setField("descTreino2");
-    obj.edit137:setWidth(600);
-    obj.edit137:setHeight(25);
-    obj.edit137:setMargins({right=5});
-    obj.edit137:setName("edit137");
-
-    obj.edit138 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit138:setParent(obj.layout87);
-    obj.edit138:setAlign("left");
-    obj.edit138:setHorzTextAlign("center");
-    obj.edit138:setField("tempoTreino2");
-    obj.edit138:setWidth(60);
-    obj.edit138:setHeight(25);
-    obj.edit138:setMargins({right=5});
-    obj.edit138:setName("edit138");
-
-    obj.button61 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button61:setParent(obj.layout87);
-    obj.button61:setAlign("left");
-    obj.button61:setText("Limpar");
-    obj.button61:setWidth(80);
-    obj.button61:setName("button61");
-
-    obj.layout88 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout88:setParent(obj.layout84);
-    obj.layout88:setLeft(20);
-    obj.layout88:setTop(138);
-    obj.layout88:setHeight(25);
-    obj.layout88:setWidth(1280);
-    obj.layout88:setName("layout88");
-
-    obj.edit139 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit139:setParent(obj.layout88);
-    obj.edit139:setAlign("left");
-    obj.edit139:setHorzTextAlign("center");
-    obj.edit139:setField("principalTreino3");
-    obj.edit139:setWidth(160);
-    obj.edit139:setHeight(25);
-    obj.edit139:setMargins({right=5});
-    obj.edit139:setName("edit139");
-
-    obj.edit140 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit140:setParent(obj.layout88);
-    obj.edit140:setAlign("left");
-    obj.edit140:setHorzTextAlign("center");
-    obj.edit140:setField("secundarioTreino3");
-    obj.edit140:setWidth(160);
-    obj.edit140:setHeight(25);
-    obj.edit140:setMargins({right=5});
-    obj.edit140:setName("edit140");
-
-    obj.edit141 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit141:setParent(obj.layout88);
-    obj.edit141:setAlign("left");
-    obj.edit141:setHorzTextAlign("center");
-    obj.edit141:setField("intTreino3");
-    obj.edit141:setWidth(40);
-    obj.edit141:setHeight(25);
-    obj.edit141:setMargins({right=5});
-    obj.edit141:setName("edit141");
-
-    obj.edit142 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit142:setParent(obj.layout88);
-    obj.edit142:setAlign("left");
-    obj.edit142:setHorzTextAlign("center");
-    obj.edit142:setField("sabTreino3");
-    obj.edit142:setWidth(40);
-    obj.edit142:setHeight(25);
-    obj.edit142:setMargins({right=5});
-    obj.edit142:setName("edit142");
-
-    obj.edit143 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit143:setParent(obj.layout88);
-    obj.edit143:setAlign("left");
-    obj.edit143:setField("descTreino3");
-    obj.edit143:setWidth(600);
-    obj.edit143:setHeight(25);
-    obj.edit143:setMargins({right=5});
-    obj.edit143:setName("edit143");
-
-    obj.edit144 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit144:setParent(obj.layout88);
-    obj.edit144:setAlign("left");
-    obj.edit144:setHorzTextAlign("center");
-    obj.edit144:setField("tempoTreino3");
-    obj.edit144:setWidth(60);
-    obj.edit144:setHeight(25);
-    obj.edit144:setMargins({right=5});
-    obj.edit144:setName("edit144");
-
     obj.button62 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button62:setParent(obj.layout88);
+    obj.button62:setParent(obj.layout90);
     obj.button62:setAlign("left");
     obj.button62:setText("Limpar");
     obj.button62:setWidth(80);
     obj.button62:setName("button62");
 
-    obj.layout89 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout89:setParent(obj.layout84);
-    obj.layout89:setLeft(20);
-    obj.layout89:setTop(168);
-    obj.layout89:setHeight(25);
-    obj.layout89:setWidth(1280);
-    obj.layout89:setName("layout89");
+    obj.layout91 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout91:setParent(obj.layout88);
+    obj.layout91:setLeft(20);
+    obj.layout91:setTop(108);
+    obj.layout91:setHeight(25);
+    obj.layout91:setWidth(1280);
+    obj.layout91:setName("layout91");
 
-    obj.edit145 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit145:setParent(obj.layout89);
-    obj.edit145:setAlign("left");
-    obj.edit145:setHorzTextAlign("center");
-    obj.edit145:setField("principalTreino4");
-    obj.edit145:setWidth(160);
-    obj.edit145:setHeight(25);
-    obj.edit145:setMargins({right=5});
-    obj.edit145:setName("edit145");
+    obj.edit135 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit135:setParent(obj.layout91);
+    obj.edit135:setAlign("left");
+    obj.edit135:setHorzTextAlign("center");
+    obj.edit135:setField("principalTreino2");
+    obj.edit135:setWidth(160);
+    obj.edit135:setHeight(25);
+    obj.edit135:setMargins({right=5});
+    obj.edit135:setName("edit135");
 
-    obj.edit146 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit146:setParent(obj.layout89);
-    obj.edit146:setAlign("left");
-    obj.edit146:setHorzTextAlign("center");
-    obj.edit146:setField("secundarioTreino4");
-    obj.edit146:setWidth(160);
-    obj.edit146:setHeight(25);
-    obj.edit146:setMargins({right=5});
-    obj.edit146:setName("edit146");
+    obj.edit136 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit136:setParent(obj.layout91);
+    obj.edit136:setAlign("left");
+    obj.edit136:setHorzTextAlign("center");
+    obj.edit136:setField("secundarioTreino2");
+    obj.edit136:setWidth(160);
+    obj.edit136:setHeight(25);
+    obj.edit136:setMargins({right=5});
+    obj.edit136:setName("edit136");
 
-    obj.edit147 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit147:setParent(obj.layout89);
-    obj.edit147:setAlign("left");
-    obj.edit147:setHorzTextAlign("center");
-    obj.edit147:setField("intTreino4");
-    obj.edit147:setWidth(40);
-    obj.edit147:setHeight(25);
-    obj.edit147:setMargins({right=5});
-    obj.edit147:setName("edit147");
+    obj.edit137 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit137:setParent(obj.layout91);
+    obj.edit137:setAlign("left");
+    obj.edit137:setHorzTextAlign("center");
+    obj.edit137:setField("intTreino2");
+    obj.edit137:setWidth(40);
+    obj.edit137:setHeight(25);
+    obj.edit137:setMargins({right=5});
+    obj.edit137:setName("edit137");
 
-    obj.edit148 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit148:setParent(obj.layout89);
-    obj.edit148:setAlign("left");
-    obj.edit148:setHorzTextAlign("center");
-    obj.edit148:setField("sabTreino4");
-    obj.edit148:setWidth(40);
-    obj.edit148:setHeight(25);
-    obj.edit148:setMargins({right=5});
-    obj.edit148:setName("edit148");
+    obj.edit138 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit138:setParent(obj.layout91);
+    obj.edit138:setAlign("left");
+    obj.edit138:setHorzTextAlign("center");
+    obj.edit138:setField("sabTreino2");
+    obj.edit138:setWidth(40);
+    obj.edit138:setHeight(25);
+    obj.edit138:setMargins({right=5});
+    obj.edit138:setName("edit138");
 
-    obj.edit149 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit149:setParent(obj.layout89);
-    obj.edit149:setAlign("left");
-    obj.edit149:setField("descTreino4");
-    obj.edit149:setWidth(600);
-    obj.edit149:setHeight(25);
-    obj.edit149:setMargins({right=5});
-    obj.edit149:setName("edit149");
+    obj.edit139 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit139:setParent(obj.layout91);
+    obj.edit139:setAlign("left");
+    obj.edit139:setField("descTreino2");
+    obj.edit139:setWidth(600);
+    obj.edit139:setHeight(25);
+    obj.edit139:setMargins({right=5});
+    obj.edit139:setName("edit139");
 
-    obj.edit150 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit150:setParent(obj.layout89);
-    obj.edit150:setAlign("left");
-    obj.edit150:setHorzTextAlign("center");
-    obj.edit150:setField("tempoTreino4");
-    obj.edit150:setWidth(60);
-    obj.edit150:setHeight(25);
-    obj.edit150:setMargins({right=5});
-    obj.edit150:setName("edit150");
+    obj.edit140 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit140:setParent(obj.layout91);
+    obj.edit140:setAlign("left");
+    obj.edit140:setHorzTextAlign("center");
+    obj.edit140:setField("tempoTreino2");
+    obj.edit140:setWidth(60);
+    obj.edit140:setHeight(25);
+    obj.edit140:setMargins({right=5});
+    obj.edit140:setName("edit140");
 
     obj.button63 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button63:setParent(obj.layout89);
+    obj.button63:setParent(obj.layout91);
     obj.button63:setAlign("left");
     obj.button63:setText("Limpar");
     obj.button63:setWidth(80);
     obj.button63:setName("button63");
 
-    obj.layout90 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout90:setParent(obj.layout84);
-    obj.layout90:setLeft(20);
-    obj.layout90:setTop(198);
-    obj.layout90:setHeight(25);
-    obj.layout90:setWidth(1280);
-    obj.layout90:setName("layout90");
+    obj.layout92 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout92:setParent(obj.layout88);
+    obj.layout92:setLeft(20);
+    obj.layout92:setTop(138);
+    obj.layout92:setHeight(25);
+    obj.layout92:setWidth(1280);
+    obj.layout92:setName("layout92");
 
-    obj.edit151 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit151:setParent(obj.layout90);
-    obj.edit151:setAlign("left");
-    obj.edit151:setHorzTextAlign("center");
-    obj.edit151:setField("principalTreino5");
-    obj.edit151:setWidth(160);
-    obj.edit151:setHeight(25);
-    obj.edit151:setMargins({right=5});
-    obj.edit151:setName("edit151");
+    obj.edit141 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit141:setParent(obj.layout92);
+    obj.edit141:setAlign("left");
+    obj.edit141:setHorzTextAlign("center");
+    obj.edit141:setField("principalTreino3");
+    obj.edit141:setWidth(160);
+    obj.edit141:setHeight(25);
+    obj.edit141:setMargins({right=5});
+    obj.edit141:setName("edit141");
 
-    obj.edit152 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit152:setParent(obj.layout90);
-    obj.edit152:setAlign("left");
-    obj.edit152:setHorzTextAlign("center");
-    obj.edit152:setField("secundarioTreino5");
-    obj.edit152:setWidth(160);
-    obj.edit152:setHeight(25);
-    obj.edit152:setMargins({right=5});
-    obj.edit152:setName("edit152");
+    obj.edit142 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit142:setParent(obj.layout92);
+    obj.edit142:setAlign("left");
+    obj.edit142:setHorzTextAlign("center");
+    obj.edit142:setField("secundarioTreino3");
+    obj.edit142:setWidth(160);
+    obj.edit142:setHeight(25);
+    obj.edit142:setMargins({right=5});
+    obj.edit142:setName("edit142");
 
-    obj.edit153 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit153:setParent(obj.layout90);
-    obj.edit153:setAlign("left");
-    obj.edit153:setHorzTextAlign("center");
-    obj.edit153:setField("intTreino5");
-    obj.edit153:setWidth(40);
-    obj.edit153:setHeight(25);
-    obj.edit153:setMargins({right=5});
-    obj.edit153:setName("edit153");
+    obj.edit143 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit143:setParent(obj.layout92);
+    obj.edit143:setAlign("left");
+    obj.edit143:setHorzTextAlign("center");
+    obj.edit143:setField("intTreino3");
+    obj.edit143:setWidth(40);
+    obj.edit143:setHeight(25);
+    obj.edit143:setMargins({right=5});
+    obj.edit143:setName("edit143");
 
-    obj.edit154 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit154:setParent(obj.layout90);
-    obj.edit154:setAlign("left");
-    obj.edit154:setHorzTextAlign("center");
-    obj.edit154:setField("sabTreino5");
-    obj.edit154:setWidth(40);
-    obj.edit154:setHeight(25);
-    obj.edit154:setMargins({right=5});
-    obj.edit154:setName("edit154");
+    obj.edit144 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit144:setParent(obj.layout92);
+    obj.edit144:setAlign("left");
+    obj.edit144:setHorzTextAlign("center");
+    obj.edit144:setField("sabTreino3");
+    obj.edit144:setWidth(40);
+    obj.edit144:setHeight(25);
+    obj.edit144:setMargins({right=5});
+    obj.edit144:setName("edit144");
 
-    obj.edit155 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit155:setParent(obj.layout90);
-    obj.edit155:setAlign("left");
-    obj.edit155:setField("descTreino5");
-    obj.edit155:setWidth(600);
-    obj.edit155:setHeight(25);
-    obj.edit155:setMargins({right=5});
-    obj.edit155:setName("edit155");
+    obj.edit145 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit145:setParent(obj.layout92);
+    obj.edit145:setAlign("left");
+    obj.edit145:setField("descTreino3");
+    obj.edit145:setWidth(600);
+    obj.edit145:setHeight(25);
+    obj.edit145:setMargins({right=5});
+    obj.edit145:setName("edit145");
 
-    obj.edit156 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit156:setParent(obj.layout90);
-    obj.edit156:setAlign("left");
-    obj.edit156:setHorzTextAlign("center");
-    obj.edit156:setField("tempoTreino5");
-    obj.edit156:setWidth(60);
-    obj.edit156:setHeight(25);
-    obj.edit156:setMargins({right=5});
-    obj.edit156:setName("edit156");
+    obj.edit146 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit146:setParent(obj.layout92);
+    obj.edit146:setAlign("left");
+    obj.edit146:setHorzTextAlign("center");
+    obj.edit146:setField("tempoTreino3");
+    obj.edit146:setWidth(60);
+    obj.edit146:setHeight(25);
+    obj.edit146:setMargins({right=5});
+    obj.edit146:setName("edit146");
 
     obj.button64 = GUI.fromHandle(_obj_newObject("button"));
-    obj.button64:setParent(obj.layout90);
+    obj.button64:setParent(obj.layout92);
     obj.button64:setAlign("left");
     obj.button64:setText("Limpar");
     obj.button64:setWidth(80);
     obj.button64:setName("button64");
 
-    obj.tab11 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab11:setParent(obj.tabControl1);
-    obj.tab11:setTitle("Conhecimentos");
-    obj.tab11:setName("tab11");
+    obj.layout93 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout93:setParent(obj.layout88);
+    obj.layout93:setLeft(20);
+    obj.layout93:setTop(168);
+    obj.layout93:setHeight(25);
+    obj.layout93:setWidth(1280);
+    obj.layout93:setName("layout93");
+
+    obj.edit147 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit147:setParent(obj.layout93);
+    obj.edit147:setAlign("left");
+    obj.edit147:setHorzTextAlign("center");
+    obj.edit147:setField("principalTreino4");
+    obj.edit147:setWidth(160);
+    obj.edit147:setHeight(25);
+    obj.edit147:setMargins({right=5});
+    obj.edit147:setName("edit147");
+
+    obj.edit148 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit148:setParent(obj.layout93);
+    obj.edit148:setAlign("left");
+    obj.edit148:setHorzTextAlign("center");
+    obj.edit148:setField("secundarioTreino4");
+    obj.edit148:setWidth(160);
+    obj.edit148:setHeight(25);
+    obj.edit148:setMargins({right=5});
+    obj.edit148:setName("edit148");
+
+    obj.edit149 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit149:setParent(obj.layout93);
+    obj.edit149:setAlign("left");
+    obj.edit149:setHorzTextAlign("center");
+    obj.edit149:setField("intTreino4");
+    obj.edit149:setWidth(40);
+    obj.edit149:setHeight(25);
+    obj.edit149:setMargins({right=5});
+    obj.edit149:setName("edit149");
+
+    obj.edit150 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit150:setParent(obj.layout93);
+    obj.edit150:setAlign("left");
+    obj.edit150:setHorzTextAlign("center");
+    obj.edit150:setField("sabTreino4");
+    obj.edit150:setWidth(40);
+    obj.edit150:setHeight(25);
+    obj.edit150:setMargins({right=5});
+    obj.edit150:setName("edit150");
+
+    obj.edit151 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit151:setParent(obj.layout93);
+    obj.edit151:setAlign("left");
+    obj.edit151:setField("descTreino4");
+    obj.edit151:setWidth(600);
+    obj.edit151:setHeight(25);
+    obj.edit151:setMargins({right=5});
+    obj.edit151:setName("edit151");
+
+    obj.edit152 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit152:setParent(obj.layout93);
+    obj.edit152:setAlign("left");
+    obj.edit152:setHorzTextAlign("center");
+    obj.edit152:setField("tempoTreino4");
+    obj.edit152:setWidth(60);
+    obj.edit152:setHeight(25);
+    obj.edit152:setMargins({right=5});
+    obj.edit152:setName("edit152");
+
+    obj.button65 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button65:setParent(obj.layout93);
+    obj.button65:setAlign("left");
+    obj.button65:setText("Limpar");
+    obj.button65:setWidth(80);
+    obj.button65:setName("button65");
+
+    obj.layout94 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout94:setParent(obj.layout88);
+    obj.layout94:setLeft(20);
+    obj.layout94:setTop(198);
+    obj.layout94:setHeight(25);
+    obj.layout94:setWidth(1280);
+    obj.layout94:setName("layout94");
+
+    obj.edit153 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit153:setParent(obj.layout94);
+    obj.edit153:setAlign("left");
+    obj.edit153:setHorzTextAlign("center");
+    obj.edit153:setField("principalTreino5");
+    obj.edit153:setWidth(160);
+    obj.edit153:setHeight(25);
+    obj.edit153:setMargins({right=5});
+    obj.edit153:setName("edit153");
+
+    obj.edit154 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit154:setParent(obj.layout94);
+    obj.edit154:setAlign("left");
+    obj.edit154:setHorzTextAlign("center");
+    obj.edit154:setField("secundarioTreino5");
+    obj.edit154:setWidth(160);
+    obj.edit154:setHeight(25);
+    obj.edit154:setMargins({right=5});
+    obj.edit154:setName("edit154");
+
+    obj.edit155 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit155:setParent(obj.layout94);
+    obj.edit155:setAlign("left");
+    obj.edit155:setHorzTextAlign("center");
+    obj.edit155:setField("intTreino5");
+    obj.edit155:setWidth(40);
+    obj.edit155:setHeight(25);
+    obj.edit155:setMargins({right=5});
+    obj.edit155:setName("edit155");
+
+    obj.edit156 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit156:setParent(obj.layout94);
+    obj.edit156:setAlign("left");
+    obj.edit156:setHorzTextAlign("center");
+    obj.edit156:setField("sabTreino5");
+    obj.edit156:setWidth(40);
+    obj.edit156:setHeight(25);
+    obj.edit156:setMargins({right=5});
+    obj.edit156:setName("edit156");
+
+    obj.edit157 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit157:setParent(obj.layout94);
+    obj.edit157:setAlign("left");
+    obj.edit157:setField("descTreino5");
+    obj.edit157:setWidth(600);
+    obj.edit157:setHeight(25);
+    obj.edit157:setMargins({right=5});
+    obj.edit157:setName("edit157");
+
+    obj.edit158 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit158:setParent(obj.layout94);
+    obj.edit158:setAlign("left");
+    obj.edit158:setHorzTextAlign("center");
+    obj.edit158:setField("tempoTreino5");
+    obj.edit158:setWidth(60);
+    obj.edit158:setHeight(25);
+    obj.edit158:setMargins({right=5});
+    obj.edit158:setName("edit158");
+
+    obj.button66 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button66:setParent(obj.layout94);
+    obj.button66:setAlign("left");
+    obj.button66:setText("Limpar");
+    obj.button66:setWidth(80);
+    obj.button66:setName("button66");
+
+    obj.tab12 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab12:setParent(obj.tabControl1);
+    obj.tab12:setTitle("Conhecimentos");
+    obj.tab12:setName("tab12");
 
     obj.richEdit1 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit1:setParent(obj.tab11);
+    obj.richEdit1:setParent(obj.tab12);
     obj.richEdit1:setAlign("client");
     obj.richEdit1.backgroundColor = "white";
     obj.richEdit1.defaultFontColor = "black";
     obj.richEdit1:setField("conhecimentos");
     obj.richEdit1:setName("richEdit1");
 
-    obj.tab12 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab12:setParent(obj.tabControl1);
-    obj.tab12:setTitle("Lore");
-    obj.tab12:setName("tab12");
+    obj.tab13 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab13:setParent(obj.tabControl1);
+    obj.tab13:setTitle("Lore");
+    obj.tab13:setName("tab13");
 
     obj.richEdit2 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit2:setParent(obj.tab12);
+    obj.richEdit2:setParent(obj.tab13);
     obj.richEdit2:setAlign("client");
     obj.richEdit2.backgroundColor = "white";
     obj.richEdit2.defaultFontColor = "black";
@@ -4041,6 +4149,41 @@ local function constructNew_DzA()
 
     obj._e_event63 = obj.button60:addEventListener("onClick",
         function (event)
+            -- Usuário clicou no botão de criar novo item.
+                                                -- Vamos inserir um novo item no nosso recordList                              
+                                                self.rclListaDosItens:append();
+        end);
+
+    obj._e_event64 = obj.rclListaDosItens:addEventListener("onSelect",
+        function ()
+            --[[
+                                        Este evento é chamado quando o usuário selecionar/deselecionar itens da lista. Quando o usuário selecionar, vamos fazer nosso dataScopeBox (e todas as tag dentro dele) salvar e carregar dados no   objeto Nodo (NodeDatabase) do item selecionado.
+            
+                                --]]                      
+                                local node = self.rclListaDosItens.selectedNode;  
+                                        self.boxDetalhesDoItem.node = node;                       
+                                -- a caixa de detalhe só ficará visível se houver item selecionado
+                                        self.boxDetalhesDoItem.visible = (node ~= nil);
+        end);
+
+    obj._e_event65 = obj.rclListaDosItens:addEventListener("onEndEnumeration",
+        function ()
+            if self.rclListaDosItens.selectedNode == nil and sheet ~= nil then
+                                            local nodes = ndb.getChildNodes(sheet.campoDosItens);               
+            
+                                            if #nodes > 0 then
+                                                    self.rclListaDosItens.selectedNode = nodes[1];
+                                            end;
+                                    end;
+        end);
+
+    obj._e_event66 = obj.button61:addEventListener("onClick",
+        function (event)
+            ndb.deleteNode(self.boxDetalhesDoItem.node);
+        end);
+
+    obj._e_event67 = obj.button62:addEventListener("onClick",
+        function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
                             function (confirmado)
                                     if confirmado then
@@ -4055,7 +4198,7 @@ local function constructNew_DzA()
                             end);
         end);
 
-    obj._e_event64 = obj.button61:addEventListener("onClick",
+    obj._e_event68 = obj.button63:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
                             function (confirmado)
@@ -4071,7 +4214,7 @@ local function constructNew_DzA()
                             end);
         end);
 
-    obj._e_event65 = obj.button62:addEventListener("onClick",
+    obj._e_event69 = obj.button64:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
                             function (confirmado)
@@ -4087,7 +4230,7 @@ local function constructNew_DzA()
                             end);
         end);
 
-    obj._e_event66 = obj.button63:addEventListener("onClick",
+    obj._e_event70 = obj.button65:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
                             function (confirmado)
@@ -4103,7 +4246,7 @@ local function constructNew_DzA()
                             end);
         end);
 
-    obj._e_event67 = obj.button64:addEventListener("onClick",
+    obj._e_event71 = obj.button66:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
                             function (confirmado)
@@ -4120,6 +4263,10 @@ local function constructNew_DzA()
         end);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event71);
+        __o_rrpgObjs.removeEventListenerById(self._e_event70);
+        __o_rrpgObjs.removeEventListenerById(self._e_event69);
+        __o_rrpgObjs.removeEventListenerById(self._e_event68);
         __o_rrpgObjs.removeEventListenerById(self._e_event67);
         __o_rrpgObjs.removeEventListenerById(self._e_event66);
         __o_rrpgObjs.removeEventListenerById(self._e_event65);
@@ -4206,6 +4353,7 @@ local function constructNew_DzA()
         if self.imageCheckBox1 ~= nil then self.imageCheckBox1:destroy(); self.imageCheckBox1 = nil; end;
         if self.edit119 ~= nil then self.edit119:destroy(); self.edit119 = nil; end;
         if self.edit154 ~= nil then self.edit154:destroy(); self.edit154 = nil; end;
+        if self.button66 ~= nil then self.button66:destroy(); self.button66 = nil; end;
         if self.edit95 ~= nil then self.edit95:destroy(); self.edit95 = nil; end;
         if self.edit70 ~= nil then self.edit70:destroy(); self.edit70 = nil; end;
         if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
@@ -4215,6 +4363,7 @@ local function constructNew_DzA()
         if self.edit49 ~= nil then self.edit49:destroy(); self.edit49 = nil; end;
         if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
         if self.layout75 ~= nil then self.layout75:destroy(); self.layout75 = nil; end;
+        if self.label62 ~= nil then self.label62:destroy(); self.label62 = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
         if self.edit108 ~= nil then self.edit108:destroy(); self.edit108 = nil; end;
         if self.edit65 ~= nil then self.edit65:destroy(); self.edit65 = nil; end;
@@ -4254,6 +4403,7 @@ local function constructNew_DzA()
         if self.label7 ~= nil then self.label7:destroy(); self.label7 = nil; end;
         if self.button16 ~= nil then self.button16:destroy(); self.button16 = nil; end;
         if self.button24 ~= nil then self.button24:destroy(); self.button24 = nil; end;
+        if self.rclListaDosItens ~= nil then self.rclListaDosItens:destroy(); self.rclListaDosItens = nil; end;
         if self.richEdit1 ~= nil then self.richEdit1:destroy(); self.richEdit1 = nil; end;
         if self.layout45 ~= nil then self.layout45:destroy(); self.layout45 = nil; end;
         if self.edit125 ~= nil then self.edit125:destroy(); self.edit125 = nil; end;
@@ -4274,6 +4424,7 @@ local function constructNew_DzA()
         if self.edit146 ~= nil then self.edit146:destroy(); self.edit146 = nil; end;
         if self.edit130 ~= nil then self.edit130:destroy(); self.edit130 = nil; end;
         if self.layout83 ~= nil then self.layout83:destroy(); self.layout83 = nil; end;
+        if self.layout93 ~= nil then self.layout93:destroy(); self.layout93 = nil; end;
         if self.label50 ~= nil then self.label50:destroy(); self.label50 = nil; end;
         if self.layout23 ~= nil then self.layout23:destroy(); self.layout23 = nil; end;
         if self.edit143 ~= nil then self.edit143:destroy(); self.edit143 = nil; end;
@@ -4281,6 +4432,7 @@ local function constructNew_DzA()
         if self.edit78 ~= nil then self.edit78:destroy(); self.edit78 = nil; end;
         if self.edit114 ~= nil then self.edit114:destroy(); self.edit114 = nil; end;
         if self.layout78 ~= nil then self.layout78:destroy(); self.layout78 = nil; end;
+        if self.button65 ~= nil then self.button65:destroy(); self.button65 = nil; end;
         if self.edit92 ~= nil then self.edit92:destroy(); self.edit92 = nil; end;
         if self.edit75 ~= nil then self.edit75:destroy(); self.edit75 = nil; end;
         if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
@@ -4292,6 +4444,7 @@ local function constructNew_DzA()
         if self.layout72 ~= nil then self.layout72:destroy(); self.layout72 = nil; end;
         if self.rclItens ~= nil then self.rclItens:destroy(); self.rclItens = nil; end;
         if self.label61 ~= nil then self.label61:destroy(); self.label61 = nil; end;
+        if self.edit158 ~= nil then self.edit158:destroy(); self.edit158 = nil; end;
         if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
         if self.layout77 ~= nil then self.layout77:destroy(); self.layout77 = nil; end;
         if self.layout34 ~= nil then self.layout34:destroy(); self.layout34 = nil; end;
@@ -4309,6 +4462,7 @@ local function constructNew_DzA()
         if self.edit104 ~= nil then self.edit104:destroy(); self.edit104 = nil; end;
         if self.edit69 ~= nil then self.edit69:destroy(); self.edit69 = nil; end;
         if self.button36 ~= nil then self.button36:destroy(); self.button36 = nil; end;
+        if self.image2 ~= nil then self.image2:destroy(); self.image2 = nil; end;
         if self.label43 ~= nil then self.label43:destroy(); self.label43 = nil; end;
         if self.tab7 ~= nil then self.tab7:destroy(); self.tab7 = nil; end;
         if self.layout55 ~= nil then self.layout55:destroy(); self.layout55 = nil; end;
@@ -4350,12 +4504,14 @@ local function constructNew_DzA()
         if self.label58 ~= nil then self.label58:destroy(); self.label58 = nil; end;
         if self.edit133 ~= nil then self.edit133:destroy(); self.edit133 = nil; end;
         if self.layout86 ~= nil then self.layout86:destroy(); self.layout86 = nil; end;
+        if self.layout94 ~= nil then self.layout94:destroy(); self.layout94 = nil; end;
         if self.label55 ~= nil then self.label55:destroy(); self.label55 = nil; end;
         if self.edit51 ~= nil then self.edit51:destroy(); self.edit51 = nil; end;
         if self.layout26 ~= nil then self.layout26:destroy(); self.layout26 = nil; end;
         if self.edit140 ~= nil then self.edit140:destroy(); self.edit140 = nil; end;
         if self.edit136 ~= nil then self.edit136:destroy(); self.edit136 = nil; end;
         if self.layout81 ~= nil then self.layout81:destroy(); self.layout81 = nil; end;
+        if self.layout91 ~= nil then self.layout91:destroy(); self.layout91 = nil; end;
         if self.edit139 ~= nil then self.edit139:destroy(); self.edit139 = nil; end;
         if self.edit113 ~= nil then self.edit113:destroy(); self.edit113 = nil; end;
         if self.layout28 ~= nil then self.layout28:destroy(); self.layout28 = nil; end;
@@ -4432,7 +4588,9 @@ local function constructNew_DzA()
         if self.edit145 ~= nil then self.edit145:destroy(); self.edit145 = nil; end;
         if self.edit131 ~= nil then self.edit131:destroy(); self.edit131 = nil; end;
         if self.layout84 ~= nil then self.layout84:destroy(); self.layout84 = nil; end;
+        if self.layout92 ~= nil then self.layout92:destroy(); self.layout92 = nil; end;
         if self.label53 ~= nil then self.label53:destroy(); self.label53 = nil; end;
+        if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
         if self.edit53 ~= nil then self.edit53:destroy(); self.edit53 = nil; end;
         if self.layout20 ~= nil then self.layout20:destroy(); self.layout20 = nil; end;
         if self.edit142 ~= nil then self.edit142:destroy(); self.edit142 = nil; end;
@@ -4442,6 +4600,7 @@ local function constructNew_DzA()
         if self.edit74 ~= nil then self.edit74:destroy(); self.edit74 = nil; end;
         if self.edit46 ~= nil then self.edit46:destroy(); self.edit46 = nil; end;
         if self.edit118 ~= nil then self.edit118:destroy(); self.edit118 = nil; end;
+        if self.edit157 ~= nil then self.edit157:destroy(); self.edit157 = nil; end;
         if self.button61 ~= nil then self.button61:destroy(); self.button61 = nil; end;
         if self.edit96 ~= nil then self.edit96:destroy(); self.edit96 = nil; end;
         if self.edit71 ~= nil then self.edit71:destroy(); self.edit71 = nil; end;
@@ -4537,6 +4696,7 @@ local function constructNew_DzA()
         if self.edit67 ~= nil then self.edit67:destroy(); self.edit67 = nil; end;
         if self.layout35 ~= nil then self.layout35:destroy(); self.layout35 = nil; end;
         if self.button38 ~= nil then self.button38:destroy(); self.button38 = nil; end;
+        if self.tab13 ~= nil then self.tab13:destroy(); self.tab13 = nil; end;
         if self.button46 ~= nil then self.button46:destroy(); self.button46 = nil; end;
         if self.edit62 ~= nil then self.edit62:destroy(); self.edit62 = nil; end;
         if self.layout32 ~= nil then self.layout32:destroy(); self.layout32 = nil; end;
@@ -4558,6 +4718,7 @@ local function constructNew_DzA()
         if self.label31 ~= nil then self.label31:destroy(); self.label31 = nil; end;
         if self.layout68 ~= nil then self.layout68:destroy(); self.layout68 = nil; end;
         if self.layout9 ~= nil then self.layout9:destroy(); self.layout9 = nil; end;
+        if self.boxDetalhesDoItem ~= nil then self.boxDetalhesDoItem:destroy(); self.boxDetalhesDoItem = nil; end;
         if self.edit129 ~= nil then self.edit129:destroy(); self.edit129 = nil; end;
         if self.layout10 ~= nil then self.layout10:destroy(); self.layout10 = nil; end;
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
@@ -4587,8 +4748,9 @@ local function constructNew_DzA()
         if self.edit86 ~= nil then self.edit86:destroy(); self.edit86 = nil; end;
         if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
         if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
-        if self.label59 ~= nil then self.label59:destroy(); self.label59 = nil; end;
+        if self.textEditor1 ~= nil then self.textEditor1:destroy(); self.textEditor1 = nil; end;
         if self.edit55 ~= nil then self.edit55:destroy(); self.edit55 = nil; end;
+        if self.label59 ~= nil then self.label59:destroy(); self.label59 = nil; end;
         if self.edit144 ~= nil then self.edit144:destroy(); self.edit144 = nil; end;
         if self.edit132 ~= nil then self.edit132:destroy(); self.edit132 = nil; end;
         if self.layout85 ~= nil then self.layout85:destroy(); self.layout85 = nil; end;
