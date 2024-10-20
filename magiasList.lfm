@@ -7,5 +7,5 @@
         <edit align="left" field="descMagia" width="600" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="alcMagia" width="80" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="durMagia" width="80" height="25" margins="{right=5}"/>
-        <button align="left" cursor="no" text="Apagar" width="80" onClick="ndb.deleteNode(sheet);"/>
+        <button align="left" cursor="no" text="Apagar" width="80" onClick="askForDeletion(sheet, 'Deseja realmente apagar essa magia?', 'Magia apagado com sucesso!');"></button>
 </form>

@@ -7,5 +7,5 @@
         <edit align="left"  field="descEquipamento" width="600" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="duraAtualEquipamento" width="60" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="duraTotalEquipamento" width="60" height="25" margins="{right=5}"/>
-        <button align="left" cursor="no" text="Apagar" width="80" onClick="ndb.deleteNode(sheet);"/>
+        <button align="left" cursor="no" text="Apagar" width="80" onClick="askForDeletion(sheet, 'Deseja realmente apagar esse item?', 'Item apagado com sucesso!');"></button>
 </form>

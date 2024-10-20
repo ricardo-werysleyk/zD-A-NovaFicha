@@ -109,7 +109,7 @@ local function constructNew_frmMagiasList()
 
     obj._e_event0 = obj.button1:addEventListener("onClick",
         function (event)
-            ndb.deleteNode(sheet);
+            askForDeletion(sheet, 'Deseja realmente apagar essa magia?', 'Magia apagado com sucesso!');
         end);
 
     function obj:_releaseEvents()

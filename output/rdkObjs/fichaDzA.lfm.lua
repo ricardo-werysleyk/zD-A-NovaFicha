@@ -109,6 +109,16 @@ local function constructNew_DzA()
 
                     showMessage(texto);
             end;
+
+            function askForDeletion(sheet, messageBox, messageConfirm)
+                Dialogs.confirmYesNo(messageBox,
+                    function (confirmado)
+                            if confirmado then
+                                    ndb.deleteNode(sheet);
+                                    showMessage(messageConfirm);
+                            end;
+                    end);
+            end
     
 
 
