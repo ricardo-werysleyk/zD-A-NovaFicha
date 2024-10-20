@@ -59,6 +59,22 @@
                     <edit align="left" horzTextAlign="center" field="sabTreino1" width="40" height="25" margins="{right=5}"/>
                     <edit align="left" field="descTreino1" width="600" height="25" margins="{right=5}"/>
                     <edit align="left" horzTextAlign="center" field="tempoTreino1" width="60" height="25" margins="{right=5}"/>
+                    <button align="left" text="Limpar" width="80">
+                        <event name="onClick">
+                            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino1 = ""
+                                            sheet.secundarioTreino1 = ""
+                                            sheet.intTreino1 = ""
+                                            sheet.sabTreino1 = ""
+                                            sheet.descTreino1 = ""
+                                            sheet.tempoTreino1 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
+                        </event>
+                    </button>
                 </layout>
                 <layout left="20" top="108" height="25" width="1280">
                     <edit align="left" horzTextAlign="center" field="principalTreino2" width="160" height="25" margins="{right=5}"/>
@@ -67,6 +83,22 @@
                     <edit align="left" horzTextAlign="center" field="sabTreino2" width="40" height="25" margins="{right=5}"/>
                     <edit align="left" field="descTreino2" width="600" height="25" margins="{right=5}"/>
                     <edit align="left" horzTextAlign="center" field="tempoTreino2" width="60" height="25" margins="{right=5}"/>
+                    <button align="left" text="Limpar" width="80">
+                        <event name="onClick">
+                            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino2 = ""
+                                            sheet.secundarioTreino2 = ""
+                                            sheet.intTreino2 = ""
+                                            sheet.sabTreino2 = ""
+                                            sheet.descTreino2 = ""
+                                            sheet.tempoTreino2 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
+                        </event>
+                    </button>
                 </layout>
                 <layout left="20" top="138" height="25" width="1280">
                     <edit align="left" horzTextAlign="center" field="principalTreino3" width="160" height="25" margins="{right=5}"/>
@@ -75,6 +107,22 @@
                     <edit align="left" horzTextAlign="center" field="sabTreino3" width="40" height="25" margins="{right=5}"/>
                     <edit align="left" field="descTreino3" width="600" height="25" margins="{right=5}"/>
                     <edit align="left" horzTextAlign="center" field="tempoTreino3" width="60" height="25" margins="{right=5}"/>
+                    <button align="left" text="Limpar" width="80">
+                        <event name="onClick">
+                            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino3 = ""
+                                            sheet.secundarioTreino3 = ""
+                                            sheet.intTreino3 = ""
+                                            sheet.sabTreino3 = ""
+                                            sheet.descTreino3 = ""
+                                            sheet.tempoTreino3 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
+                        </event>
+                    </button>
                 </layout>
             </layout>
         </tab>
