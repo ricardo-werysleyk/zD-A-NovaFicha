@@ -8,25 +8,44 @@
 
     <tabControl g="col" g-width="12" height="500">
         <tab title="Ficha">
-
-            <import file="./partitions/testsFisicos.xml"/>
-            
-            <import file="./partitions/infos_desvantagens.xml"/>
-            
-            <import file="./partitions/capacidades_movApri.xml"/>
-            
+            <import file="./partitions/testsFisicos.xml"/>            
+            <import file="./partitions/infos_desvantagens.xml"/>            
+            <import file="./partitions/capacidades_movApri.xml"/>            
             <import file="./partitions/pericias.xml"/>
+        </tab>
 
+        <tab title="Magias" g="col" g-width="12">     
+            <button left="20" top="20" height="25" text="Nova Magia" cursor="handPoint" width="80" onClick="self.rclMagias:append();"/>
+            <layout left="20" top="48" height="25" width="1280" margins="{top=12}">
+                <label align="left" text="Usos" width="40" margins="{right=5}"/>
+                <label align="left" text="Total" width="40" margins="{right=5}"/>
+                <label align="left" text="Tipo" width="80" margins="{right=5}"/>
+                <label align="left" text="Nome" width="80" margins="{right=5}"/>
+                <label align="left" text="Descrição" width="600" margins="{right=5}"/>
+                <label align="left" text="Alcance" width="80" margins="{right=5}"/>
+                <label align="left" text="Duração" width="80"/>
+            </layout>
+            <recordList name="rclMagias" field="magias" templateForm="frmMagiasList" left="20" top="72" width="1280" autoHeight="true"/>
         </tab>
-        <tab title="Magias">
-            <richEdit align="client" backgroundColor="white" defaultFontColor="black" field="magias"/>
-        </tab>
+
         <tab title="Coisas">
-            <richEdit align="client" backgroundColor="white" defaultFontColor="black" field="txt"/>
+            <button left="20" top="20" height="25" text="Novo Item" cursor="handPoint" width="80" onClick="self.rclItens:append();"/>
+            <layout left="20" top="48" height="25" width="1280" margins="{top=12}">
+                <label align="left" text="Nome" width="120" margins="{right=5}"/>
+                <label align="left" text="Tipo" width="100" margins="{right=5}"/>
+                <label align="left" text="Qtd." width="40" margins="{right=5}"/>
+                <label align="left" text="Peso" width="40" margins="{right=5}"/>
+                <label align="left" text="Descrição" width="600" margins="{right=5}"/>
+                <label align="left" text="Dur.Atual" width="60" margins="{right=5}"/>
+                <label align="left" text="Dur.Total" width="60"/>
+            </layout>
+            <recordList name="rclItens" field="itens" templateForm="frmItensGerais" left="20" top="72" width="1280" autoHeight="true"/>
         </tab>
+
         <tab title="Conhecimentos">
             <richEdit align="client" backgroundColor="white" defaultFontColor="black" field="conhecimentos"/>
         </tab>
+
         <tab title="Lore">
             <richEdit align="client" backgroundColor="white" defaultFontColor="black" field="lore"/>
         </tab>
