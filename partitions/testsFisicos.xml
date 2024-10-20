@@ -1,4 +1,6 @@
 <layout g="col" g-width="2" height="450" margins="{top=10}">
+    <!-- <label left="20" top="420" text="Capacidade de carga" width="120"/>
+    <edit left="145" top="420" horzTextAlign="center" field="maxLoad" width="40" height="25"/> -->
     <layout left="20" top="20" height="25" g="block" width="450">
         <label align="left" text="Teste" width="40" hitTest="true" margins="{right=5}" hint="Testes físicos do seu personagem"/>
         <label align="left" text="Valor" width="40" hitTest="true"/>
@@ -66,7 +68,7 @@
     </layout>
     <layout left="20" top="20" height="25" g="block" class="layoutTest">
         <label align="left" text="Dest" width="40" hitTest="true" hint="Define a precisão de suas ações"/>
-        <edit align="left" horzTextAlign="center" field="destreza" class="testField"/>   
+        <edit align="left" horzTextAlign="center" field="destreza" class="testField" onChange="atualizarMaxLoad(sheet.resistencia, sheet.destreza, sheet.forca, sheet.maxLoad)"/>   
         <edit align="left" horzTextAlign="center" field="destrezaMod" class="testField"/>
         <button class="buttonRolar">
             <event name="onClick">
@@ -76,7 +78,7 @@
     </layout>
     <layout left="20" top="20" height="25" g="block" class="layoutTest">
         <label align="left" text="Força" width="40" hitTest="true" hint="Habilidade de vencer a inércia"/>
-        <edit align="left" horzTextAlign="center" field="forca" class="testField"/>   
+        <edit align="left" horzTextAlign="center" field="forca" class="testField" onChange="atualizarMaxLoad(sheet.resistencia, sheet.destreza, sheet.forca, sheet.maxLoad)"/>   
         <edit align="left" horzTextAlign="center" field="forcaMod" class="testField"/>
         <button class="buttonRolar">
             <event name="onClick">
@@ -96,7 +98,7 @@
     </layout>
     <layout left="20" top="20" height="25" g="block" class="layoutTest">
         <label align="left" text="Resis" width="40" hitTest="true" hint="Resiliência do seu personagem"/>
-        <edit align="left" horzTextAlign="center" field="resistencia" class="testField"/>   
+        <edit align="left" horzTextAlign="center" field="resistencia" class="testField" onChange="atualizarMaxLoad(sheet.resistencia, sheet.destreza, sheet.forca, sheet.maxLoad)"/>   
         <edit align="left" horzTextAlign="center" field="resistenciaMod" class="testField"/>
         <button class="buttonRolar">
             <event name="onClick">

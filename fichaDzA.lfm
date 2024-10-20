@@ -30,6 +30,8 @@
 
         <tab title="Coisas">
             <button left="20" top="20" height="25" text="Novo Item" cursor="handPoint" width="80" onClick="self.rclItens:append();"/>
+            <!-- <label left="185" top="20" text="Capacidade de carga" width="120"/>
+            <edit left="310" top="20" horzTextAlign="center" field="maxLoad" width="40" height="25" enabled="false"/> -->
             <layout left="20" top="48" height="25" width="1280" margins="{top=12}">
                 <label align="left" text="Nome" width="160" margins="{right=5}"/>
                 <label align="left" text="Tipo" width="100" margins="{right=5}"/>
@@ -43,88 +45,7 @@
         </tab>
 
         <tab title="Treinamentos">
-            <layout left="20" top="0" height="500" width="1280">
-                <layout left="20" top="48" height="25" width="1280">
-                    <label align="left" text="Treino Principal" width="160" margins="{right=5}"/>
-                    <label align="left" text="Treino Secundário" width="160" margins="{right=5}"/>
-                    <label align="left" text="Int" width="40" margins="{right=5}"/>
-                    <label align="left" text="Sab" width="40" margins="{right=5}"/>
-                    <label align="left" text="Descrição do treinamento" width="600" margins="{right=5}"/>
-                    <label align="left" text="Tempo h." width="60" margins="{right=5}"/>
-                </layout>
-                <layout left="20" top="78" height="25" width="1280">
-                    <edit align="left" horzTextAlign="center" field="principalTreino1" width="160" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="secundarioTreino1" width="160" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="intTreino1" width="40" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="sabTreino1" width="40" height="25" margins="{right=5}"/>
-                    <edit align="left" field="descTreino1" width="600" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="tempoTreino1" width="60" height="25" margins="{right=5}"/>
-                    <button align="left" text="Limpar" width="80">
-                        <event name="onClick">
-                            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
-                            function (confirmado)
-                                    if confirmado then
-                                            sheet.principalTreino1 = ""
-                                            sheet.secundarioTreino1 = ""
-                                            sheet.intTreino1 = ""
-                                            sheet.sabTreino1 = ""
-                                            sheet.descTreino1 = ""
-                                            sheet.tempoTreino1 = ""
-                                            showMessage("Campos limpos com sucesso!");
-                                    end;
-                            end);
-                        </event>
-                    </button>
-                </layout>
-                <layout left="20" top="108" height="25" width="1280">
-                    <edit align="left" horzTextAlign="center" field="principalTreino2" width="160" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="secundarioTreino2" width="160" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="intTreino2" width="40" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="sabTreino2" width="40" height="25" margins="{right=5}"/>
-                    <edit align="left" field="descTreino2" width="600" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="tempoTreino2" width="60" height="25" margins="{right=5}"/>
-                    <button align="left" text="Limpar" width="80">
-                        <event name="onClick">
-                            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
-                            function (confirmado)
-                                    if confirmado then
-                                            sheet.principalTreino2 = ""
-                                            sheet.secundarioTreino2 = ""
-                                            sheet.intTreino2 = ""
-                                            sheet.sabTreino2 = ""
-                                            sheet.descTreino2 = ""
-                                            sheet.tempoTreino2 = ""
-                                            showMessage("Campos limpos com sucesso!");
-                                    end;
-                            end);
-                        </event>
-                    </button>
-                </layout>
-                <layout left="20" top="138" height="25" width="1280">
-                    <edit align="left" horzTextAlign="center" field="principalTreino3" width="160" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="secundarioTreino3" width="160" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="intTreino3" width="40" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="sabTreino3" width="40" height="25" margins="{right=5}"/>
-                    <edit align="left" field="descTreino3" width="600" height="25" margins="{right=5}"/>
-                    <edit align="left" horzTextAlign="center" field="tempoTreino3" width="60" height="25" margins="{right=5}"/>
-                    <button align="left" text="Limpar" width="80">
-                        <event name="onClick">
-                            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
-                            function (confirmado)
-                                    if confirmado then
-                                            sheet.principalTreino3 = ""
-                                            sheet.secundarioTreino3 = ""
-                                            sheet.intTreino3 = ""
-                                            sheet.sabTreino3 = ""
-                                            sheet.descTreino3 = ""
-                                            sheet.tempoTreino3 = ""
-                                            showMessage("Campos limpos com sucesso!");
-                                    end;
-                            end);
-                        </event>
-                    </button>
-                </layout>
-            </layout>
+            <import file="./partitions/treinamentos.xml"/>
         </tab>
 
         <tab title="Conhecimentos">

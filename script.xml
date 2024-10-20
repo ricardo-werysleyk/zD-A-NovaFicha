@@ -85,6 +85,16 @@
                             end;
                     end);
             end
+
+            function atualizarMaxLoad(resistencia,destreza,forca, maxLoad)
+                local valorFor = tonumber(forca) or 0
+                local valorDes = tonumber(destreza) or 0
+                local valorRes = tonumber(resistencia) or 0
+
+                local soma = ((valorFor*3) + (valorDes*2) + (valorRes*3))/8
+
+                sheet.maxLoad = tostring(soma)
+            end
     </script>
 
 </form>

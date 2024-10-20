@@ -1,0 +1,130 @@
+<layout left="20" top="0" height="500" width="1280">
+    <layout left="20" top="48" height="25" width="1280">
+        <label align="left" text="Treino Principal" width="160" margins="{right=5}"/>
+        <label align="left" text="Treino Secundário" width="160" margins="{right=5}"/>
+        <label align="left" text="Int" width="40" margins="{right=5}"/>
+        <label align="left" text="Sab" width="40" margins="{right=5}"/>
+        <label align="left" text="Descrição do treinamento" width="600" margins="{right=5}"/>
+        <label align="left" text="Tempo h." width="60" margins="{right=5}"/>
+    </layout>
+    <layout left="20" top="78" height="25" width="1280">
+        <edit align="left" horzTextAlign="center" field="principalTreino1" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="secundarioTreino1" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="intTreino1" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="sabTreino1" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" field="descTreino1" width="600" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="tempoTreino1" width="60" height="25" margins="{right=5}"/>
+        <button align="left" text="Limpar" width="80">
+            <event name="onClick">
+                Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                function (confirmado)
+                        if confirmado then
+                                sheet.principalTreino1 = ""
+                                sheet.secundarioTreino1 = ""
+                                sheet.intTreino1 = ""
+                                sheet.sabTreino1 = ""
+                                sheet.descTreino1 = ""
+                                sheet.tempoTreino1 = ""
+                                showMessage("Campos limpos com sucesso!");
+                        end;
+                end);
+            </event>
+        </button>
+    </layout>
+    <layout left="20" top="108" height="25" width="1280">
+        <edit align="left" horzTextAlign="center" field="principalTreino2" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="secundarioTreino2" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="intTreino2" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="sabTreino2" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" field="descTreino2" width="600" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="tempoTreino2" width="60" height="25" margins="{right=5}"/>
+        <button align="left" text="Limpar" width="80">
+            <event name="onClick">
+                Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                function (confirmado)
+                        if confirmado then
+                                sheet.principalTreino2 = ""
+                                sheet.secundarioTreino2 = ""
+                                sheet.intTreino2 = ""
+                                sheet.sabTreino2 = ""
+                                sheet.descTreino2 = ""
+                                sheet.tempoTreino2 = ""
+                                showMessage("Campos limpos com sucesso!");
+                        end;
+                end);
+            </event>
+        </button>
+    </layout>
+    <layout left="20" top="138" height="25" width="1280">
+        <edit align="left" horzTextAlign="center" field="principalTreino3" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="secundarioTreino3" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="intTreino3" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="sabTreino3" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" field="descTreino3" width="600" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="tempoTreino3" width="60" height="25" margins="{right=5}"/>
+        <button align="left" text="Limpar" width="80">
+            <event name="onClick">
+                Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                function (confirmado)
+                        if confirmado then
+                                sheet.principalTreino3 = ""
+                                sheet.secundarioTreino3 = ""
+                                sheet.intTreino3 = ""
+                                sheet.sabTreino3 = ""
+                                sheet.descTreino3 = ""
+                                sheet.tempoTreino3 = ""
+                                showMessage("Campos limpos com sucesso!");
+                        end;
+                end);
+            </event>
+        </button>
+    </layout>
+    <layout left="20" top="168" height="25" width="1280">
+        <edit align="left" horzTextAlign="center" field="principalTreino4" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="secundarioTreino4" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="intTreino4" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="sabTreino4" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" field="descTreino4" width="600" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="tempoTreino4" width="60" height="25" margins="{right=5}"/>
+        <button align="left" text="Limpar" width="80">
+            <event name="onClick">
+                Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                function (confirmado)
+                        if confirmado then
+                                sheet.principalTreino4 = ""
+                                sheet.secundarioTreino4 = ""
+                                sheet.intTreino4 = ""
+                                sheet.sabTreino4 = ""
+                                sheet.descTreino4 = ""
+                                sheet.tempoTreino4 = ""
+                                showMessage("Campos limpos com sucesso!");
+                        end;
+                end);
+            </event>
+        </button>
+    </layout>
+    <layout left="20" top="198" height="25" width="1280">
+        <edit align="left" horzTextAlign="center" field="principalTreino5" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="secundarioTreino5" width="160" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="intTreino5" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="sabTreino5" width="40" height="25" margins="{right=5}"/>
+        <edit align="left" field="descTreino5" width="600" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="tempoTreino5" width="60" height="25" margins="{right=5}"/>
+        <button align="left" text="Limpar" width="80">
+            <event name="onClick">
+                Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                function (confirmado)
+                        if confirmado then
+                                sheet.principalTreino5 = ""
+                                sheet.secundarioTreino5 = ""
+                                sheet.intTreino5 = ""
+                                sheet.sabTreino5 = ""
+                                sheet.descTreino5 = ""
+                                sheet.tempoTreino5 = ""
+                                showMessage("Campos limpos com sucesso!");
+                        end;
+                end);
+            </event>
+        </button>
+    </layout>
+</layout>

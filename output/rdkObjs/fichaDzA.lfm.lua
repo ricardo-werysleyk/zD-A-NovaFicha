@@ -119,6 +119,16 @@ local function constructNew_DzA()
                             end;
                     end);
             end
+
+            function atualizarMaxLoad(resistencia,destreza,forca, maxLoad)
+                local valorFor = tonumber(forca) or 0
+                local valorDes = tonumber(destreza) or 0
+                local valorRes = tonumber(resistencia) or 0
+
+                local soma = ((valorFor*3) + (valorDes*2) + (valorRes*3))/8
+
+                sheet.maxLoad = tostring(soma)
+            end
     
 
 
@@ -3383,6 +3393,154 @@ local function constructNew_DzA()
     obj.button62:setWidth(80);
     obj.button62:setName("button62");
 
+    obj.layout89 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout89:setParent(obj.layout84);
+    obj.layout89:setLeft(20);
+    obj.layout89:setTop(168);
+    obj.layout89:setHeight(25);
+    obj.layout89:setWidth(1280);
+    obj.layout89:setName("layout89");
+
+    obj.edit145 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit145:setParent(obj.layout89);
+    obj.edit145:setAlign("left");
+    obj.edit145:setHorzTextAlign("center");
+    obj.edit145:setField("principalTreino4");
+    obj.edit145:setWidth(160);
+    obj.edit145:setHeight(25);
+    obj.edit145:setMargins({right=5});
+    obj.edit145:setName("edit145");
+
+    obj.edit146 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit146:setParent(obj.layout89);
+    obj.edit146:setAlign("left");
+    obj.edit146:setHorzTextAlign("center");
+    obj.edit146:setField("secundarioTreino4");
+    obj.edit146:setWidth(160);
+    obj.edit146:setHeight(25);
+    obj.edit146:setMargins({right=5});
+    obj.edit146:setName("edit146");
+
+    obj.edit147 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit147:setParent(obj.layout89);
+    obj.edit147:setAlign("left");
+    obj.edit147:setHorzTextAlign("center");
+    obj.edit147:setField("intTreino4");
+    obj.edit147:setWidth(40);
+    obj.edit147:setHeight(25);
+    obj.edit147:setMargins({right=5});
+    obj.edit147:setName("edit147");
+
+    obj.edit148 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit148:setParent(obj.layout89);
+    obj.edit148:setAlign("left");
+    obj.edit148:setHorzTextAlign("center");
+    obj.edit148:setField("sabTreino4");
+    obj.edit148:setWidth(40);
+    obj.edit148:setHeight(25);
+    obj.edit148:setMargins({right=5});
+    obj.edit148:setName("edit148");
+
+    obj.edit149 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit149:setParent(obj.layout89);
+    obj.edit149:setAlign("left");
+    obj.edit149:setField("descTreino4");
+    obj.edit149:setWidth(600);
+    obj.edit149:setHeight(25);
+    obj.edit149:setMargins({right=5});
+    obj.edit149:setName("edit149");
+
+    obj.edit150 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit150:setParent(obj.layout89);
+    obj.edit150:setAlign("left");
+    obj.edit150:setHorzTextAlign("center");
+    obj.edit150:setField("tempoTreino4");
+    obj.edit150:setWidth(60);
+    obj.edit150:setHeight(25);
+    obj.edit150:setMargins({right=5});
+    obj.edit150:setName("edit150");
+
+    obj.button63 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button63:setParent(obj.layout89);
+    obj.button63:setAlign("left");
+    obj.button63:setText("Limpar");
+    obj.button63:setWidth(80);
+    obj.button63:setName("button63");
+
+    obj.layout90 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout90:setParent(obj.layout84);
+    obj.layout90:setLeft(20);
+    obj.layout90:setTop(198);
+    obj.layout90:setHeight(25);
+    obj.layout90:setWidth(1280);
+    obj.layout90:setName("layout90");
+
+    obj.edit151 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit151:setParent(obj.layout90);
+    obj.edit151:setAlign("left");
+    obj.edit151:setHorzTextAlign("center");
+    obj.edit151:setField("principalTreino5");
+    obj.edit151:setWidth(160);
+    obj.edit151:setHeight(25);
+    obj.edit151:setMargins({right=5});
+    obj.edit151:setName("edit151");
+
+    obj.edit152 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit152:setParent(obj.layout90);
+    obj.edit152:setAlign("left");
+    obj.edit152:setHorzTextAlign("center");
+    obj.edit152:setField("secundarioTreino5");
+    obj.edit152:setWidth(160);
+    obj.edit152:setHeight(25);
+    obj.edit152:setMargins({right=5});
+    obj.edit152:setName("edit152");
+
+    obj.edit153 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit153:setParent(obj.layout90);
+    obj.edit153:setAlign("left");
+    obj.edit153:setHorzTextAlign("center");
+    obj.edit153:setField("intTreino5");
+    obj.edit153:setWidth(40);
+    obj.edit153:setHeight(25);
+    obj.edit153:setMargins({right=5});
+    obj.edit153:setName("edit153");
+
+    obj.edit154 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit154:setParent(obj.layout90);
+    obj.edit154:setAlign("left");
+    obj.edit154:setHorzTextAlign("center");
+    obj.edit154:setField("sabTreino5");
+    obj.edit154:setWidth(40);
+    obj.edit154:setHeight(25);
+    obj.edit154:setMargins({right=5});
+    obj.edit154:setName("edit154");
+
+    obj.edit155 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit155:setParent(obj.layout90);
+    obj.edit155:setAlign("left");
+    obj.edit155:setField("descTreino5");
+    obj.edit155:setWidth(600);
+    obj.edit155:setHeight(25);
+    obj.edit155:setMargins({right=5});
+    obj.edit155:setName("edit155");
+
+    obj.edit156 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit156:setParent(obj.layout90);
+    obj.edit156:setAlign("left");
+    obj.edit156:setHorzTextAlign("center");
+    obj.edit156:setField("tempoTreino5");
+    obj.edit156:setWidth(60);
+    obj.edit156:setHeight(25);
+    obj.edit156:setMargins({right=5});
+    obj.edit156:setName("edit156");
+
+    obj.button64 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button64:setParent(obj.layout90);
+    obj.button64:setAlign("left");
+    obj.button64:setText("Limpar");
+    obj.button64:setWidth(80);
+    obj.button64:setName("button64");
+
     obj.tab11 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab11:setParent(obj.tabControl1);
     obj.tab11:setTitle("Conhecimentos");
@@ -3452,37 +3610,52 @@ local function constructNew_DzA()
             dadoPadrao("Defesa", sheet.defesa, sheet.defesaDoPersonagem, sheet.defesaMod);
         end);
 
-    obj._e_event6 = obj.button6:addEventListener("onClick",
+    obj._e_event6 = obj.edit11:addEventListener("onChange",
+        function ()
+            atualizarMaxLoad(sheet.resistencia, sheet.destreza, sheet.forca, sheet.maxLoad)
+        end);
+
+    obj._e_event7 = obj.button6:addEventListener("onClick",
         function (event)
             dadoPadrao("Destreza", sheet.destreza, sheet.destrezaDoPersonagem, sheet.destrezaMod);
         end);
 
-    obj._e_event7 = obj.button7:addEventListener("onClick",
+    obj._e_event8 = obj.edit13:addEventListener("onChange",
+        function ()
+            atualizarMaxLoad(sheet.resistencia, sheet.destreza, sheet.forca, sheet.maxLoad)
+        end);
+
+    obj._e_event9 = obj.button7:addEventListener("onClick",
         function (event)
             dadoPadrao("Força", sheet.forca, sheet.forcaDoPersonagem, sheet.forcaMod);
         end);
 
-    obj._e_event8 = obj.button8:addEventListener("onClick",
+    obj._e_event10 = obj.button8:addEventListener("onClick",
         function (event)
             dadoPadrao("Inteligencia", sheet.inteligencia, sheet.inteligenciaDoPersonagem, sheet.inteligenciaMod);
         end);
 
-    obj._e_event9 = obj.button9:addEventListener("onClick",
+    obj._e_event11 = obj.edit17:addEventListener("onChange",
+        function ()
+            atualizarMaxLoad(sheet.resistencia, sheet.destreza, sheet.forca, sheet.maxLoad)
+        end);
+
+    obj._e_event12 = obj.button9:addEventListener("onClick",
         function (event)
             dadoPadrao("Resistência", sheet.resistencia, sheet.resistenciaDoPersonagem, sheet.resistenciaMod);
         end);
 
-    obj._e_event10 = obj.button10:addEventListener("onClick",
+    obj._e_event13 = obj.button10:addEventListener("onClick",
         function (event)
             dadoPadrao("Sabedoria", sheet.sabedoria, sheet.sabedoriaDoPersonagem, sheet.sabedoriaMod);
         end);
 
-    obj._e_event11 = obj.button11:addEventListener("onClick",
+    obj._e_event14 = obj.button11:addEventListener("onClick",
         function (event)
             dadoPadrao("Velocidade", sheet.velocidade, sheet.velocidadeDoPersonagem, sheet.velocidadeMod);
         end);
 
-    obj._e_event12 = obj.button12:addEventListener("onClick",
+    obj._e_event15 = obj.button12:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem1) or 0;
             
@@ -3493,7 +3666,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event13 = obj.button13:addEventListener("onClick",
+    obj._e_event16 = obj.button13:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem2) or 0;
             
@@ -3504,7 +3677,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event14 = obj.button14:addEventListener("onClick",
+    obj._e_event17 = obj.button14:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem3) or 0;
             
@@ -3515,7 +3688,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event15 = obj.button15:addEventListener("onClick",
+    obj._e_event18 = obj.button15:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem4) or 0;
             
@@ -3526,7 +3699,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event16 = obj.button16:addEventListener("onClick",
+    obj._e_event19 = obj.button16:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem5) or 0;
             
@@ -3537,7 +3710,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event17 = obj.button17:addEventListener("onClick",
+    obj._e_event20 = obj.button17:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem6) or 0;
             
@@ -3548,7 +3721,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event18 = obj.button18:addEventListener("onClick",
+    obj._e_event21 = obj.button18:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem7) or 0;
             
@@ -3559,7 +3732,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event19 = obj.button19:addEventListener("onClick",
+    obj._e_event22 = obj.button19:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testeDesvantagem8) or 0;
             
@@ -3570,117 +3743,117 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event20 = obj.button20:addEventListener("onClick",
+    obj._e_event23 = obj.button20:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade1, sheet.testeCapacidade1, sheet.testeCapacidade1DoPersonagem);
         end);
 
-    obj._e_event21 = obj.button21:addEventListener("onClick",
+    obj._e_event24 = obj.button21:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade2, sheet.testeCapacidade2, sheet.testeCapacidade2DoPersonagem);
         end);
 
-    obj._e_event22 = obj.button22:addEventListener("onClick",
+    obj._e_event25 = obj.button22:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade3, sheet.testeCapacidade3, sheet.testeCapacidade3DoPersonagem);
         end);
 
-    obj._e_event23 = obj.button23:addEventListener("onClick",
+    obj._e_event26 = obj.button23:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade4, sheet.testeCapacidade4, sheet.testeCapacidade4DoPersonagem);
         end);
 
-    obj._e_event24 = obj.button24:addEventListener("onClick",
+    obj._e_event27 = obj.button24:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade5, sheet.testeCapacidade5, sheet.testeCapacidade5DoPersonagem);
         end);
 
-    obj._e_event25 = obj.button25:addEventListener("onClick",
+    obj._e_event28 = obj.button25:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade6, sheet.testeCapacidade6, sheet.testeCapacidade6DoPersonagem);
         end);
 
-    obj._e_event26 = obj.button26:addEventListener("onClick",
+    obj._e_event29 = obj.button26:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade7, sheet.testeCapacidade7, sheet.testeCapacidade7DoPersonagem);
         end);
 
-    obj._e_event27 = obj.button27:addEventListener("onClick",
+    obj._e_event30 = obj.button27:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade8, sheet.testeCapacidade8, sheet.testeCapacidade8DoPersonagem);
         end);
 
-    obj._e_event28 = obj.button28:addEventListener("onClick",
+    obj._e_event31 = obj.button28:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.moviApri1, sheet.testeMoviApri1, sheet.testeMoviApri1DoPersonagem);
         end);
 
-    obj._e_event29 = obj.button29:addEventListener("onClick",
+    obj._e_event32 = obj.button29:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.moviApri2, sheet.testeMoviApri2, sheet.testeMoviApri2DoPersonagem);
         end);
 
-    obj._e_event30 = obj.button30:addEventListener("onClick",
+    obj._e_event33 = obj.button30:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.moviApri3, sheet.testeMoviApri3, sheet.testeMoviApri3DoPersonagem);
         end);
 
-    obj._e_event31 = obj.button31:addEventListener("onClick",
+    obj._e_event34 = obj.button31:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade16, sheet.testeCapacidade16, sheet.testeCapacidade16DoPersonagem);
         end);
 
-    obj._e_event32 = obj.button32:addEventListener("onClick",
+    obj._e_event35 = obj.button32:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade9, sheet.testeCapacidade9, sheet.testeCapacidade9DoPersonagem);
         end);
 
-    obj._e_event33 = obj.button33:addEventListener("onClick",
+    obj._e_event36 = obj.button33:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade10, sheet.testeCapacidade10, sheet.testeCapacidade10DoPersonagem);
         end);
 
-    obj._e_event34 = obj.button34:addEventListener("onClick",
+    obj._e_event37 = obj.button34:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade11, sheet.testeCapacidade11, sheet.testeCapacidade11DoPersonagem);
         end);
 
-    obj._e_event35 = obj.button35:addEventListener("onClick",
+    obj._e_event38 = obj.button35:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade12, sheet.testeCapacidade12, sheet.testeCapacidade12DoPersonagem);
         end);
 
-    obj._e_event36 = obj.button36:addEventListener("onClick",
+    obj._e_event39 = obj.button36:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade13, sheet.testeCapacidade13, sheet.testeCapacidade13DoPersonagem);
         end);
 
-    obj._e_event37 = obj.button37:addEventListener("onClick",
+    obj._e_event40 = obj.button37:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade14, sheet.testeCapacidade14, sheet.testeCapacidade14DoPersonagem);
         end);
 
-    obj._e_event38 = obj.button38:addEventListener("onClick",
+    obj._e_event41 = obj.button38:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.capacidade15, sheet.testeCapacidade15, sheet.testeCapacidade15DoPersonagem);
         end);
 
-    obj._e_event39 = obj.button39:addEventListener("onClick",
+    obj._e_event42 = obj.button39:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.moviApri4, sheet.testeMoviApri4, sheet.testeMoviApri4DoPersonagem);
         end);
 
-    obj._e_event40 = obj.button40:addEventListener("onClick",
+    obj._e_event43 = obj.button40:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.moviApri5, sheet.testeMoviApri5, sheet.testeMoviApri5DoPersonagem);
         end);
 
-    obj._e_event41 = obj.button41:addEventListener("onClick",
+    obj._e_event44 = obj.button41:addEventListener("onClick",
         function (event)
             dadoPadrao(sheet.moviApri6, sheet.testeMoviApri6, sheet.testeMoviApri6DoPersonagem);
         end);
 
-    obj._e_event42 = obj.button42:addEventListener("onClick",
+    obj._e_event45 = obj.button42:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia1) or 0;
             
@@ -3691,7 +3864,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event43 = obj.button43:addEventListener("onClick",
+    obj._e_event46 = obj.button43:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia2) or 0;
             
@@ -3702,7 +3875,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event44 = obj.button44:addEventListener("onClick",
+    obj._e_event47 = obj.button44:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia3) or 0;
             
@@ -3713,7 +3886,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event45 = obj.button45:addEventListener("onClick",
+    obj._e_event48 = obj.button45:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia4) or 0;
             
@@ -3724,7 +3897,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event46 = obj.button46:addEventListener("onClick",
+    obj._e_event49 = obj.button46:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia5) or 0;
             
@@ -3735,7 +3908,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event47 = obj.button47:addEventListener("onClick",
+    obj._e_event50 = obj.button47:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia6) or 0;
             
@@ -3746,7 +3919,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event48 = obj.button48:addEventListener("onClick",
+    obj._e_event51 = obj.button48:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia7) or 0;
             
@@ -3757,7 +3930,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event49 = obj.button49:addEventListener("onClick",
+    obj._e_event52 = obj.button49:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia8) or 0;
             
@@ -3768,7 +3941,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event50 = obj.button50:addEventListener("onClick",
+    obj._e_event53 = obj.button50:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia9) or 0;
             
@@ -3779,7 +3952,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event51 = obj.button51:addEventListener("onClick",
+    obj._e_event54 = obj.button51:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia10) or 0;
             
@@ -3790,7 +3963,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event52 = obj.button52:addEventListener("onClick",
+    obj._e_event55 = obj.button52:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia11) or 0;
             
@@ -3801,7 +3974,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event53 = obj.button53:addEventListener("onClick",
+    obj._e_event56 = obj.button53:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia12) or 0;
             
@@ -3812,7 +3985,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event54 = obj.button54:addEventListener("onClick",
+    obj._e_event57 = obj.button54:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia13) or 0;
             
@@ -3823,7 +3996,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event55 = obj.button55:addEventListener("onClick",
+    obj._e_event58 = obj.button55:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia14) or 0;
             
@@ -3834,7 +4007,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event56 = obj.button56:addEventListener("onClick",
+    obj._e_event59 = obj.button56:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia15) or 0;
             
@@ -3845,7 +4018,7 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event57 = obj.button57:addEventListener("onClick",
+    obj._e_event60 = obj.button57:addEventListener("onClick",
         function (event)
             local teste = tonumber(sheet.testePericia16) or 0;
             
@@ -3856,65 +4029,102 @@ local function constructNew_DzA()
                                     end;
         end);
 
-    obj._e_event58 = obj.button58:addEventListener("onClick",
+    obj._e_event61 = obj.button58:addEventListener("onClick",
         function (event)
             self.rclMagias:append();
         end);
 
-    obj._e_event59 = obj.button59:addEventListener("onClick",
+    obj._e_event62 = obj.button59:addEventListener("onClick",
         function (event)
             self.rclItens:append();
         end);
 
-    obj._e_event60 = obj.button60:addEventListener("onClick",
+    obj._e_event63 = obj.button60:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
-                                        function (confirmado)
-                                                if confirmado then
-                                                        sheet.principalTreino1 = ""
-                                                        sheet.secundarioTreino1 = ""
-                                                        sheet.intTreino1 = ""
-                                                        sheet.sabTreino1 = ""
-                                                        sheet.descTreino1 = ""
-                                                        sheet.tempoTreino1 = ""
-                                                        showMessage("Campos limpos com sucesso!");
-                                                end;
-                                        end);
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino1 = ""
+                                            sheet.secundarioTreino1 = ""
+                                            sheet.intTreino1 = ""
+                                            sheet.sabTreino1 = ""
+                                            sheet.descTreino1 = ""
+                                            sheet.tempoTreino1 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
         end);
 
-    obj._e_event61 = obj.button61:addEventListener("onClick",
+    obj._e_event64 = obj.button61:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
-                                        function (confirmado)
-                                                if confirmado then
-                                                        sheet.principalTreino2 = ""
-                                                        sheet.secundarioTreino2 = ""
-                                                        sheet.intTreino2 = ""
-                                                        sheet.sabTreino2 = ""
-                                                        sheet.descTreino2 = ""
-                                                        sheet.tempoTreino2 = ""
-                                                        showMessage("Campos limpos com sucesso!");
-                                                end;
-                                        end);
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino2 = ""
+                                            sheet.secundarioTreino2 = ""
+                                            sheet.intTreino2 = ""
+                                            sheet.sabTreino2 = ""
+                                            sheet.descTreino2 = ""
+                                            sheet.tempoTreino2 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
         end);
 
-    obj._e_event62 = obj.button62:addEventListener("onClick",
+    obj._e_event65 = obj.button62:addEventListener("onClick",
         function (event)
             Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
-                                        function (confirmado)
-                                                if confirmado then
-                                                        sheet.principalTreino3 = ""
-                                                        sheet.secundarioTreino3 = ""
-                                                        sheet.intTreino3 = ""
-                                                        sheet.sabTreino3 = ""
-                                                        sheet.descTreino3 = ""
-                                                        sheet.tempoTreino3 = ""
-                                                        showMessage("Campos limpos com sucesso!");
-                                                end;
-                                        end);
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino3 = ""
+                                            sheet.secundarioTreino3 = ""
+                                            sheet.intTreino3 = ""
+                                            sheet.sabTreino3 = ""
+                                            sheet.descTreino3 = ""
+                                            sheet.tempoTreino3 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
+        end);
+
+    obj._e_event66 = obj.button63:addEventListener("onClick",
+        function (event)
+            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino4 = ""
+                                            sheet.secundarioTreino4 = ""
+                                            sheet.intTreino4 = ""
+                                            sheet.sabTreino4 = ""
+                                            sheet.descTreino4 = ""
+                                            sheet.tempoTreino4 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
+        end);
+
+    obj._e_event67 = obj.button64:addEventListener("onClick",
+        function (event)
+            Dialogs.confirmYesNo("Dejesa limpar os campos relacionados?",
+                            function (confirmado)
+                                    if confirmado then
+                                            sheet.principalTreino5 = ""
+                                            sheet.secundarioTreino5 = ""
+                                            sheet.intTreino5 = ""
+                                            sheet.sabTreino5 = ""
+                                            sheet.descTreino5 = ""
+                                            sheet.tempoTreino5 = ""
+                                            showMessage("Campos limpos com sucesso!");
+                                    end;
+                            end);
         end);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event67);
+        __o_rrpgObjs.removeEventListenerById(self._e_event66);
+        __o_rrpgObjs.removeEventListenerById(self._e_event65);
+        __o_rrpgObjs.removeEventListenerById(self._e_event64);
+        __o_rrpgObjs.removeEventListenerById(self._e_event63);
         __o_rrpgObjs.removeEventListenerById(self._e_event62);
         __o_rrpgObjs.removeEventListenerById(self._e_event61);
         __o_rrpgObjs.removeEventListenerById(self._e_event60);
@@ -3995,10 +4205,12 @@ local function constructNew_DzA()
         if self.edit47 ~= nil then self.edit47:destroy(); self.edit47 = nil; end;
         if self.imageCheckBox1 ~= nil then self.imageCheckBox1:destroy(); self.imageCheckBox1 = nil; end;
         if self.edit119 ~= nil then self.edit119:destroy(); self.edit119 = nil; end;
+        if self.edit154 ~= nil then self.edit154:destroy(); self.edit154 = nil; end;
         if self.edit95 ~= nil then self.edit95:destroy(); self.edit95 = nil; end;
         if self.edit70 ~= nil then self.edit70:destroy(); self.edit70 = nil; end;
         if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
         if self.imageCheckBox4 ~= nil then self.imageCheckBox4:destroy(); self.imageCheckBox4 = nil; end;
+        if self.edit153 ~= nil then self.edit153:destroy(); self.edit153 = nil; end;
         if self.layout70 ~= nil then self.layout70:destroy(); self.layout70 = nil; end;
         if self.edit49 ~= nil then self.edit49:destroy(); self.edit49 = nil; end;
         if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
@@ -4053,11 +4265,13 @@ local function constructNew_DzA()
         if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.layout48 ~= nil then self.layout48:destroy(); self.layout48 = nil; end;
         if self.button51 ~= nil then self.button51:destroy(); self.button51 = nil; end;
+        if self.edit149 ~= nil then self.edit149:destroy(); self.edit149 = nil; end;
         if self.layout88 ~= nil then self.layout88:destroy(); self.layout88 = nil; end;
         if self.label28 ~= nil then self.label28:destroy(); self.label28 = nil; end;
         if self.label57 ~= nil then self.label57:destroy(); self.label57 = nil; end;
         if self.edit57 ~= nil then self.edit57:destroy(); self.edit57 = nil; end;
         if self.layout24 ~= nil then self.layout24:destroy(); self.layout24 = nil; end;
+        if self.edit146 ~= nil then self.edit146:destroy(); self.edit146 = nil; end;
         if self.edit130 ~= nil then self.edit130:destroy(); self.edit130 = nil; end;
         if self.layout83 ~= nil then self.layout83:destroy(); self.layout83 = nil; end;
         if self.label50 ~= nil then self.label50:destroy(); self.label50 = nil; end;
@@ -4071,6 +4285,7 @@ local function constructNew_DzA()
         if self.edit75 ~= nil then self.edit75:destroy(); self.edit75 = nil; end;
         if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
         if self.imageCheckBox3 ~= nil then self.imageCheckBox3:destroy(); self.imageCheckBox3 = nil; end;
+        if self.edit156 ~= nil then self.edit156:destroy(); self.edit156 = nil; end;
         if self.button60 ~= nil then self.button60:destroy(); self.button60 = nil; end;
         if self.edit97 ~= nil then self.edit97:destroy(); self.edit97 = nil; end;
         if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
@@ -4147,10 +4362,12 @@ local function constructNew_DzA()
         if self.edit76 ~= nil then self.edit76:destroy(); self.edit76 = nil; end;
         if self.edit44 ~= nil then self.edit44:destroy(); self.edit44 = nil; end;
         if self.edit116 ~= nil then self.edit116:destroy(); self.edit116 = nil; end;
+        if self.edit155 ~= nil then self.edit155:destroy(); self.edit155 = nil; end;
         if self.edit94 ~= nil then self.edit94:destroy(); self.edit94 = nil; end;
         if self.edit73 ~= nil then self.edit73:destroy(); self.edit73 = nil; end;
         if self.edit43 ~= nil then self.edit43:destroy(); self.edit43 = nil; end;
         if self.imageCheckBox5 ~= nil then self.imageCheckBox5:destroy(); self.imageCheckBox5 = nil; end;
+        if self.edit150 ~= nil then self.edit150:destroy(); self.edit150 = nil; end;
         if self.button62 ~= nil then self.button62:destroy(); self.button62 = nil; end;
         if self.edit99 ~= nil then self.edit99:destroy(); self.edit99 = nil; end;
         if self.edit20 ~= nil then self.edit20:destroy(); self.edit20 = nil; end;
@@ -4205,11 +4422,14 @@ local function constructNew_DzA()
         if self.edit59 ~= nil then self.edit59:destroy(); self.edit59 = nil; end;
         if self.layout49 ~= nil then self.layout49:destroy(); self.layout49 = nil; end;
         if self.button50 ~= nil then self.button50:destroy(); self.button50 = nil; end;
+        if self.edit148 ~= nil then self.edit148:destroy(); self.edit148 = nil; end;
+        if self.layout89 ~= nil then self.layout89:destroy(); self.layout89 = nil; end;
         if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
         if self.label29 ~= nil then self.label29:destroy(); self.label29 = nil; end;
         if self.label56 ~= nil then self.label56:destroy(); self.label56 = nil; end;
         if self.edit56 ~= nil then self.edit56:destroy(); self.edit56 = nil; end;
         if self.layout25 ~= nil then self.layout25:destroy(); self.layout25 = nil; end;
+        if self.edit145 ~= nil then self.edit145:destroy(); self.edit145 = nil; end;
         if self.edit131 ~= nil then self.edit131:destroy(); self.edit131 = nil; end;
         if self.layout84 ~= nil then self.layout84:destroy(); self.layout84 = nil; end;
         if self.label53 ~= nil then self.label53:destroy(); self.label53 = nil; end;
@@ -4225,6 +4445,7 @@ local function constructNew_DzA()
         if self.button61 ~= nil then self.button61:destroy(); self.button61 = nil; end;
         if self.edit96 ~= nil then self.edit96:destroy(); self.edit96 = nil; end;
         if self.edit71 ~= nil then self.edit71:destroy(); self.edit71 = nil; end;
+        if self.edit152 ~= nil then self.edit152:destroy(); self.edit152 = nil; end;
         if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
         if self.progressBar1 ~= nil then self.progressBar1:destroy(); self.progressBar1 = nil; end;
         if self.layout71 ~= nil then self.layout71:destroy(); self.layout71 = nil; end;
@@ -4286,8 +4507,10 @@ local function constructNew_DzA()
         if self.label54 ~= nil then self.label54:destroy(); self.label54 = nil; end;
         if self.edit50 ~= nil then self.edit50:destroy(); self.edit50 = nil; end;
         if self.layout27 ~= nil then self.layout27:destroy(); self.layout27 = nil; end;
+        if self.edit147 ~= nil then self.edit147:destroy(); self.edit147 = nil; end;
         if self.edit137 ~= nil then self.edit137:destroy(); self.edit137 = nil; end;
         if self.layout82 ~= nil then self.layout82:destroy(); self.layout82 = nil; end;
+        if self.layout90 ~= nil then self.layout90:destroy(); self.layout90 = nil; end;
         if self.label51 ~= nil then self.label51:destroy(); self.label51 = nil; end;
         if self.layout22 ~= nil then self.layout22:destroy(); self.layout22 = nil; end;
         if self.edit110 ~= nil then self.edit110:destroy(); self.edit110 = nil; end;
@@ -4296,10 +4519,13 @@ local function constructNew_DzA()
         if self.edit45 ~= nil then self.edit45:destroy(); self.edit45 = nil; end;
         if self.edit117 ~= nil then self.edit117:destroy(); self.edit117 = nil; end;
         if self.layout79 ~= nil then self.layout79:destroy(); self.layout79 = nil; end;
+        if self.button64 ~= nil then self.button64:destroy(); self.button64 = nil; end;
         if self.edit93 ~= nil then self.edit93:destroy(); self.edit93 = nil; end;
         if self.edit72 ~= nil then self.edit72:destroy(); self.edit72 = nil; end;
         if self.edit40 ~= nil then self.edit40:destroy(); self.edit40 = nil; end;
         if self.imageCheckBox2 ~= nil then self.imageCheckBox2:destroy(); self.imageCheckBox2 = nil; end;
+        if self.edit151 ~= nil then self.edit151:destroy(); self.edit151 = nil; end;
+        if self.button63 ~= nil then self.button63:destroy(); self.button63 = nil; end;
         if self.edit98 ~= nil then self.edit98:destroy(); self.edit98 = nil; end;
         if self.tabControl4 ~= nil then self.tabControl4:destroy(); self.tabControl4 = nil; end;
         if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
