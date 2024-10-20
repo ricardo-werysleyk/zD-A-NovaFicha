@@ -3094,24 +3094,294 @@ local function constructNew_DzA()
 
     obj.tab10 = GUI.fromHandle(_obj_newObject("tab"));
     obj.tab10:setParent(obj.tabControl1);
-    obj.tab10:setTitle("Conhecimentos");
+    obj.tab10:setTitle("Treinamentos");
     obj.tab10:setName("tab10");
 
+    obj.layout84 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout84:setParent(obj.tab10);
+    obj.layout84:setLeft(20);
+    obj.layout84:setTop(0);
+    obj.layout84:setHeight(500);
+    obj.layout84:setWidth(1280);
+    obj.layout84:setName("layout84");
+
+    obj.layout85 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout85:setParent(obj.layout84);
+    obj.layout85:setLeft(20);
+    obj.layout85:setTop(48);
+    obj.layout85:setHeight(25);
+    obj.layout85:setWidth(1280);
+    obj.layout85:setName("layout85");
+
+    obj.label56 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label56:setParent(obj.layout85);
+    obj.label56:setAlign("left");
+    obj.label56:setText("Treino Principal");
+    obj.label56:setWidth(160);
+    obj.label56:setMargins({right=5});
+    obj.label56:setName("label56");
+
+    obj.label57 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label57:setParent(obj.layout85);
+    obj.label57:setAlign("left");
+    obj.label57:setText("Treino Secundário");
+    obj.label57:setWidth(160);
+    obj.label57:setMargins({right=5});
+    obj.label57:setName("label57");
+
+    obj.label58 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label58:setParent(obj.layout85);
+    obj.label58:setAlign("left");
+    obj.label58:setText("Int");
+    obj.label58:setWidth(40);
+    obj.label58:setMargins({right=5});
+    obj.label58:setName("label58");
+
+    obj.label59 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label59:setParent(obj.layout85);
+    obj.label59:setAlign("left");
+    obj.label59:setText("Sab");
+    obj.label59:setWidth(40);
+    obj.label59:setMargins({right=5});
+    obj.label59:setName("label59");
+
+    obj.label60 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label60:setParent(obj.layout85);
+    obj.label60:setAlign("left");
+    obj.label60:setText("Descrição do treinamento");
+    obj.label60:setWidth(600);
+    obj.label60:setMargins({right=5});
+    obj.label60:setName("label60");
+
+    obj.label61 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label61:setParent(obj.layout85);
+    obj.label61:setAlign("left");
+    obj.label61:setText("Tempo h.");
+    obj.label61:setWidth(60);
+    obj.label61:setMargins({right=5});
+    obj.label61:setName("label61");
+
+    obj.layout86 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout86:setParent(obj.layout84);
+    obj.layout86:setLeft(20);
+    obj.layout86:setTop(78);
+    obj.layout86:setHeight(25);
+    obj.layout86:setWidth(1280);
+    obj.layout86:setName("layout86");
+
+    obj.edit127 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit127:setParent(obj.layout86);
+    obj.edit127:setAlign("left");
+    obj.edit127:setHorzTextAlign("center");
+    obj.edit127:setField("principalTreino1");
+    obj.edit127:setWidth(160);
+    obj.edit127:setHeight(25);
+    obj.edit127:setMargins({right=5});
+    obj.edit127:setName("edit127");
+
+    obj.edit128 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit128:setParent(obj.layout86);
+    obj.edit128:setAlign("left");
+    obj.edit128:setHorzTextAlign("center");
+    obj.edit128:setField("secundarioTreino1");
+    obj.edit128:setWidth(160);
+    obj.edit128:setHeight(25);
+    obj.edit128:setMargins({right=5});
+    obj.edit128:setName("edit128");
+
+    obj.edit129 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit129:setParent(obj.layout86);
+    obj.edit129:setAlign("left");
+    obj.edit129:setHorzTextAlign("center");
+    obj.edit129:setField("intTreino1");
+    obj.edit129:setWidth(40);
+    obj.edit129:setHeight(25);
+    obj.edit129:setMargins({right=5});
+    obj.edit129:setName("edit129");
+
+    obj.edit130 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit130:setParent(obj.layout86);
+    obj.edit130:setAlign("left");
+    obj.edit130:setHorzTextAlign("center");
+    obj.edit130:setField("sabTreino1");
+    obj.edit130:setWidth(40);
+    obj.edit130:setHeight(25);
+    obj.edit130:setMargins({right=5});
+    obj.edit130:setName("edit130");
+
+    obj.edit131 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit131:setParent(obj.layout86);
+    obj.edit131:setAlign("left");
+    obj.edit131:setField("descTreino1");
+    obj.edit131:setWidth(600);
+    obj.edit131:setHeight(25);
+    obj.edit131:setMargins({right=5});
+    obj.edit131:setName("edit131");
+
+    obj.edit132 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit132:setParent(obj.layout86);
+    obj.edit132:setAlign("left");
+    obj.edit132:setHorzTextAlign("center");
+    obj.edit132:setField("tempoTreino1");
+    obj.edit132:setWidth(60);
+    obj.edit132:setHeight(25);
+    obj.edit132:setMargins({right=5});
+    obj.edit132:setName("edit132");
+
+    obj.layout87 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout87:setParent(obj.layout84);
+    obj.layout87:setLeft(20);
+    obj.layout87:setTop(108);
+    obj.layout87:setHeight(25);
+    obj.layout87:setWidth(1280);
+    obj.layout87:setName("layout87");
+
+    obj.edit133 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit133:setParent(obj.layout87);
+    obj.edit133:setAlign("left");
+    obj.edit133:setHorzTextAlign("center");
+    obj.edit133:setField("principalTreino2");
+    obj.edit133:setWidth(160);
+    obj.edit133:setHeight(25);
+    obj.edit133:setMargins({right=5});
+    obj.edit133:setName("edit133");
+
+    obj.edit134 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit134:setParent(obj.layout87);
+    obj.edit134:setAlign("left");
+    obj.edit134:setHorzTextAlign("center");
+    obj.edit134:setField("secundarioTreino2");
+    obj.edit134:setWidth(160);
+    obj.edit134:setHeight(25);
+    obj.edit134:setMargins({right=5});
+    obj.edit134:setName("edit134");
+
+    obj.edit135 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit135:setParent(obj.layout87);
+    obj.edit135:setAlign("left");
+    obj.edit135:setHorzTextAlign("center");
+    obj.edit135:setField("intTreino2");
+    obj.edit135:setWidth(40);
+    obj.edit135:setHeight(25);
+    obj.edit135:setMargins({right=5});
+    obj.edit135:setName("edit135");
+
+    obj.edit136 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit136:setParent(obj.layout87);
+    obj.edit136:setAlign("left");
+    obj.edit136:setHorzTextAlign("center");
+    obj.edit136:setField("sabTreino2");
+    obj.edit136:setWidth(40);
+    obj.edit136:setHeight(25);
+    obj.edit136:setMargins({right=5});
+    obj.edit136:setName("edit136");
+
+    obj.edit137 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit137:setParent(obj.layout87);
+    obj.edit137:setAlign("left");
+    obj.edit137:setField("descTreino2");
+    obj.edit137:setWidth(600);
+    obj.edit137:setHeight(25);
+    obj.edit137:setMargins({right=5});
+    obj.edit137:setName("edit137");
+
+    obj.edit138 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit138:setParent(obj.layout87);
+    obj.edit138:setAlign("left");
+    obj.edit138:setHorzTextAlign("center");
+    obj.edit138:setField("tempoTreino2");
+    obj.edit138:setWidth(60);
+    obj.edit138:setHeight(25);
+    obj.edit138:setMargins({right=5});
+    obj.edit138:setName("edit138");
+
+    obj.layout88 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout88:setParent(obj.layout84);
+    obj.layout88:setLeft(20);
+    obj.layout88:setTop(138);
+    obj.layout88:setHeight(25);
+    obj.layout88:setWidth(1280);
+    obj.layout88:setName("layout88");
+
+    obj.edit139 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit139:setParent(obj.layout88);
+    obj.edit139:setAlign("left");
+    obj.edit139:setHorzTextAlign("center");
+    obj.edit139:setField("principalTreino3");
+    obj.edit139:setWidth(160);
+    obj.edit139:setHeight(25);
+    obj.edit139:setMargins({right=5});
+    obj.edit139:setName("edit139");
+
+    obj.edit140 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit140:setParent(obj.layout88);
+    obj.edit140:setAlign("left");
+    obj.edit140:setHorzTextAlign("center");
+    obj.edit140:setField("secundarioTreino3");
+    obj.edit140:setWidth(160);
+    obj.edit140:setHeight(25);
+    obj.edit140:setMargins({right=5});
+    obj.edit140:setName("edit140");
+
+    obj.edit141 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit141:setParent(obj.layout88);
+    obj.edit141:setAlign("left");
+    obj.edit141:setHorzTextAlign("center");
+    obj.edit141:setField("intTreino3");
+    obj.edit141:setWidth(40);
+    obj.edit141:setHeight(25);
+    obj.edit141:setMargins({right=5});
+    obj.edit141:setName("edit141");
+
+    obj.edit142 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit142:setParent(obj.layout88);
+    obj.edit142:setAlign("left");
+    obj.edit142:setHorzTextAlign("center");
+    obj.edit142:setField("sabTreino3");
+    obj.edit142:setWidth(40);
+    obj.edit142:setHeight(25);
+    obj.edit142:setMargins({right=5});
+    obj.edit142:setName("edit142");
+
+    obj.edit143 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit143:setParent(obj.layout88);
+    obj.edit143:setAlign("left");
+    obj.edit143:setField("descTreino3");
+    obj.edit143:setWidth(600);
+    obj.edit143:setHeight(25);
+    obj.edit143:setMargins({right=5});
+    obj.edit143:setName("edit143");
+
+    obj.edit144 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit144:setParent(obj.layout88);
+    obj.edit144:setAlign("left");
+    obj.edit144:setHorzTextAlign("center");
+    obj.edit144:setField("tempoTreino3");
+    obj.edit144:setWidth(60);
+    obj.edit144:setHeight(25);
+    obj.edit144:setMargins({right=5});
+    obj.edit144:setName("edit144");
+
+    obj.tab11 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab11:setParent(obj.tabControl1);
+    obj.tab11:setTitle("Conhecimentos");
+    obj.tab11:setName("tab11");
+
     obj.richEdit1 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit1:setParent(obj.tab10);
+    obj.richEdit1:setParent(obj.tab11);
     obj.richEdit1:setAlign("client");
     obj.richEdit1.backgroundColor = "white";
     obj.richEdit1.defaultFontColor = "black";
     obj.richEdit1:setField("conhecimentos");
     obj.richEdit1:setName("richEdit1");
 
-    obj.tab11 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab11:setParent(obj.tabControl1);
-    obj.tab11:setTitle("Lore");
-    obj.tab11:setName("tab11");
+    obj.tab12 = GUI.fromHandle(_obj_newObject("tab"));
+    obj.tab12:setParent(obj.tabControl1);
+    obj.tab12:setTitle("Lore");
+    obj.tab12:setName("tab12");
 
     obj.richEdit2 = GUI.fromHandle(_obj_newObject("richEdit"));
-    obj.richEdit2:setParent(obj.tab11);
+    obj.richEdit2:setParent(obj.tab12);
     obj.richEdit2:setAlign("client");
     obj.richEdit2.backgroundColor = "white";
     obj.richEdit2.defaultFontColor = "black";
@@ -3690,11 +3960,14 @@ local function constructNew_DzA()
         if self.tab11 ~= nil then self.tab11:destroy(); self.tab11 = nil; end;
         if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
         if self.label29 ~= nil then self.label29:destroy(); self.label29 = nil; end;
+        if self.label56 ~= nil then self.label56:destroy(); self.label56 = nil; end;
         if self.edit56 ~= nil then self.edit56:destroy(); self.edit56 = nil; end;
         if self.layout59 ~= nil then self.layout59:destroy(); self.layout59 = nil; end;
         if self.button44 ~= nil then self.button44:destroy(); self.button44 = nil; end;
         if self.edit60 ~= nil then self.edit60:destroy(); self.edit60 = nil; end;
         if self.layout25 ~= nil then self.layout25:destroy(); self.layout25 = nil; end;
+        if self.edit131 ~= nil then self.edit131:destroy(); self.edit131 = nil; end;
+        if self.layout84 ~= nil then self.layout84:destroy(); self.layout84 = nil; end;
         if self.label53 ~= nil then self.label53:destroy(); self.label53 = nil; end;
         if self.edit53 ~= nil then self.edit53:destroy(); self.edit53 = nil; end;
         if self.layout52 ~= nil then self.layout52:destroy(); self.layout52 = nil; end;
@@ -3705,6 +3978,8 @@ local function constructNew_DzA()
         if self.layout20 ~= nil then self.layout20:destroy(); self.layout20 = nil; end;
         if self.edit102 ~= nil then self.edit102:destroy(); self.edit102 = nil; end;
         if self.label39 ~= nil then self.label39:destroy(); self.label39 = nil; end;
+        if self.edit134 ~= nil then self.edit134:destroy(); self.edit134 = nil; end;
+        if self.edit142 ~= nil then self.edit142:destroy(); self.edit142 = nil; end;
         if self.label45 ~= nil then self.label45:destroy(); self.label45 = nil; end;
         if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
         if self.layout57 ~= nil then self.layout57:destroy(); self.layout57 = nil; end;
@@ -3760,12 +4035,15 @@ local function constructNew_DzA()
         if self.layout30 ~= nil then self.layout30:destroy(); self.layout30 = nil; end;
         if self.edit109 ~= nil then self.edit109:destroy(); self.edit109 = nil; end;
         if self.tab10 ~= nil then self.tab10:destroy(); self.tab10 = nil; end;
+        if self.layout88 ~= nil then self.layout88:destroy(); self.layout88 = nil; end;
         if self.label28 ~= nil then self.label28:destroy(); self.label28 = nil; end;
         if self.tab8 ~= nil then self.tab8:destroy(); self.tab8 = nil; end;
         if self.edit57 ~= nil then self.edit57:destroy(); self.edit57 = nil; end;
         if self.button43 ~= nil then self.button43:destroy(); self.button43 = nil; end;
+        if self.label57 ~= nil then self.label57:destroy(); self.label57 = nil; end;
         if self.button30 ~= nil then self.button30:destroy(); self.button30 = nil; end;
         if self.layout24 ~= nil then self.layout24:destroy(); self.layout24 = nil; end;
+        if self.edit130 ~= nil then self.edit130:destroy(); self.edit130 = nil; end;
         if self.layout83 ~= nil then self.layout83:destroy(); self.layout83 = nil; end;
         if self.label50 ~= nil then self.label50:destroy(); self.label50 = nil; end;
         if self.layout53 ~= nil then self.layout53:destroy(); self.layout53 = nil; end;
@@ -3774,6 +4052,7 @@ local function constructNew_DzA()
         if self.edit103 ~= nil then self.edit103:destroy(); self.edit103 = nil; end;
         if self.button35 ~= nil then self.button35:destroy(); self.button35 = nil; end;
         if self.layout23 ~= nil then self.layout23:destroy(); self.layout23 = nil; end;
+        if self.edit143 ~= nil then self.edit143:destroy(); self.edit143 = nil; end;
         if self.label44 ~= nil then self.label44:destroy(); self.label44 = nil; end;
         if self.tab6 ~= nil then self.tab6:destroy(); self.tab6 = nil; end;
         if self.layout54 ~= nil then self.layout54:destroy(); self.layout54 = nil; end;
@@ -3817,6 +4096,7 @@ local function constructNew_DzA()
         if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
         if self.button55 ~= nil then self.button55:destroy(); self.button55 = nil; end;
+        if self.label61 ~= nil then self.label61:destroy(); self.label61 = nil; end;
         if self.edit84 ~= nil then self.edit84:destroy(); self.edit84 = nil; end;
         if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
         if self.layout77 ~= nil then self.layout77:destroy(); self.layout77 = nil; end;
@@ -3829,12 +4109,14 @@ local function constructNew_DzA()
         if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
         if self.edit63 ~= nil then self.edit63:destroy(); self.edit63 = nil; end;
         if self.layout31 ~= nil then self.layout31:destroy(); self.layout31 = nil; end;
+        if self.layout87 ~= nil then self.layout87:destroy(); self.layout87 = nil; end;
         if self.label54 ~= nil then self.label54:destroy(); self.label54 = nil; end;
         if self.tab9 ~= nil then self.tab9:destroy(); self.tab9 = nil; end;
         if self.edit50 ~= nil then self.edit50:destroy(); self.edit50 = nil; end;
         if self.button42 ~= nil then self.button42:destroy(); self.button42 = nil; end;
         if self.button31 ~= nil then self.button31:destroy(); self.button31 = nil; end;
         if self.layout27 ~= nil then self.layout27:destroy(); self.layout27 = nil; end;
+        if self.edit137 ~= nil then self.edit137:destroy(); self.edit137 = nil; end;
         if self.layout82 ~= nil then self.layout82:destroy(); self.layout82 = nil; end;
         if self.label51 ~= nil then self.label51:destroy(); self.label51 = nil; end;
         if self.tab2 ~= nil then self.tab2:destroy(); self.tab2 = nil; end;
@@ -3858,6 +4140,7 @@ local function constructNew_DzA()
         if self.edit79 ~= nil then self.edit79:destroy(); self.edit79 = nil; end;
         if self.edit45 ~= nil then self.edit45:destroy(); self.edit45 = nil; end;
         if self.edit110 ~= nil then self.edit110:destroy(); self.edit110 = nil; end;
+        if self.edit128 ~= nil then self.edit128:destroy(); self.edit128 = nil; end;
         if self.layout13 ~= nil then self.layout13:destroy(); self.layout13 = nil; end;
         if self.label35 ~= nil then self.label35:destroy(); self.label35 = nil; end;
         if self.button4 ~= nil then self.button4:destroy(); self.button4 = nil; end;
@@ -3893,6 +4176,7 @@ local function constructNew_DzA()
         if self.label20 ~= nil then self.label20:destroy(); self.label20 = nil; end;
         if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
         if self.button52 ~= nil then self.button52:destroy(); self.button52 = nil; end;
+        if self.label60 ~= nil then self.label60:destroy(); self.label60 = nil; end;
         if self.edit87 ~= nil then self.edit87:destroy(); self.edit87 = nil; end;
         if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
         if self.edit67 ~= nil then self.edit67:destroy(); self.edit67 = nil; end;
@@ -3903,8 +4187,11 @@ local function constructNew_DzA()
         if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
         if self.edit54 ~= nil then self.edit54:destroy(); self.edit54 = nil; end;
         if self.button46 ~= nil then self.button46:destroy(); self.button46 = nil; end;
+        if self.label58 ~= nil then self.label58:destroy(); self.label58 = nil; end;
         if self.edit62 ~= nil then self.edit62:destroy(); self.edit62 = nil; end;
         if self.layout32 ~= nil then self.layout32:destroy(); self.layout32 = nil; end;
+        if self.edit133 ~= nil then self.edit133:destroy(); self.edit133 = nil; end;
+        if self.layout86 ~= nil then self.layout86:destroy(); self.layout86 = nil; end;
         if self.label55 ~= nil then self.label55:destroy(); self.label55 = nil; end;
         if self.edit51 ~= nil then self.edit51:destroy(); self.edit51 = nil; end;
         if self.button41 ~= nil then self.button41:destroy(); self.button41 = nil; end;
@@ -3912,6 +4199,8 @@ local function constructNew_DzA()
         if self.edit100 ~= nil then self.edit100:destroy(); self.edit100 = nil; end;
         if self.button32 ~= nil then self.button32:destroy(); self.button32 = nil; end;
         if self.layout26 ~= nil then self.layout26:destroy(); self.layout26 = nil; end;
+        if self.edit140 ~= nil then self.edit140:destroy(); self.edit140 = nil; end;
+        if self.edit136 ~= nil then self.edit136:destroy(); self.edit136 = nil; end;
         if self.layout81 ~= nil then self.layout81:destroy(); self.layout81 = nil; end;
         if self.label47 ~= nil then self.label47:destroy(); self.label47 = nil; end;
         if self.tab3 ~= nil then self.tab3:destroy(); self.tab3 = nil; end;
@@ -3921,6 +4210,7 @@ local function constructNew_DzA()
         if self.edit105 ~= nil then self.edit105:destroy(); self.edit105 = nil; end;
         if self.edit68 ~= nil then self.edit68:destroy(); self.edit68 = nil; end;
         if self.button37 ~= nil then self.button37:destroy(); self.button37 = nil; end;
+        if self.edit139 ~= nil then self.edit139:destroy(); self.edit139 = nil; end;
         if self.label42 ~= nil then self.label42:destroy(); self.label42 = nil; end;
         if self.tab4 ~= nil then self.tab4:destroy(); self.tab4 = nil; end;
         if self.layout17 ~= nil then self.layout17:destroy(); self.layout17 = nil; end;
@@ -3931,6 +4221,7 @@ local function constructNew_DzA()
         if self.layout9 ~= nil then self.layout9:destroy(); self.layout9 = nil; end;
         if self.edit76 ~= nil then self.edit76:destroy(); self.edit76 = nil; end;
         if self.edit44 ~= nil then self.edit44:destroy(); self.edit44 = nil; end;
+        if self.edit129 ~= nil then self.edit129:destroy(); self.edit129 = nil; end;
         if self.layout10 ~= nil then self.layout10:destroy(); self.layout10 = nil; end;
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
         if self.edit89 ~= nil then self.edit89:destroy(); self.edit89 = nil; end;
@@ -3950,6 +4241,7 @@ local function constructNew_DzA()
         if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
         if self.edit99 ~= nil then self.edit99:destroy(); self.edit99 = nil; end;
         if self.layout47 ~= nil then self.layout47:destroy(); self.layout47 = nil; end;
+        if self.edit127 ~= nil then self.edit127:destroy(); self.edit127 = nil; end;
         if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
         if self.button15 ~= nil then self.button15:destroy(); self.button15 = nil; end;
         if self.button29 ~= nil then self.button29:destroy(); self.button29 = nil; end;
@@ -3970,13 +4262,18 @@ local function constructNew_DzA()
         if self.script ~= nil then self.script:destroy(); self.script = nil; end;
         if self.layout36 ~= nil then self.layout36:destroy(); self.layout36 = nil; end;
         if self.button39 ~= nil then self.button39:destroy(); self.button39 = nil; end;
+        if self.tab12 ~= nil then self.tab12:destroy(); self.tab12 = nil; end;
         if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
         if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
+        if self.label59 ~= nil then self.label59:destroy(); self.label59 = nil; end;
         if self.edit55 ~= nil then self.edit55:destroy(); self.edit55 = nil; end;
         if self.layout58 ~= nil then self.layout58:destroy(); self.layout58 = nil; end;
         if self.button45 ~= nil then self.button45:destroy(); self.button45 = nil; end;
         if self.edit61 ~= nil then self.edit61:destroy(); self.edit61 = nil; end;
         if self.layout33 ~= nil then self.layout33:destroy(); self.layout33 = nil; end;
+        if self.edit144 ~= nil then self.edit144:destroy(); self.edit144 = nil; end;
+        if self.edit132 ~= nil then self.edit132:destroy(); self.edit132 = nil; end;
+        if self.layout85 ~= nil then self.layout85:destroy(); self.layout85 = nil; end;
         if self.label52 ~= nil then self.label52:destroy(); self.label52 = nil; end;
         if self.edit52 ~= nil then self.edit52:destroy(); self.edit52 = nil; end;
         if self.button40 ~= nil then self.button40:destroy(); self.button40 = nil; end;
@@ -3988,11 +4285,14 @@ local function constructNew_DzA()
         if self.layout21 ~= nil then self.layout21:destroy(); self.layout21 = nil; end;
         if self.label38 ~= nil then self.label38:destroy(); self.label38 = nil; end;
         if self.layout80 ~= nil then self.layout80:destroy(); self.layout80 = nil; end;
+        if self.edit135 ~= nil then self.edit135:destroy(); self.edit135 = nil; end;
         if self.label46 ~= nil then self.label46:destroy(); self.label46 = nil; end;
+        if self.edit141 ~= nil then self.edit141:destroy(); self.edit141 = nil; end;
         if self.layout56 ~= nil then self.layout56:destroy(); self.layout56 = nil; end;
         if self.layout64 ~= nil then self.layout64:destroy(); self.layout64 = nil; end;
         if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
         if self.edit106 ~= nil then self.edit106:destroy(); self.edit106 = nil; end;
+        if self.edit138 ~= nil then self.edit138:destroy(); self.edit138 = nil; end;
         if self.label41 ~= nil then self.label41:destroy(); self.label41 = nil; end;
         if self.tab5 ~= nil then self.tab5:destroy(); self.tab5 = nil; end;
         if self.layout14 ~= nil then self.layout14:destroy(); self.layout14 = nil; end;
