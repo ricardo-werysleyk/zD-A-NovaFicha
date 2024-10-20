@@ -3,7 +3,7 @@
         <edit align="left" horzTextAlign="center" field="usosMagia" width="40" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="qtdUsosMagia" width="40" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="tipoMagia" width="80" height="25" margins="{right=5}"/>
-        <edit align="left" horzTextAlign="center" field="nomeMagia" width="80" height="25" margins="{right=5}"/>
+        <edit align="left" horzTextAlign="center" field="nomeMagia" width="160" height="25" margins="{right=5}"/>
         <edit align="left" field="descMagia" width="600" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="alcMagia" width="80" height="25" margins="{right=5}"/>
         <edit align="left" horzTextAlign="center" field="durMagia" width="80" height="25" margins="{right=5}"/>

@@ -20,7 +20,7 @@
                 <label align="left" text="Usos" width="40" margins="{right=5}"/>
                 <label align="left" text="Total" width="40" margins="{right=5}"/>
                 <label align="left" text="Tipo" width="80" margins="{right=5}"/>
-                <label align="left" text="Nome" width="80" margins="{right=5}"/>
+                <label align="left" text="Nome" width="160" margins="{right=5}"/>
                 <label align="left" text="Descrição" width="600" margins="{right=5}"/>
                 <label align="left" text="Alcance" width="80" margins="{right=5}"/>
                 <label align="left" text="Duração" width="80"/>
@@ -31,7 +31,7 @@
         <tab title="Coisas">
             <button left="20" top="20" height="25" text="Novo Item" cursor="handPoint" width="80" onClick="self.rclItens:append();"/>
             <layout left="20" top="48" height="25" width="1280" margins="{top=12}">
-                <label align="left" text="Nome" width="120" margins="{right=5}"/>
+                <label align="left" text="Nome" width="160" margins="{right=5}"/>
                 <label align="left" text="Tipo" width="100" margins="{right=5}"/>
                 <label align="left" text="Qtd." width="40" margins="{right=5}"/>
                 <label align="left" text="Peso" width="40" margins="{right=5}"/>

@@ -2966,7 +2966,7 @@ local function constructNew_DzA()
     obj.label45:setParent(obj.layout82);
     obj.label45:setAlign("left");
     obj.label45:setText("Nome");
-    obj.label45:setWidth(80);
+    obj.label45:setWidth(160);
     obj.label45:setMargins({right=5});
     obj.label45:setName("label45");
 
@@ -3031,7 +3031,7 @@ local function constructNew_DzA()
     obj.label49:setParent(obj.layout83);
     obj.label49:setAlign("left");
     obj.label49:setText("Nome");
-    obj.label49:setWidth(120);
+    obj.label49:setWidth(160);
     obj.label49:setMargins({right=5});
     obj.label49:setName("label49");
 

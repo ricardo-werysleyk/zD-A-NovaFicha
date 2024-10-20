@@ -35,7 +35,7 @@ local function constructNew_frmItensGerais()
     obj.edit1:setAlign("left");
     obj.edit1:setHorzTextAlign("center");
     obj.edit1:setField("nomeEquipamento");
-    obj.edit1:setWidth(120);
+    obj.edit1:setWidth(160);
     obj.edit1:setHeight(25);
     obj.edit1:setMargins({right=5});
     obj.edit1:setName("edit1");

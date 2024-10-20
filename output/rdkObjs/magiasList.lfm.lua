@@ -65,7 +65,7 @@ local function constructNew_frmMagiasList()
     obj.edit4:setAlign("left");
     obj.edit4:setHorzTextAlign("center");
     obj.edit4:setField("nomeMagia");
-    obj.edit4:setWidth(80);
+    obj.edit4:setWidth(160);
     obj.edit4:setHeight(25);
     obj.edit4:setMargins({right=5});
     obj.edit4:setName("edit4");
