@@ -3111,7 +3111,7 @@ local function constructNew_DzA()
     obj.layout84:setParent(obj.tab10);
     obj.layout84:setAlign("top");
     obj.layout84:setHeight(30);
-    obj.layout84:setMargins({bottom=4});
+    obj.layout84:setMargins({bottom=4, top=20});
     obj.layout84:setName("layout84");
 
     obj.button60 = GUI.fromHandle(_obj_newObject("button"));
@@ -3179,7 +3179,7 @@ local function constructNew_DzA()
     obj.layout86 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout86:setParent(obj.rectangle1);
     obj.layout86:setAlign("top");
-    obj.layout86:setHeight(130);
+    obj.layout86:setHeight(350);
     obj.layout86:setName("layout86");
 
     obj.image2 = GUI.fromHandle(_obj_newObject("image"));
@@ -3187,7 +3187,8 @@ local function constructNew_DzA()
     obj.image2:setAlign("left");
     obj.image2:setEditable(true);
     obj.image2:setField("campoURLImagem");
-    obj.image2:setWidth(130);
+    obj.image2:setWidth(350);
+    obj.image2:setHeight(350);
     obj.image2:setName("image2");
 
     obj.layout87 = GUI.fromHandle(_obj_newObject("layout"));
